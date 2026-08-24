@@ -1,0 +1,112 @@
+====================================================================================================
+RUN 1: positive_control
+prompt          : 'Fact: The currency used in the country shaped like a boot is'
+input_ids       : [16903, 25, 561, 11085, 1429, 303, 279, 3046, 25432, 1040, 264, 10146, 369]
+tokens          : ['Fact', ':', ' The', ' currency', ' used', ' in', ' the', ' country', ' shaped', ' like', ' a', ' boot', ' is']
+scored position : 11   token string = ' boot'   (final sub-token of 'boot')
+====================================================================================================
+
+--- layer 8 ---
+J-lens  ' boots':10.19  '盔':9.88  '靴':9.69  'lessly':9.69  'ting':9.69  'ing':9.62  'soles':9.44  'ress':9.38  '儿的':9.31  '意大利':9.25
+R-lens  ' feet':9.88  ' italian':9.50  ' heel':9.38  'foot':9.31  'เท้า':9.00  ' Achilles':8.94  'alling':8.75  ' boots':8.69  '脚的':8.62  '欧元区':8.56
+logit   'oman':8.81  'edom':8.75  'GPC':8.25  'ולי':8.25  ' Urlaubs':8.19  '长在':8.00  'anggal':7.97  '号令':7.97  '越长':7.88  '蔓延':7.78
+
+--- layer 9 ---
+J-lens  '意大利':10.62  ' italian':10.50  ' heel':9.75  ' Italian':9.69  '盔':9.50  ' boots':9.25  'lessly':9.25  '靴':9.19  ' Ital':9.12  ' Italy':8.94
+R-lens  ' italian':10.56  ' heel':9.56  ' Italian':8.81  '意大利':8.75  ' Achilles':8.50  'alo':8.50  'เท้า':8.50  '的剑':8.50  ' feet':8.44  'foot':8.44
+logit   '长在':8.94  ' Urlaubs':8.38  'oman':8.31  'Siamo':8.12  '会后':8.06  'ernet':7.97  'Untitled':7.94  'ündür':7.94  '大概在':7.84  'umus':7.81
+
+--- layer 10 ---
+J-lens  ' heel':9.38  '意大利':9.19  'soles':8.81  ' italian':8.62  ' Italian':8.56  'ress':8.44  ' Ital':8.38  '履':8.31  ' boots':8.31  '靴':8.25
+R-lens  ' heel':9.62  '不长':8.44  ' italian':8.44  ' feet':8.38  '的剑':8.19  '形状的':7.84  'foot':7.81  '/trunk':7.81  ' Achilles':7.78  '的形状':7.75
+logit   '长在':8.44  'Siamo':8.12  ' vaguely':7.62  'ulus':7.53  ' Ау':7.38  'ernet':7.28  '发动':7.19  'erman':6.97  'LEAR':6.97  'гий':6.94
+
+--- layer 11 ---
+J-lens  ' heel':9.06  '意大利':8.81  'soles':8.56  ' italian':8.25  ' Ital':8.19  ' ITAL':8.00  ' Italy':8.00  ' Italian':7.97  'Italy':7.84  '踵':7.62
+R-lens  ' heel':9.38  '的剑':8.88  ' italian':8.50  '/trunk':8.31  '不长':8.12  '的形状':8.00  '_foot':7.91  ' feet':7.91  '现实主义':7.88  '形状的':7.88
+logit   ' rampant':7.91  'Siamo':7.91  'KNOWN':7.84  'outlined':7.81  ' milione':7.59  ' Ау':7.31  '自称':7.28  'CLAIM':7.28  ' inhabited':7.22  'CONTACT':7.19
+
+--- layer 12 ---
+J-lens  'soles':8.75  ' heel':8.69  '-shaped':8.06  '意大利':7.97  ' Ital':7.88  '踵':7.69  '履':7.62  ' boots':7.59  '象征着':7.50  '靴':7.41
+R-lens  ' heel':8.50  '的形状':8.00  '的剑':7.88  ' feet':7.78  '不长':7.69  '形状的':7.62  '_foot':7.53  '现实主义':7.50  '-shaped':7.50  '/trunk':7.38
+logit   'shaw':7.38  ' ril':7.09  '半边':6.91  ' جام':6.88  '幅':6.69  '万家':6.69  ' Ау':6.66  '-shaped':6.59  '不回':6.59  'CLAIM':6.56
+
+--- layer 13 ---
+J-lens  'soles':8.69  ' heel':8.31  '-shaped':8.06  ' Ital':8.06  '象征着':7.91  '喻':7.78  '意大利':7.75  ' boots':7.75  ' Italian':7.69  '的形状':7.44
+R-lens  '的形状':8.44  ' heel':8.06  '_foot':8.00  '脚跟':7.62  '的剑':7.59  '形状的':7.53  '形状':7.50  '-shaped':7.50  '帚':7.50  ' shape':7.44
+logit   'shaw':7.88  '会后':6.91  'LEAR':6.91  'KNOWN':6.69  '万家':6.62  ' ril':6.50  '长在':6.47  'amaz':6.44  '的时间内':6.44  'leneck':6.34
+
+--- layer 14 ---
+J-lens  'soles':8.56  ' heel':8.12  '-shaped':7.94  'oreal':7.72  '喻':7.66  ' Ital':7.66  '现实主义':7.62  '踵':7.53  ' boots':7.50  'eiro':7.47
+R-lens  '-shaped':8.62  '形状':8.00  '的形状':8.00  'soles':7.97  ' heel':7.91  '现实主义':7.53  ' extinct':7.47  '脚跟':7.44  'shape':7.34  '举世':7.22
+logit   '举世':6.88  '万家':6.66  ' Lager':6.53  '长在':6.44  'shaw':6.28  '状':6.28  'leneck':6.09  ' extinct':6.00  'ٍ':5.97  'rient':5.97
+
+--- layer 15 ---
+J-lens  'soles':8.94  ' Ital':8.25  '?':8.25  'oreal':8.06  ' Pob':7.81  ' heel':7.78  '喻':7.69  '意大利':7.62  '-shaped':7.50  '现实主义':7.25
+R-lens  '-shaped':7.66  'soles':7.50  '的形状':7.44  ' heel':7.31  '形状':7.31  '现实主义':7.19  'trimmed':7.00  'shape':6.94  '_foot':6.94  '?':6.94
+logit   'วย':7.34  '举世':7.28  'shaw':7.16  'rea':7.12  '眷':7.03  ' Lager':7.03  'rient':7.00  'ٍ':6.97  'LEAR':6.94  'REA':6.75
+
+--- layer 16 ---
+J-lens  '?':8.56  'soles':8.25  ' Ital':8.25  'oreal':7.94  '意大利':7.78  ' Italy':7.69  ' Italian':7.53  '喻':7.41  '-shaped':7.34  ' heel':7.28
+R-lens  '-shaped':7.47  '?':7.12  ' Italy':7.03  'soles':7.00  ' shape':6.91  '的形状':6.84  ' heel':6.75  'endom':6.72  '现实主义':6.72  '形状':6.50
+logit   'shaw':8.06  'วย':7.81  'amaz':7.72  'REA':7.41  '举世':7.31  'ٍ':7.25  'PROFILE':7.25  ' Lager':7.25  'LEAR':7.19  'rea':7.19
+
+--- layer 17 ---
+J-lens  '?':9.31  'soles':9.00  'oreal':7.75  '-shaped':7.50  ' heel':7.34  ' Italy':7.31  ' Ital':7.28  '喻':7.25  ' Italian':7.22  '<|im_end|>':7.16
+R-lens  'soles':7.84  '-shaped':7.59  '?':7.28  ' shape':6.94  'oes':6.84  ' heel':6.69  ' Italy':6.56  '形状':6.53  'shape':6.50  '的形状':6.44
+logit   'shaw':8.00  'ٍ':7.97  ' Ау':7.94  '举世':7.88  'วย':7.78  ' Lager':7.47  'amaz':7.38  'olim':7.38  'PROFILE':7.19  '千萬':7.16
+
+--- layer 18 ---
+J-lens  '-shaped':8.69  '?':8.44  'soles':8.31  'oreal':7.66  '-like':7.59  '____':6.94  '�':6.91  '比喻':6.75  ' heel':6.75  ' analogy':6.72
+R-lens  '-shaped':8.62  'soles':7.75  'oes':7.12  '-like':6.94  ' shape':6.94  '形状':6.69  '?':6.56  'shell':6.41  ' inhabited':6.28  'shape':6.25
+logit   ' lodging':7.50  'uled':7.44  'soles':7.34  'shaw':7.19  'les':7.12  'ograd':7.12  'CONTACT':7.06  '状':7.00  'KNOWN':6.97  'rient':6.97
+
+--- layer 19 ---
+J-lens  '-shaped':8.81  'soles':8.50  '-like':7.53  '?':7.31  ' Italy':7.22  ' Italian':7.12  'oreal':6.84  '____':6.62  '�':6.50  'oes':6.50
+R-lens  '-shaped':7.72  ' shape':6.94  '-like':6.81  'soles':6.53  'oes':6.38  '形状':6.19  'shape':5.97  '的形状':5.91  'less':5.72  'shell':5.69
+logit   'KNOWN':8.94  '-shaped':8.81  'CONTACT':8.75  'tenzione':8.62  'soles':8.56  'uled':8.44  'leneck':8.44  '美誉':8.25  'ERTO':8.19  '&r':8.19
+
+--- layer 20 ---
+J-lens  '-shaped':9.00  'soles':8.88  ' Italy':8.00  ' Italian':7.62  '-like':7.19  '意大利':7.03  'Italy':7.03  '?':6.91  ' shape':6.84  'oes':6.75
+R-lens  '-shaped':8.19  ' shape':7.31  'soles':7.00  'oes':6.88  ' Italy':6.78  '形状':6.69  '的形状':6.47  'shape':6.44  ' Italian':6.38  '-like':6.34
+logit   '-shaped':9.06  'shapes':8.75  'soles':8.69  '😀':8.69  'rient':8.62  'ERTO':8.56  '美誉':8.56  '形状':8.56  'leneck':8.44  'CONTACT':8.38
+
+--- layer 21 ---
+J-lens  'soles':10.88  '/boot':9.00  ' Shoe':8.69  'boot':8.44  ' heel':8.38  ' boots':8.31  '-shaped':8.12  ' boot':7.88  '鞋':7.69  ' footwear':7.66
+R-lens  'soles':9.56  '/boot':9.25  'boot':9.06  ' heel':8.44  ' boot':8.31  ' Shoe':7.94  ' boots':7.91  '-shaped':7.72  ' Boot':7.62  '袜':7.47
+logit   'soles':11.31  '袜':10.62  'leneck':10.25  '😀':9.50  'boot':9.19  'iful':8.69  'shapes':8.69  '万家':8.56  '😉':8.50  'glas':8.50
+
+--- layer 22 ---
+J-lens  '-shaped':12.31  ' shape':11.88  '形状':11.75  '的形状':11.38  'shape':10.88  ' shaped':10.69  '形状的':9.75  'soles':9.38  ' shapes':9.38  '形狀':9.12
+R-lens  '-shaped':12.00  ' shape':11.88  '形状':11.56  '的形状':11.19  'shape':10.75  '形状的':9.88  ' shaped':9.75  ' shapes':9.19  '/boot':8.75  '形狀':8.69
+logit   '形状':13.06  '形状的':12.56  '的形状':12.44  'shape':12.12  '-shaped':12.06  'shapes':11.44  'leneck':11.25  '😀':11.00  '形狀':11.00  ' shape':10.88
+
+--- layer 23 ---
+J-lens  ' shape':11.75  '-shaped':11.56  '的形状':11.38  '形状':11.25  'shape':10.88  ' shaped':10.50  '形状的':9.62  'soles':8.88  '形狀':8.75  ' shapes':8.69
+R-lens  ' shape':12.12  '-shaped':12.12  '的形状':11.75  '形状':11.50  'shape':11.12  '形状的':10.38  ' shaped':10.31  ' shapes':9.12  '形狀':8.88  '.shape':8.44
+logit   '的形状':13.44  '形状的':13.31  '形状':13.06  'shape':12.31  '-shaped':12.19  'leneck':11.94  'shapes':11.75  '😀':11.62  '形狀':11.44  'soles':11.38
+
+--- layer 24 ---
+J-lens  ' shape':12.19  '-shaped':11.81  '形状':11.56  '的形状':11.44  'shape':11.38  ' shaped':11.00  '形状的':9.94  ' shapes':9.38  '形狀':9.12  'soles':9.06
+R-lens  ' shape':12.44  '-shaped':12.12  '的形状':11.88  '形状':11.50  'shape':11.44  '形状的':10.56  ' shaped':10.56  'boot':9.69  ' shapes':9.69  '/boot':9.38
+logit   '的形状':13.69  '形状的':13.12  'shape':12.50  '形状':12.50  '-shaped':12.31  'leneck':11.94  '😀':11.44  'shapes':11.44  '形狀':11.31  'soles':10.62
+
+--- layer 25 ---
+J-lens  ' shape':16.62  'shape':15.69  '形状':15.50  '的形状':14.50  ' shaped':14.00  '-shaped':13.94  ' shapes':13.38  '形状的':12.81  ' Shoe':12.19  ' Shape':12.00
+R-lens  ' shape':16.25  'shape':15.25  '形状':14.94  '的形状':14.62  '-shaped':13.75  ' shaped':13.31  ' shapes':13.00  '形状的':12.94  ' Shoe':12.25  ' boot':11.62
+logit   '的形状':15.31  'shape':15.31  '形状':14.88  '形状的':13.94  ' shape':13.94  '-shaped':13.81  'shapes':13.25  '形狀':12.44  ' shapes':12.19  ' shaped':12.12
+
+--- layer 26 ---
+J-lens  ' boot':23.88  'boot':22.25  ' Boot':22.00  'Boot':20.25  ' bootstrap':20.00  '靴':19.88  ' boots':19.88  '/boot':19.75  ' BOOT':18.62  'bootstrap':17.62
+R-lens  ' boot':22.75  'boot':21.50  ' Boot':20.75  ' boots':18.88  '/boot':18.88  'Boot':18.75  '靴':18.38  ' bootstrap':18.38  ' BOOT':18.00  ' shape':16.75
+logit   'boot':19.88  ' boot':19.38  ' Boot':17.50  '/boot':17.38  '靴':16.88  'Boot':16.38  ' bootstrap':16.12  ' boots':16.12  ' BOOT':16.00  '形状':15.56
+
+--- layer 27 ---
+J-lens  ' boot':19.75  'boot':19.38  ' Boot':18.25  'Boot':16.50  '/boot':16.38  ' boots':16.38  '靴':16.25  ' shape':15.75  ' bootstrap':15.38  ' BOOT':15.31
+R-lens  ' boot':18.88  'boot':18.62  ' Boot':17.00  '/boot':15.56  ' boots':15.56  ' shape':15.12  'Boot':15.12  '靴':15.00  ' BOOT':14.75  '形状':14.38
+logit   'boot':19.88  ' boot':18.50  '/boot':17.25  ' Boot':17.12  '靴':16.88  ' BOOT':16.25  'Boot':15.94  ' boots':15.56  'BOOT':15.50  '-boot':14.75
+
+--- layer 28 ---
+J-lens  ' boot':18.75  'boot':18.50  ' Boot':16.50  ' boots':15.81  '/boot':15.62  'Boot':15.25  '-boot':14.50  '靴':14.44  ' BOOT':13.81  ' bootstrap':13.62
+R-lens  ' boot':18.62  'boot':18.12  ' Boot':15.88  ' boots':15.50  '/boot':15.31  'Boot':14.62  '-boot':14.12  '靴':13.81  ' BOOT':13.50  ' Shoe':12.81
+logit   'boot':18.88  ' boot':17.50  '/boot':16.50  ' Boot':15.56  '-boot':15.06  ' boots':14.94  'Boot':14.62  ' BOOT':14.44  'BOOT':14.00  '靴':13.94

@@ -1,0 +1,112 @@
+====================================================================================================
+RUN 2: broken_referent
+prompt          : 'Fact: The currency used in the country shaped like a sandal is'
+input_ids       : [16903, 25, 561, 11085, 1429, 303, 279, 3046, 25432, 1040, 264, 9002, 278, 369]
+tokens          : ['Fact', ':', ' The', ' currency', ' used', ' in', ' the', ' country', ' shaped', ' like', ' a', ' sand', 'al', ' is']
+scored position : 12   token string = 'al'   (final sub-token of 'sandal')
+====================================================================================================
+
+--- layer 8 ---
+J-lens  ' sandals':9.94  'stick':9.88  'wood':9.81  'foot':9.44  ' shoe':9.06  'dehyde':9.06  ' worn':8.62  ' shoes':8.44  'ogo':8.38  '鞋':8.25
+R-lens  ' sandals':10.62  'foot':10.38  '凉鞋':9.94  '/sn':9.75  ' shoe':9.19  'encontre':9.00  ' footwear':8.88  ' feet':8.62  ' Achilles':8.38  '脚趾':8.19
+logit   'уне':7.91  'бир':7.56  ' szuka':7.53  'disconnect':7.44  ' بمنطقة':7.12  ' moduleName':7.12  'oman':6.97  ' unwitting':6.94  '�':6.88  'бан':6.88
+
+--- layer 9 ---
+J-lens  ' sandals':12.25  'foot':10.31  ' worn':9.44  ' shoe':9.38  '鞋':9.31  '脚趾':9.19  ' shoes':9.06  'stick':9.00  '凉鞋':8.94  '防滑':8.94
+R-lens  ' sandals':12.19  '凉鞋':10.94  'foot':10.50  ' footwear':9.44  '脚趾':9.19  ' shoe':9.12  'heel':9.00  ' worn':8.81  ' feet':8.75  'oes':8.56
+logit   'رت':7.34  'бан':6.62  'уне':6.50  ' ora':6.03  'proof':5.91  'Ub':5.84  'abas':5.81  'arel':5.78  ' widened':5.75  'tp':5.75
+
+--- layer 10 ---
+J-lens  ' sandals':11.62  ' worn':9.81  'foot':9.75  '脚趾':9.50  '防滑':8.94  ' shoe':8.94  '鞋':8.88  'wear':8.75  ' footwear':8.62  ' shoes':8.62
+R-lens  ' sandals':11.69  'foot':9.75  '凉鞋':9.69  ' footwear':9.19  ' worn':8.94  '脚趾':8.94  ' shoe':8.56  ' feet':8.50  'oes':8.38  ' wearing':8.31
+logit   'L':6.69  'URL':6.59  ' URL':6.16  'зон':6.12  'øm':6.12  ' Ara':5.84  'رت':5.81  'NB':5.78  ' stil':5.78  'ーフ':5.62
+
+--- layer 11 ---
+J-lens  ' sandals':10.56  'foot':9.38  '脚趾':9.25  ' worn':9.12  '鞋':8.75  'wear':8.75  ' wearing':8.31  '防滑':8.31  ' footwear':8.25  ' shoe':8.00
+R-lens  ' sandals':10.25  'foot':9.19  ' footwear':8.56  '凉鞋':8.50  '脚趾':8.31  ' worn':8.12  'oes':8.06  ' heel':8.00  'heel':7.97  ' Achilles':7.88
+logit   '六种':6.56  'oms':6.50  'ancel':6.31  'Geom':6.25  '半边':6.16  'رت':6.06  '六是':6.03  'UDI':6.00  '�':5.97  '等不良':5.94
+
+--- layer 12 ---
+J-lens  ' sandals':10.50  '脚趾':9.81  'foot':9.62  ' worn':8.94  'wear':8.69  ' footwear':8.19  '鞋':8.19  ' shoes':8.12  ' shoe':8.06  'oes':8.06
+R-lens  ' sandals':10.19  'foot':9.31  '凉鞋':8.94  '脚趾':8.31  'oes':8.19  ' footwear':8.00  'wear':7.88  'heel':7.84  ' worn':7.81  'ReactDOM':7.78
+logit   ' widened':6.47  'нали':6.34  'OOT':5.88  'sworth':5.88  '等不良':5.81  '六是':5.75  '半边':5.69  ' welt':5.62  'acus':5.56  '一双':5.53
+
+--- layer 13 ---
+J-lens  '脚趾':9.56  ' sandals':9.50  'wear':9.38  ' worn':9.06  'foot':9.00  ' wearing':8.31  ' footwear':8.00  ' shoes':7.78  '鞋':7.69  '湿了':7.66
+R-lens  ' sandals':8.94  'foot':8.81  'wear':8.44  '凉鞋':8.12  '脚趾':7.97  ' worn':7.66  ' footwear':7.56  ' orth':7.38  ' wearing':7.38  ' wearer':7.28
+logit   '六是':6.62  'sole':6.53  'SOLE':6.19  '霹':6.16  ' sole':6.06  ' unconscious':6.06  '等不良':5.97  'OOT':5.97  'فش':5.84  'IRROR':5.72
+
+--- layer 14 ---
+J-lens  'wear':9.62  ' worn':9.12  '脚趾':9.00  ' sandals':8.69  'foot':8.12  ' wearing':8.06  ' footwear':7.81  '湿了':7.69  ' shoe':7.53  '偏旁':7.50
+R-lens  'wear':8.31  ' sandals':8.19  ' worn':7.97  '凉鞋':7.50  'foot':7.47  ' orth':7.44  ' wearer':7.38  ' footwear':7.28  '脚趾':7.28  ' wearing':7.25
+logit   '�':5.66  '长在':5.66  ' unconscious':5.59  '长出':5.56  '�':5.53  'S':5.53  'l':5.47  'Greetings':5.47  'OOT':5.38  'C':5.34
+
+--- layer 15 ---
+J-lens  '脚趾':9.06  'wear':9.00  ' worn':8.62  ' sandals':8.44  '?':8.38  ' footwear':7.66  ' wearing':7.66  '湿了':7.56  'foot':7.56  ' shoe':7.50
+R-lens  ' sandals':7.94  'wear':7.50  ' wearer':7.44  ' worn':7.31  '凉鞋':7.25  ' footwear':7.03  '湿了':6.97  'oes':6.91  ' orth':6.78  ' wearing':6.78
+logit   '不良':6.00  '-':5.91  '长在':5.84  '�':5.78  'ro':5.50  ' morphology':5.50  'l':5.47  '�':5.28  'Greetings':5.25  'Appearance':5.25
+
+--- layer 16 ---
+J-lens  '脚趾':9.19  '?':9.06  ' sandals':9.00  'wear':8.44  ' footwear':8.19  ' worn':8.19  ' shoes':7.66  ' shoe':7.50  ' wearing':7.44  'foot':7.41
+R-lens  ' sandals':8.38  ' wearer':7.38  'oes':7.28  '?':7.28  ' worn':7.28  'wear':7.22  '凉鞋':7.00  ' footwear':6.91  '脚趾':6.81  ' orth':6.72
+logit   'S':6.88  '�':6.75  'OOT':6.16  '长在':6.09  '午':6.06  'l':6.03  '-':5.88  'cole':5.78  'doctype':5.78  ' وزار':5.72
+
+--- layer 17 ---
+J-lens  ' sandals':9.12  '脚趾':9.06  '?':9.06  'wear':8.19  ' worn':7.44  ' footwear':7.31  'oes':7.28  ' wearing':7.19  ' shoe':7.06  ' shoes':7.06
+R-lens  ' sandals':8.44  'oes':7.34  '?':7.19  '凉鞋':6.97  'wear':6.88  '脚趾':6.88  ' worn':6.81  ' wearer':6.81  ' wearing':6.69  'soles':6.62
+logit   'doctype':6.66  'OOT':6.19  'amaz':6.09  'SOLE':6.00  ' وزار':6.00  'fish':5.62  '�':5.53  'wa':5.53  'LC':5.47  'Suit':5.41
+
+--- layer 18 ---
+J-lens  ' sandals':9.00  '?':8.25  '脚趾':7.94  'oes':7.75  '-like':7.31  'oe':7.16  'foot':7.09  ' footwear':6.97  'wear':6.94  ' heel':6.81
+R-lens  ' sandals':8.06  'oes':7.78  ' heel':6.62  '脚趾':6.53  ' worn':6.50  '凉鞋':6.44  '?':6.41  ' footwear':6.41  '-shaped':6.38  ' wearer':6.28
+logit   'phone':7.00  'amaz':6.78  'doctype':6.78  'CONTACT':6.66  'difficulty':6.53  'وات':6.38  'UNCT':6.34  'UPI':6.25  'PHONE':6.19  'wa':6.09
+
+--- layer 19 ---
+J-lens  ' sandals':8.50  '-like':7.97  'oes':7.81  'oe':7.53  '?':7.50  ' footwear':7.41  '-shaped':7.31  '脚趾':7.22  'foot':7.19  '.svg':7.12
+R-lens  'oes':7.25  ' sandals':7.12  '-like':6.72  '-shaped':6.53  ' footwear':6.34  '凉鞋':6.25  ' wearer':6.03  'oe':5.91  ' heel':5.84  'foot':5.84
+logit   'amaz':8.50  'OOT':8.31  'shapes':8.06  'ominio':7.97  '🙂':7.94  '向法院':7.88  'difficulty':7.84  'وات':7.84  'acan':7.59  'soles':7.59
+
+--- layer 20 ---
+J-lens  ' sandals':9.62  'oes':8.56  'oe':7.94  ' footwear':7.91  'foot':7.78  '-like':7.69  '脚趾':7.47  '-shaped':7.22  'Foot':7.12  '?':7.03
+R-lens  ' sandals':8.44  'oes':8.12  ' footwear':7.19  '凉鞋':6.94  '-shaped':6.94  'oe':6.75  ' heel':6.53  'foot':6.53  '-like':6.47  '脚趾':6.12
+logit   'وات':8.50  'amaz':8.44  '🙂':8.44  ' demi':8.00  'shapes':7.94  'engkapi':7.81  'ampi':7.75  'ritic':7.72  'FIT':7.62  '法律诉讼':7.50
+
+--- layer 21 ---
+J-lens  ' sandals':10.00  ' footwear':9.25  'oes':8.06  'foot':7.91  '凉鞋':7.69  ' heel':7.59  ' Shoe':7.53  '脚趾':7.53  ' shoe':7.53  'Foot':7.34
+R-lens  ' sandals':9.38  ' footwear':8.62  'oes':8.12  '凉鞋':7.78  ' heel':7.69  ' Shoe':7.12  'foot':7.09  '脚趾':7.00  ' shoe':6.91  'boot':6.88
+logit   'oes':8.25  '竞速':7.97  'OOT':7.72  'وات':7.72  'boot':7.44  'shapes':7.31  '履':7.22  'CIO':7.22  'soles':7.19  ' че':7.09
+
+--- layer 22 ---
+J-lens  '-shaped':10.19  ' sandals':9.06  '-like':8.12  'shape':7.84  ' footwear':7.66  ' shape':7.62  'oes':7.59  'foot':7.56  ' shaped':7.53  '脚趾':7.34
+R-lens  '-shaped':10.00  ' sandals':8.62  'shape':7.78  ' shape':7.75  'oes':7.72  ' footwear':7.28  '-like':7.16  ' heel':7.00  '脚趾':6.97  ' wearer':6.84
+logit   '-shaped':9.31  'shape':8.62  'shapes':8.56  'OOT':8.44  '形状的':8.44  '竞速':8.25  'UPI':8.06  'ARC':8.06  '形状':8.00  'amaz':7.84
+
+--- layer 23 ---
+J-lens  '-shaped':9.38  ' sandals':9.06  'oes':8.00  '脚趾':7.81  'shape':7.47  ' footwear':7.44  '-like':7.34  'foot':7.25  ' shape':7.22  ' shaped':7.00
+R-lens  '-shaped':9.94  ' sandals':8.94  'oes':8.69  '脚趾':7.75  'shape':7.59  ' shape':7.59  ' heel':7.31  ' footwear':7.16  'oe':7.16  '-like':6.94
+logit   '-shaped':9.81  'oes':9.69  '🙂':9.44  '竞速':9.44  'boot':9.06  'OOT':9.00  'cini':8.94  '脚趾':8.75  '形状的':8.69  '履':8.62
+
+--- layer 24 ---
+J-lens  ' sandals':13.38  '脚趾':11.62  'foot':10.88  ' footwear':10.12  ' foot':9.88  ' sand':9.75  '凉鞋':9.56  ' toes':9.00  'Foot':8.75  '-shaped':8.69
+R-lens  ' sandals':12.62  '脚趾':11.00  'foot':9.94  ' sand':9.75  ' footwear':9.25  '凉鞋':9.00  '-shaped':9.00  ' foot':8.81  'boot':8.75  ' heel':8.38
+logit   '脚趾':11.06  ' sandals':10.69  '履':10.44  'boot':9.88  '竞速':9.75  'UPI':9.62  'foot':9.31  '凉鞋':9.25  'soles':9.25  '踵':9.12
+
+--- layer 25 ---
+J-lens  ' sandals':17.38  'foot':17.25  ' footwear':16.75  ' foot':16.38  ' shoe':15.81  '鞋':15.75  'Foot':15.50  ' shoes':14.88  ' Foot':14.88  'boot':14.81
+R-lens  ' sandals':16.25  'foot':15.69  ' shoe':15.38  ' footwear':15.25  'boot':14.81  '鞋':14.75  ' foot':14.56  ' Shoe':13.94  'Foot':13.88  ' boot':13.81
+logit   'boot':15.69  'foot':15.00  'Foot':14.19  '鞋':14.00  ' footwear':13.94  ' shoe':13.62  '印':13.56  ' sandals':13.12  ' footprint':13.06  ' foot':13.06
+
+--- layer 26 ---
+J-lens  ' sandals':15.06  'foot':14.50  ' foot':13.88  ' footprint':13.12  '凉鞋':13.06  ' footwear':13.06  ' shoe':13.00  'Foot':13.00  '印':12.31  '鞋':12.12
+R-lens  ' sandals':13.62  'foot':13.31  ' shoe':12.44  ' foot':12.38  ' footprint':12.19  '凉鞋':12.12  ' footwear':11.81  'Foot':11.69  '印':11.62  '脚趾':11.06
+logit   'foot':12.69  '印':12.38  'Foot':12.38  ' footprint':11.88  ' foot':11.00  '履':10.44  ' Foot':10.44  ' shoe':10.38  '_foot':10.31  '凉鞋':10.19
+
+--- layer 27 ---
+J-lens  ' footprint':14.00  'foot':13.75  ' foot':13.50  'Foot':13.06  ' sandals':12.75  ' footwear':12.69  '_foot':12.06  '脚趾':12.00  ' Foot':11.81  ' shoe':11.81
+R-lens  ' footprint':12.81  'foot':12.31  ' foot':12.06  'Foot':11.69  ' sandals':11.69  '印':11.19  '_foot':11.19  ' footwear':11.19  ' shoe':11.12  ' toe':11.00
+logit   '印':15.25  ' footprint':13.25  'foot':12.88  'Foot':12.81  '_foot':12.19  ' sandals':11.56  'boot':11.44  '脚趾':11.38  ' foot':11.31  ' Foot':11.12
+
+--- layer 28 ---
+J-lens  'foot':12.50  ' footprint':12.38  'Foot':11.44  ' sandals':11.38  ' foot':11.19  ' footwear':11.06  '脚趾':10.50  '_foot':10.00  ' shoe':9.88  ' Foot':9.88
+R-lens  ' footprint':11.88  'foot':11.69  'Foot':10.88  ' foot':10.69  ' sandals':10.62  ' footwear':10.06  ' shoe':9.81  '脚趾':9.69  'mark':9.56  'print':9.56
+logit   '印':12.38  ' footprint':12.31  'foot':12.00  'Foot':11.88  '_foot':10.81  'boot':10.69  ' sandals':10.44  '脚趾':10.31  'mark':10.31  ' footwear':10.25

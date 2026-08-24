@@ -1,0 +1,112 @@
+====================================================================================================
+RUN 3: bare_mention
+prompt          : 'the boot'
+input_ids       : [1719, 10146]
+tokens          : ['the', ' boot']
+scored position : 1   token string = ' boot'   (final sub-token of 'boot')
+====================================================================================================
+
+--- layer 8 ---
+J-lens  'ing':14.62  'ting':13.69  'ers':11.31  '儿的':11.19  '盔':10.75  'er':10.62  ' boots':10.00  'erry':9.50  'ie':9.50  'lessly':9.44
+R-lens  'ing':9.88  '-boot':9.06  ' boot':9.00  'boot':8.81  'ie':8.75  ' boots':8.44  'ers':8.38  '/boot':8.31  'alo':8.25  '盔':8.12
+logit   'boot':7.34  'loader':6.25  'قال':6.25  'لس':6.06  'ท้าย':5.94  '德里':5.84  ' barro':5.78  ' arrière':5.75  'preter':5.75  'بد':5.72
+
+--- layer 9 ---
+J-lens  'ing':14.19  'ting':12.56  'ers':11.19  ' boots':10.81  'er':10.62  '盔':10.38  '儿的':10.12  ' boot':9.38  '´':9.25  'erry':9.12
+R-lens  'ing':9.75  ' boot':9.38  'boot':9.19  '-boot':8.94  ' boots':8.94  'ie':8.31  'ers':8.12  '/boot':7.84  'Boot':7.75  'alo':7.72
+logit   'boot':7.00  ' Ovviamente':6.28  'ี้':6.00  'loader':5.69  '😀':5.69  ' Juz':5.66  '山区':5.62  '德里':5.59  'preter':5.53  '_cursor':5.53
+
+--- layer 10 ---
+J-lens  'ing':12.38  'ting':10.75  ' boots':10.44  '盔':10.06  'ers':9.88  'er':9.25  ' boot':9.06  '儿的':8.94  '�':8.62  '-boot':8.56
+R-lens  'ing':8.94  'boot':8.75  ' boot':8.69  ' boots':8.62  '-boot':8.31  'ie':8.06  '盔':7.31  '/boot':7.28  'Boot':7.25  'ers':7.12
+logit   'boot':7.31  ' Juz':7.28  'ี้':6.97  'Blank':6.62  ' Ovviamente':6.53  '.ini':6.44  'LENGTH':6.41  '(format':6.38  'loader':6.25  'bucket':6.22
+
+--- layer 11 ---
+J-lens  'ing':11.88  ' boots':10.38  'ers':10.00  'ting':9.94  '盔':9.56  'er':9.44  ' boot':9.25  '�':8.69  '儿的':8.56  'boot':8.56
+R-lens  'boot':9.25  ' boot':8.75  '-boot':8.50  ' boots':8.44  'ing':8.38  'ie':7.91  'Boot':7.50  '/boot':7.50  '盔':7.25  'back':7.16
+logit   'ี้':7.38  'boot':6.88  'laat':6.41  ' Juz':6.38  ' Ovviamente':6.38  'CHILD':6.12  ',length':6.09  'BOOT':6.00  '.ini':6.00  ' Insomma':5.94
+
+--- layer 12 ---
+J-lens  'ing':11.50  ' boots':10.38  'er':9.69  'ting':9.44  'ers':9.25  ' boot':9.12  '盔':8.94  'boot':8.56  '-boot':8.31  '�':8.12
+R-lens  'boot':8.88  'ing':8.62  ' boots':8.50  ' boot':8.38  'ie':8.06  '-boot':8.06  'oes':7.09  'Boot':7.06  '/boot':7.00  'back':6.94
+logit   'ี้':7.38  'boot':6.50  ' Insomma':6.47  'laat':6.28  ' Ovviamente':6.09  'ер':5.94  '_boot':5.91  '_pad':5.81  'CHILD':5.72  '_required':5.66
+
+--- layer 13 ---
+J-lens  'ing':10.81  ' boots':10.12  'er':9.44  'ers':9.06  'ting':8.69  ' boot':8.62  '盔':8.56  'boot':8.50  '-boot':7.84  '�':7.84
+R-lens  'boot':8.25  ' boots':7.97  'ing':7.91  ' boot':7.53  'ie':7.41  '-boot':7.31  'oes':6.94  'shell':6.72  '什么意思':6.53  '/boot':6.53
+logit   'laat':6.91  'boot':6.69  '�':6.28  'ี้':6.25  ',length':6.22  '下载地址':6.19  '_required':6.03  'oin':6.00  ' Needless':5.88  'soles':5.84
+
+--- layer 14 ---
+J-lens  'ing':10.50  ' boots':9.69  'er':8.94  'boot':8.50  'ers':8.50  ' boot':8.38  'ting':8.19  '盔':7.94  '-boot':7.44  'Boot':7.44
+R-lens  'boot':8.25  ' boots':8.25  'ing':8.00  ' boot':7.59  '-boot':7.25  '什么意思':6.97  'ie':6.84  '/boot':6.69  'oes':6.56  'shell':6.41
+logit   'laat':7.19  ',length':6.94  '_pad':6.88  ' lề':6.81  'soles':6.78  '你的人':6.50  'LENGTH':6.50  '什么意思':6.44  'oin':6.44  'COLUMN':6.44
+
+--- layer 15 ---
+J-lens  'ing':10.88  'er':9.25  ' boots':9.19  'ers':8.62  'ting':8.06  'boot':7.97  ' boot':7.75  '盔':7.66  'less':7.62  'ress':7.31
+R-lens  'ing':8.38  'boot':7.59  ' boots':7.34  'ie':6.91  ' boot':6.81  '-boot':6.72  'ers':6.66  'less':6.62  'back':6.47  'shell':6.44
+logit   'laat':6.34  '_required':6.06  ' Adi':6.00  'rey':5.94  'ер':5.91  'CHILD':5.81  '你的人':5.69  '头':5.69  '什么意思':5.66  '_pad':5.66
+
+--- layer 16 ---
+J-lens  'ing':10.44  ' boots':9.50  'er':8.88  'ers':8.38  'boot':8.19  ' boot':8.12  'less':7.66  'ting':7.66  '盔':7.59  '_boot':7.25
+R-lens  'ing':7.91  'boot':7.78  ' boots':7.62  ' boot':7.25  '-boot':6.72  'ie':6.66  'ers':6.66  'less':6.59  'oes':6.50  '/boot':6.44
+logit   'laat':7.09  '_),':6.72  '的支持':6.44  '_boot':6.44  ' Adi':6.41  '_pad':6.34  "},'":6.31  ' бед':6.28  ' منزل':6.22  ' Premi':6.22
+
+--- layer 17 ---
+J-lens  'ing':10.06  ' boots':8.75  'er':8.50  'less':8.06  'ers':7.78  'boot':7.69  ' boot':7.50  'ting':7.22  '什么意思':7.03  'ary':7.00
+R-lens  'ing':8.25  'boot':7.31  ' boots':6.97  'less':6.94  ' boot':6.69  'ers':6.62  'ie':6.59  'oes':6.34  'shell':6.31  'ed':6.03
+logit   '_),':6.66  'oule':6.62  '的支持':6.28  'ác':6.25  'ird':6.19  ' منزل':6.09  'Allen':6.03  'ер':6.00  ' бед':5.94  '你的人':5.94
+
+--- layer 18 ---
+J-lens  'ing':8.88  'less':7.91  'er':7.38  'ers':7.16  'ting':6.94  ' boots':6.91  'ary':6.62  'ress':6.31  'shell':6.28  'ger':6.19
+R-lens  'ing':7.19  'less':6.91  'ers':6.53  'shell':6.44  'oes':6.25  ' boots':6.06  'ary':5.91  'ie':5.72  'ger':5.72  ' arch':5.56
+logit   'oule':7.75  'блей':7.28  ' arrière':7.09  'éré':7.09  'ثمارات':7.06  ' منزل':6.94  ' carriera':6.94  'CONTACT':6.81  'kali':6.72  'از':6.72
+
+--- layer 19 ---
+J-lens  'ing':8.88  'less':8.19  'ting':7.47  'ers':7.12  'er':6.69  'ed':6.47  'ress':6.19  'ary':6.16  ' boots':6.06  'ies':6.00
+R-lens  'ing':7.66  'less':7.38  'ers':7.00  'ie':6.41  'ed':6.12  'shell':5.72  'ary':5.59  'ies':5.56  'oes':5.38  'ger':5.31
+logit   'FAILURE':8.12  'soles':8.00  '"..':7.84  ' truk':7.66  ' Mounted':7.59  '_),':7.59  ' arrière':7.56  'CONTACT':7.38  ' thang':7.22  'ثمارات':7.19
+
+--- layer 20 ---
+J-lens  'ing':8.81  'less':8.38  'ting':7.53  'ers':7.38  'er':6.62  'ed':6.50  'ies':6.12  'able':6.09  'ie':6.09  'ger':5.91
+R-lens  'ing':7.69  'less':7.41  'ers':7.06  'ie':6.53  'ed':6.12  'ies':5.62  'oes':5.59  'able':5.41  'stock':5.38  'ger':5.34
+logit   'iful':8.44  ' arrière':8.38  'soles':8.00  ' truk':7.72  'less':7.62  'FAILURE':7.56  '"..':7.47  'bucket':7.47  'nameof':7.41  'loader':7.41
+
+--- layer 21 ---
+J-lens  ' boot':11.12  '/boot':10.94  'boot':10.88  ' boots':10.69  '鞋':9.69  ' Boot':9.25  'BOOT':9.12  'Boot':8.75  '靴':8.75  'ing':8.69
+R-lens  '/boot':11.44  'boot':11.38  ' boot':11.31  ' boots':10.50  '鞋':9.38  ' Boot':9.38  'Boot':8.81  'BOOT':8.81  ' BOOT':8.75  '靴':8.38
+logit   '袜':11.25  'soles':10.44  'loader':10.38  'boot':9.25  '"..':9.00  'iful':8.81  '/boot':8.50  '鞋':8.50  '哇':8.38  '高级中学':8.12
+
+--- layer 22 ---
+J-lens  ' boot':11.81  '/boot':11.44  ' boots':11.00  'boot':10.81  '靴':10.00  ' Boot':9.94  ' BOOT':9.75  'BOOT':9.69  ' bootstrap':9.69  '鞋':9.50
+R-lens  ' boot':12.25  '/boot':11.94  'boot':11.56  ' boots':11.25  ' BOOT':10.38  ' Boot':10.19  '靴':9.88  ' bootstrap':9.38  '鞋':9.31  'Boot':9.19
+logit   'loader':12.31  'iful':11.62  '袜':11.06  '"..':10.19  'soles':9.75  'legs':9.25  ' thang':9.19  ' Salut':8.88  ' salut':8.88  'plate':8.81
+
+--- layer 23 ---
+J-lens  '/boot':11.06  ' boot':10.75  ' boots':10.38  'boot':10.31  ' Boot':9.81  '靴':9.81  ' bootstrap':9.06  ' BOOT':8.88  '鞋':8.75  'Boot':8.75
+R-lens  '/boot':11.62  ' boot':11.38  'boot':11.25  ' boots':10.88  ' Boot':10.19  ' BOOT':9.69  '靴':9.44  'Boot':9.00  ' bootstrap':8.81  'bootstrap':8.75
+logit   'loader':13.88  'iful':11.88  '/boot':11.31  '袜':11.31  '"..':11.12  'soles':11.00  'plate':10.38  'boot':10.06  'lsi':9.69  '靴':9.62
+
+--- layer 24 ---
+J-lens  '/boot':13.25  ' boot':13.25  'boot':12.56  ' boots':11.94  ' Boot':11.88  'Boot':11.06  '靴':10.94  ' BOOT':10.81  ' bootstrap':10.75  'BOOT':10.69
+R-lens  ' boot':13.56  '/boot':13.38  'boot':13.19  ' boots':12.19  ' Boot':12.00  ' BOOT':11.31  'Boot':11.00  '靴':10.44  ' bootstrap':10.38  'BOOT':10.19
+logit   'loader':12.50  '/boot':11.88  'boot':11.62  'iful':11.62  'soles':11.06  '靴':10.44  ' BOOT':10.38  ' thang':10.25  '"..':10.19  'bootstrap':10.12
+
+--- layer 25 ---
+J-lens  ' boot':13.50  '/boot':13.44  'boot':12.88  ' Boot':12.19  ' boots':12.19  'Boot':11.62  'BOOT':11.25  ' BOOT':11.19  '靴':11.19  ' bootstrap':10.75
+R-lens  '/boot':13.19  ' boot':13.19  'boot':13.06  ' boots':11.88  ' Boot':11.75  ' BOOT':11.19  'Boot':10.94  'BOOT':10.44  '靴':10.25  ' bootstrap':9.94
+logit   'loader':12.31  'boot':11.81  '/boot':11.69  'iful':11.19  'soles':10.44  ' boot':9.88  '那双':9.75  '靴':9.69  ' boots':9.56  '"..':9.50
+
+--- layer 26 ---
+J-lens  ' boot':17.62  'boot':16.50  '/boot':16.12  ' Boot':15.81  'Boot':15.38  ' boots':15.12  ' bootstrap':14.69  '靴':14.31  ' BOOT':14.19  'BOOT':13.62
+R-lens  ' boot':16.00  'boot':15.38  '/boot':14.81  ' Boot':14.19  ' boots':13.88  'Boot':13.56  ' BOOT':13.12  ' bootstrap':13.06  '靴':12.50  ' Bootstrap':12.00
+logit   'boot':11.88  ' boot':11.00  '/boot':10.69  ' bootstrap':10.25  'bootstrap':10.25  'soles':10.06  'loader':10.00  ' boots':9.94  'str':9.81  'Boot':9.50
+
+--- layer 27 ---
+J-lens  'boot':12.25  '/boot':12.19  ' boot':12.12  'loader':11.12  'camp':10.69  ' Boot':10.56  ' boots':10.50  ' loader':10.31  'Boot':10.12  ' Camp':10.06
+R-lens  'boot':11.31  '/boot':11.12  ' boot':10.88  'loader':10.50  'camp':10.00  ' boots':9.50  ' Boot':9.38  ' camp':9.31  ' loader':9.25  ' Camp':9.25
+logit   'loader':13.69  'leg':12.19  'camp':11.75  'boot':11.19  '/boot':10.88  'iful':10.81  'load':10.56  ' camps':10.56  'laces':10.50  'soles':10.44
+
+--- layer 28 ---
+J-lens  'loader':11.06  'leg':10.88  '/boot':10.81  'camp':10.38  'boot':10.25  ' boot':10.19  ' Camp':10.12  ' camp':9.88  ' loader':9.81  'legs':9.69
+R-lens  'loader':10.69  'leg':10.44  'camp':10.06  '/boot':9.88  'boot':9.81  ' Camp':9.69  ' boot':9.56  ' camp':9.56  'str':9.50  'laces':9.25
+logit   'loader':12.69  'leg':11.94  'laces':11.31  'iful':11.31  'camp':11.19  'legs':10.44  'soles':10.44  ' loader':10.31  '/boot':10.19  'boot':10.00
