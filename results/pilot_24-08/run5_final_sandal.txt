@@ -1,0 +1,119 @@
+====================================================================================================
+RUN 5: final_sandal
+prompt          : 'Fact: The currency used in the country shaped like a sandal is'
+input_ids       : [16903, 25, 561, 11085, 1429, 303, 279, 3046, 25432, 1040, 264, 9002, 278, 369]
+tokens          : ['Fact', ':', ' The', ' currency', ' used', ' in', ' the', ' country', ' shaped', ' like', ' a', ' sand', 'al', ' is']
+scored position : 13   token string = ' is'   (FINAL token)
+====================================================================================================
+
+MODEL ACTUAL next-token top-5 after ' is' (raw logit / softmax prob):
+            ' the'  logit=16.62  p=0.732
+         ' called'  logit=13.69  p=0.039
+              ' a'  logit=13.12  p=0.022
+               ' '  logit=13.06  p=0.021
+            ' not'  logit=12.56  p=0.013
+
+--- layer 8 ---
+J-lens  'ностран':10.12  'stick':9.94  '마자':9.75  'lip':9.69  'folk':9.38  'otope':9.19  'mand':9.12  'ว์':9.06  '通则':9.06  'toile':9.00
+R-lens  'encontre':8.38  'ностран':8.00  ' only':7.69  ' almost':7.59  '通则':7.41  'bearer':7.31  '..........':7.31  ' exactly':7.28  '頭に':7.25  ' diety':7.22
+logit   ' Moms':7.44  'واس':7.19  'ثة':7.19  '\\"\\':7.00  '__;':6.84  '最新发布':6.84  'влаж':6.81  'urge':6.78  'uppe':6.72  'lah':6.56
+
+--- layer 9 ---
+J-lens  '通则':10.00  '...':9.38  ' ...':9.25  'mand':8.94  '该国':8.62  'stick':8.44  'folk':8.44  'ruhe':8.38  '...\\':8.38  'latin':8.25
+R-lens  'bearer':7.81  '通则':7.62  '..........':7.28  '...\\':7.09  '_foreign':7.00  '该国':6.81  'encontre':6.72  ' spok':6.72  ' america':6.72  '此楼':6.69
+logit   'واس':8.62  '助威':7.78  '之国':7.75  'odge':7.19  '王某某':7.16  ' tâ':7.16  '这让我':7.16  ' cherchez':7.12  ' titular':7.03  'влаж':6.97
+
+--- layer 10 ---
+J-lens  '通则':9.81  'colon':9.00  'folk':8.75  ' nationality':8.69  'country':8.62  ' ...':8.38  '...':8.38  'baden':8.31  '该国':8.19  ' countries':8.12
+R-lens  '通则':7.50  '探し':6.72  'bearer':6.59  '_foreign':6.56  ' planet':6.56  '经营异常':6.50  ' continent':6.47  ' inhabitants':6.41  ' only':6.41  'cloth':6.38
+logit   'اع':6.94  'odge':6.47  'oes':6.44  'holds':6.41  ' tut':6.31  'Compiled':6.28  ' southeastern':6.06  'holding':6.06  'واس':6.03  ' titolare':6.00
+
+--- layer 11 ---
+J-lens  '通则':9.94  'country':8.88  ' nationality':8.75  'colon':8.06  ' ...':8.00  'ctype':7.97  '...':7.94  ' country':7.88  ' countries':7.84  'Uploaded':7.84
+R-lens  '通则':7.53  '经营异常':6.78  '探し':6.72  ' continent':6.69  'planet':6.59  '_foreign':6.56  ' planet':6.53  ' ryt':6.38  'continent':6.34  '该国':6.34
+logit   ' totiž':9.25  ' nemlig':9.00  'besondere':8.00  ' moden':7.91  'bergen':7.88  '一指':7.75  'coce':7.75  'amba':7.72  'kring':7.66  '.tif':7.53
+
+--- layer 12 ---
+J-lens  '通则':10.81  ' nationality':8.94  'ctype':8.69  'country':8.62  'baden':8.56  ' recognised':8.38  'Uploaded':8.19  'toile':8.19  'latin':8.12  '_foreign':8.12
+R-lens  '通则':7.56  '探し':6.84  '此楼':6.47  ' nowhere':6.28  ' referred':6.28  ' spok':6.28  '..........':6.25  'lación':6.25  'noop':6.22  '_foreign':6.22
+logit   ' totiž':9.00  ' nemlig':8.56  ' ملك':7.72  ' namely':7.56  ' Moms':7.22  'bergen':7.16  'Occurrences':7.16  ' mailing':7.06  ' southeastern':7.03  '多头':7.00
+
+--- layer 13 ---
+J-lens  '通则':10.25  'lab':8.19  ' recognised':8.06  'preter':8.00  'Uploaded':8.00  ' nationality':8.00  'pell':8.00  ' known':7.97  'country':7.91  'ctype':7.91
+R-lens  ' only':6.88  '通则':6.88  ' known':6.34  ' nowhere':6.28  'only':6.25  ' referred':6.22  '探し':6.12  '经营异常':6.12  '此楼':6.06  ' exactly':5.97
+logit   ' Moms':7.97  ' totiž':7.88  'bergen':7.22  '类推':7.09  ' nemlig':7.09  '类比':6.81  'holding':6.47  'wegen':6.38  'EQUAL':6.25  ' 몰':6.25
+
+--- layer 14 ---
+J-lens  '通则':9.06  '该国':8.62  'NAME':8.38  ' known':8.06  ' unbek':7.84  ' nationality':7.69  'pell':7.69  '____':7.47  'aurus':7.38  '================':7.38
+R-lens  '该国':7.00  ' known':6.91  ' inhabitants':6.72  ' exactly':6.34  ' nowhere':6.28  '通则':6.22  '该作者':6.16  'name':6.03  ' uniquely':6.00  '谜底':5.97
+logit   'odont':5.91  'olate':5.78  'ultimate':5.75  'ability':5.66  ' Moms':5.59  'holds':5.53  '_plural':5.50  '____':5.50  'лав':5.41  '类推':5.34
+
+--- layer 15 ---
+J-lens  '该国':8.75  '�':7.94  '通则':7.88  'izens':7.84  '?':7.69  'NAME':7.69  ' known':7.66  '经营异常':7.56  ' inhabitants':7.50  '该作者':7.47
+R-lens  '该国':6.78  ' inhabitants':6.72  ' exactly':6.59  ' known':6.31  'nam':6.16  'годи':5.72  '经营异常':5.56  'inator':5.56  'name':5.56  '/is':5.53
+logit   'holds':8.62  ' totiž':7.84  'bro':7.09  'holding':6.97  'VERSE':6.97  '原件及复印件':6.94  'egot':6.81  '____':6.56  'andum':6.38  'odont':6.31
+
+--- layer 16 ---
+J-lens  '该国':8.75  ' known':8.12  '该作者':7.62  '<|im_end|>':7.59  '通则':7.56  '\r\n\n':7.44  '又称':7.34  '...':7.28  'NAME':7.25  ' namely':7.22
+R-lens  '该国':6.66  ' known':6.62  ' exactly':6.06  'nam':5.91  ' inhabitants':5.75  'годи':5.72  'known':5.72  'name':5.69  '该作者':5.59  'noop':5.47
+logit   '原件及复印件':7.34  ' totiž':7.25  ' Bum':7.06  'sha':7.03  'folio':6.88  'ất':6.75  'лав':6.59  'odont':6.56  'Prime':6.50  '求美':6.47
+
+--- layer 17 ---
+J-lens  '该国':8.38  ' known':8.31  '又称':8.00  ' indeed':7.81  ' namely':7.78  'nam':7.62  'known':7.59  '全称':7.41  '该作者':7.19  '____':7.09
+R-lens  ' known':6.88  ' exactly':6.22  '该国':6.06  ' indeed':5.91  '谜底':5.81  'nam':5.72  ' only':5.69  'known':5.69  ' found':5.62  ' inhabitants':5.53
+logit   'ất':7.53  'egot':7.50  'lah':7.16  '原件及复印件':7.09  '-found':6.94  'ائعة':6.88  ' thinly':6.88  '举世':6.72  ' fond':6.66  'olate':6.62
+
+--- layer 18 ---
+J-lens  '该国':8.38  'nam':7.72  ' known':7.53  ' namely':7.44  '____':7.28  ' called':7.22  '又称':7.03  'known':6.88  ' называется':6.78  '的名称':6.78
+R-lens  ' exactly':6.34  '该国':6.12  ' known':6.06  'nam':5.59  '/is':5.34  'name':5.31  'are':5.31  'aren':5.22  ' only':5.22  ' called':5.22
+logit   '原件及复印件':8.38  '东北':7.81  '/is':7.47  '团团':7.44  ' souhaitent':7.41  '____':7.41  '与众':7.38  '其中之一':7.03  'olate':6.97  'gesteld':6.94
+
+--- layer 19 ---
+J-lens  ' called':8.25  '该国':7.53  'Currency':6.91  'called':6.88  'currency':6.75  ' называется':6.59  ' currency':6.59  '的名称':6.56  'decimal':6.56  '____':6.44
+R-lens  ' exactly':6.50  ' called':5.88  'are':5.62  '该国':5.59  ' itself':5.53  'name':5.28  '/is':5.09  ' denomination':4.94  '____':4.81  '�':4.81
+logit   '/is':8.75  '原件及复印件':8.50  'orate':8.31  ' berin':8.31  '(TM':8.25  '😀':8.19  'lah':8.12  'shipment':8.06  'ærer':7.97  ' jakim':7.88
+
+--- layer 20 ---
+J-lens  ' called':8.88  'currency':7.59  'called':7.44  ' currency':7.41  ' slang':7.00  'Currency':6.94  '该国':6.75  ' называется':6.69  ' known':6.62  '____':6.56
+R-lens  ' called':6.75  ' exactly':5.84  'currency':5.72  ' currency':5.53  '/is':5.38  ' slang':5.38  ' denomination':5.25  '该国':5.25  ' based':5.22  ' known':5.19
+logit   '/is':8.44  'olate':7.88  'bearer':7.84  '😀':7.78  ' bearer':7.50  '微风':7.47  'しゃれ':7.47  '原件及复印件':7.44  'orate':7.44  'летия':7.25
+
+--- layer 21 ---
+J-lens  ' currency':9.56  'currency':9.38  ' called':8.81  'Currency':8.38  '货币':7.81  ' currencies':7.69  'called':7.38  'coin':7.38  '通货':7.34  '人民币':7.31
+R-lens  'currency':7.66  ' currency':7.56  ' called':6.78  '汇率':6.44  'Currency':6.06  'coins':5.97  ' coins':5.94  '货币':5.94  'coin':5.75  '人民币':5.72
+logit   'bearer':9.00  ' bearer':8.50  'called':8.31  '/unit':8.00  'currency':8.00  ' called':7.78  'olate':7.69  'bygg':7.66  ' uniquely':7.56  '/is':7.53
+
+--- layer 22 ---
+J-lens  ' called':9.31  'currency':9.25  ' currency':9.25  'Currency':8.38  'called':7.72  ' currencies':7.69  '货币':7.62  '叫做':7.25  ' называется':7.22  ' Currency':6.97
+R-lens  'currency':7.47  ' called':7.25  ' currency':7.22  'Currency':6.12  ' unit':6.00  '汇率':5.84  '货币':5.84  '人民币':5.62  ' units':5.62  'called':5.53
+logit   'called':9.50  ' called':9.19  'currency':8.50  'unit':8.19  '/unit':8.06  'UNIT':8.00  'nam':7.69  'Unit':7.62  'หน่วย':7.59  '叫做':7.47
+
+--- layer 23 ---
+J-lens  ' called':9.19  '叫做':7.94  'currency':7.69  ' currency':7.66  'called':7.66  ' dollars':7.56  ' Dollars':7.12  ' называется':7.00  '货币':6.88  'Currency':6.59
+R-lens  ' called':7.62  ' dollars':6.53  'currency':6.53  ' currency':6.19  'called':5.97  ' Dollars':5.84  '叫做':5.62  '__':5.53  ' denomination':5.34  '货币':5.34
+logit   'called':9.56  ' called':8.94  'nam':8.75  '叫做':8.56  'UNIT':8.50  '叫':8.38  '-den':8.31  '兰特':8.25  ' называется':8.25  '叫什么':8.06
+
+--- layer 24 ---
+J-lens  ' currency':14.12  '货币':13.88  'currency':13.06  ' money':12.88  ' dollars':12.12  '钱':11.81  ' Money':11.31  ' currencies':11.25  ' Currency':11.25  ' Dollars':11.19
+R-lens  ' currency':11.81  'currency':11.25  '货币':11.19  ' money':10.94  ' dollars':10.44  ' Dollars':9.38  ' called':9.38  ' Money':9.06  ' currencies':9.00  ' coins':8.94
+logit   'currency':11.69  ' called':10.56  'called':10.19  '流通':9.62  'coins':9.56  ' Dollars':9.50  '货币':9.31  '폐':9.06  ' dollars':9.06  ' currency':8.94
+
+--- layer 25 ---
+J-lens  ' currency':11.06  ' called':10.31  'currency':10.25  '货币':10.06  'coins':9.75  ' coins':9.75  ' dollars':9.44  'coin':9.19  ' currencies':9.00  '硬币':8.75
+R-lens  ' called':9.12  ' currency':8.94  'currency':8.62  ' dollars':8.12  ' coins':8.00  'coins':7.75  '货币':7.72  ' Dollars':7.12  'coin':7.12  ' hard':7.03
+logit   ' called':10.00  'called':9.56  'currency':8.62  '流通':8.31  '...':8.12  '폐':8.12  '叫做':8.06  'บาท':7.88  '叫我':7.72  'olate':7.66
+
+--- layer 26 ---
+J-lens  ' called':10.62  'currency':9.31  ' currency':9.19  '叫做':8.62  'called':8.50  '货币':8.31  '日元':8.12  ' currencies':7.88  'Currency':7.75  '�':7.59
+R-lens  ' called':9.44  'currency':7.44  'called':7.19  ' currency':6.94  '叫做':6.72  '日元':6.50  ' pounds':6.47  ' złot':6.44  '兰特':6.44  ' worth':6.38
+logit   ' called':9.31  'called':9.00  '叫我':8.19  '叫':7.53  '叫做':7.47  '叫什么':7.31  'currency':7.00  '...':6.91  '폐':6.88  '�':6.69
+
+--- layer 27 ---
+J-lens  'currency':10.31  '元的':9.88  ' called':9.81  '日元':9.62  ' currency':9.56  ' euros':9.38  ' Euro':9.25  ' yen':9.19  ' dollars':9.19  ' euro':9.12
+R-lens  '元的':8.88  ' called':8.88  'currency':8.25  ' Euro':8.06  '日元':8.06  ' dollars':7.81  ' Peso':7.75  'pes':7.72  ' Yen':7.66  ' euros':7.59
+logit   ' called':9.38  ' taka':9.25  'called':9.12  'pes':9.00  '兰特':8.62  '卢':8.50  '叫我':8.44  '一元':8.12  '元的':8.06  '폐':8.00
+
+--- layer 28 ---
+J-lens  ' called':11.56  ' dollars':9.19  '元的':9.19  '日元':9.12  'called':9.06  'currency':8.94  ' yen':8.88  ' Yen':8.69  '兰特':8.62  ' euros':8.62
+R-lens  ' called':11.56  ' the':8.75  '元的':8.50  'called':8.31  ' dollars':8.25  'pes':8.12  ' known':8.12  '日元':8.06  '兰特':8.00  ' yen':7.84
+logit   ' called':11.69  'called':10.12  ' the':9.56  'pes':8.94  ' taka':8.94  'ru':8.50  '兰特':8.50  'worth':8.19  ' złot':7.94  ' pounds':7.88

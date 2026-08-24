@@ -1,0 +1,119 @@
+====================================================================================================
+RUN 4: final_boot
+prompt          : 'Fact: The currency used in the country shaped like a boot is'
+input_ids       : [16903, 25, 561, 11085, 1429, 303, 279, 3046, 25432, 1040, 264, 10146, 369]
+tokens          : ['Fact', ':', ' The', ' currency', ' used', ' in', ' the', ' country', ' shaped', ' like', ' a', ' boot', ' is']
+scored position : 12   token string = ' is'   (FINAL token)
+====================================================================================================
+
+MODEL ACTUAL next-token top-5 after ' is' (raw logit / softmax prob):
+            ' the'  logit=18.62  p=0.824
+         ' called'  logit=15.12  p=0.025
+           ' Euro'  logit=14.44  p=0.013
+              ' a'  logit=14.44  p=0.013
+            ' not'  logit=14.19  p=0.010
+
+--- layer 8 ---
+J-lens  'ностран':10.12  '마자':10.00  '通则':9.62  'lip':9.50  'stick':8.94  'ว์':8.88  'latin':8.88  'otope':8.62  'carat':8.56  '裡的':8.56
+R-lens  'ностран':8.50  'encontre':8.00  '通则':7.72  ' almost':7.53  '.xls':7.47  ' spok':7.44  ' only':7.41  'тім':7.38  '预包装':7.25  ' exactly':7.25
+logit   'влаж':7.41  ' litri':7.25  ' Moms':7.00  'واس':7.00  ' %@",':6.84  'urge':6.78  ' nemlig':6.75  '__;':6.66  ']?.':6.62  '战略布局':6.59
+
+--- layer 9 ---
+J-lens  ' ...':10.38  '通则':10.25  '...':9.50  ' [...]':8.88  'country':8.81  '地图上':8.69  'boa':8.44  'latin':8.12  'aglia':8.06  '该国':8.06
+R-lens  '通则':7.69  'bearer':7.66  ' spok':7.28  '地图上':7.12  '..........':6.94  'ностран':6.91  '此楼':6.84  'に住':6.72  'ipel':6.69  'тім':6.66
+logit   'واس':8.00  ' nemlig':7.47  'vaart':7.12  'LOTS':7.09  '这让我':7.06  'alm':7.03  ' titular':7.03  ' herum':6.88  '之国':6.84  '腦袋':6.84
+
+--- layer 10 ---
+J-lens  '通则':10.19  ' ...':9.38  'country':9.12  '...':8.94  ' countries':8.75  ' nationality':8.62  ' country':8.56  '地图上':8.50  ' [...]':8.44  'countries':8.19
+R-lens  '通则':7.66  ' inhabitants':6.84  '探し':6.78  '送り':6.72  ' continent':6.69  'bearer':6.66  ' geopol':6.53  '地图上':6.53  '经营异常':6.50  ' planet':6.47
+logit   'اع':7.19  'Compiled':6.66  'odge':6.62  'oes':6.41  '$b':6.38  ' орган':6.25  ' titolare':6.19  '这让我':6.19  'Occurrences':6.16  '$l':6.09
+
+--- layer 11 ---
+J-lens  '通则':9.81  'country':9.44  ' nationality':9.19  ' ...':8.69  ' country':8.69  ' countries':8.62  '...':8.38  ' geography':8.31  'countries':8.31  '地图上':8.25
+R-lens  '通则':7.44  ' continent':7.09  ' inhabitants':6.88  '经营异常':6.84  '探し':6.78  '地图上':6.78  ' spok':6.75  'continent':6.75  'planet':6.69  '此楼':6.69
+logit   ' nemlig':8.94  ' totiž':8.62  'besondere':8.56  'allon':8.56  'bergen':8.44  '.tif':8.06  ' moden':8.06  'Occurrences':8.06  'tagen':7.94  '此楼':7.88
+
+--- layer 12 ---
+J-lens  '通则':10.31  ' nationality':9.31  'country':8.81  ' geography':8.50  'aglia':8.44  'latin':8.44  'boa':8.38  ' countries':8.25  'countries':8.19  ' erect':8.12
+R-lens  '通则':7.38  '此楼':7.09  ' spok':7.00  '探し':6.75  ' referred':6.69  '预包装':6.66  'noop':6.62  '..........':6.31  '_foreign':6.31  '地图上':6.28
+logit   ' nemlig':8.50  ' totiž':8.44  'Occurrences':7.56  ' ملك':7.47  'bergen':7.47  ' Moms':7.25  ' namely':6.84  '.tif':6.84  '多头':6.81  '此楼':6.72
+
+--- layer 13 ---
+J-lens  '通则':9.88  '____':8.50  ' nationality':8.50  ' ___':8.38  ' famous':8.19  ' inhabitants':8.12  ' countries':8.06  ' known':8.00  'country':7.97  'countries':7.97
+R-lens  '通则':6.72  ' known':6.66  ' referred':6.50  ' inhabitants':6.47  '此楼':6.38  ' only':6.28  '探し':6.16  '经营异常':6.12  'noop':6.06  '送り':6.03
+logit   '原件及复印件':7.56  ' Moms':7.50  'Occurrences':7.41  ' totiž':7.28  '类推':6.97  ' nemlig':6.94  'EQUAL':6.81  ' subur':6.78  'bergen':6.75  'uars':6.69
+
+--- layer 14 ---
+J-lens  '____':9.50  '通则':9.38  ' known':8.94  ' ___':8.88  ' geography':8.56  ' famous':8.50  ' ____':8.44  '该国':8.44  ' inhabitants':8.31  'NAME':8.31
+R-lens  ' known':7.81  ' inhabitants':7.78  '该国':6.97  'known':6.88  '通则':6.69  ' referred':6.62  '全称':6.25  '____':6.25  '该作者':6.22  'name':6.22
+logit   '____':7.16  'oft':6.56  ' fond':6.34  '莫过于':6.16  '即':5.88  ' Naciones':5.81  'خوان':5.81  ' abbreviated':5.78  'shaw':5.78  'лав':5.78
+
+--- layer 15 ---
+J-lens  '该国':8.88  '____':8.81  ' inhabitants':8.75  ' famous':8.69  ' known':8.69  ' ___':8.50  '�':8.50  '通则':8.44  '全称':8.44  'aglia':8.19
+R-lens  ' inhabitants':7.88  '该国':6.94  ' known':6.94  'aren':6.50  'nam':6.25  '通则':6.09  'гада':6.06  'known':6.03  ' whose':6.03  ' exactly':6.03
+logit   'holds':9.12  '____':7.69  '原件及复印件':7.50  'bro':7.28  'VERSE':7.19  'egot':7.16  'bygg':7.12  'shaw':7.12  ' totiž':7.09  ' fond':6.78
+
+--- layer 16 ---
+J-lens  '____':8.94  ' known':8.94  '该国':8.75  ' famous':8.50  ' ___':8.38  '全称':8.25  '通则':8.25  '又称':8.12  '<|im_end|>':8.00  'known':8.00
+R-lens  ' known':7.12  ' inhabitants':6.75  'aren':6.66  '该国':6.66  'known':6.16  '通则':5.84  'noop':5.84  '该作者':5.81  '全称':5.78  'годи':5.75
+logit   '原件及复印件':8.06  'ште':7.47  ' fond':7.44  '变更为':7.31  ' thinly':7.31  'otin':7.28  'ất':7.28  'egot':7.28  'aren':7.16  'лав':7.09
+
+--- layer 17 ---
+J-lens  '又称':8.81  ' known':8.81  '____':8.75  '全称':8.75  '该国':8.50  ' famous':8.38  ' ___':8.12  'known':8.06  ' inhabitants':7.81  ' internationally':7.81
+R-lens  ' known':7.25  'aren':6.62  ' inhabitants':6.59  '该国':6.16  'are':6.12  '全称':6.00  'known':5.94  ' indeed':5.75  '/is':5.69  ' exactly':5.66
+logit   'egot':9.00  '原件及复印件':8.06  '(TM':7.94  ' centuries':7.81  '巅':7.81  'ất':7.75  ' thinly':7.69  'iclet':7.56  ' fond':7.53  '举世':7.41
+
+--- layer 18 ---
+J-lens  '该国':8.94  '____':8.31  ' называется':8.12  ' called':8.00  '又称':7.84  ' known':7.78  ' internationally':7.59  '的那个人':7.38  'nam':7.31  'known':7.25
+R-lens  '该国':6.59  'aren':6.38  ' known':6.16  ' inhabitants':6.09  'are':5.91  ' called':5.72  ' exactly':5.72  '____':5.62  '/is':5.59  ' indeed':5.41
+logit   '原件及复印件':9.06  '东北':8.19  'egot':7.91  '(TM':7.91  'gesteld':7.91  '团团':7.75  '/is':7.59  '____':7.59  ' souhaitent':7.44  '与众':7.41
+
+--- layer 19 ---
+J-lens  ' called':8.75  '该国':8.00  'Currency':7.78  'currency':7.50  ' называется':7.44  ' currency':7.44  'called':7.41  '____':7.38  'decimal':7.31  '又称':6.94
+R-lens  ' exactly':6.28  ' called':6.22  '该国':5.94  'are':5.84  '____':5.41  ' denomination':5.38  ' slang':5.28  ' currency':5.22  'aren':5.22  '/is':5.19
+logit   '原件及复印件':9.12  '(TM':9.06  ' berin':8.88  'orate':8.88  '/is':8.62  'shed':8.31  '😀':8.31  ' lancar':8.25  ' centuries':8.25  'shares':8.19
+
+--- layer 20 ---
+J-lens  ' called':9.69  'called':8.25  'currency':8.19  ' currency':8.12  'Currency':7.72  ' называется':7.72  ' slang':7.41  '____':7.34  '的名称':7.28  '叫做':7.06
+R-lens  ' called':7.47  ' currency':6.03  'currency':6.03  ' denomination':5.97  ' slang':5.94  ' exactly':5.88  ' standard':5.66  'called':5.62  '该国':5.53  '/is':5.53
+logit   'bearer':9.25  'しゃれ':8.94  ' berin':8.88  'держ':8.75  '原件及复印件':8.75  'egot':8.62  '举世':8.62  'Issuer':8.62  'orate':8.38  '/is':8.38
+
+--- layer 21 ---
+J-lens  ' currency':10.94  'currency':10.31  ' called':9.62  'Currency':9.56  ' currencies':8.50  ' Currency':8.44  '货币':8.31  '人民币':8.19  'called':8.06  'coins':7.97
+R-lens  ' currency':8.75  'currency':8.44  ' called':7.56  'Currency':7.06  '汇率':6.78  'coins':6.59  ' coins':6.47  '人民币':6.47  '英镑':6.44  ' currencies':6.41
+logit   'bearer':9.94  ' bearer':9.19  'called':8.88  '举世':8.75  '(TM':8.75  'dling':8.69  'しゃれ':8.50  '/unit':8.50  '原件及复印件':8.44  ' called':8.38
+
+--- layer 22 ---
+J-lens  ' called':10.44  ' currency':9.88  'currency':9.81  'Currency':8.94  'called':8.75  ' называется':8.44  ' currencies':8.12  '叫做':8.12  ' Currency':7.59  '货币':7.59
+R-lens  ' called':8.38  'currency':7.91  ' currency':7.78  'Currency':6.72  'called':6.47  ' unit':6.16  '人民币':5.97  ' currencies':5.97  '英镑':5.97  ' units':5.91
+logit   'called':10.06  ' called':9.94  'oglio':8.81  ' валю':8.69  '原件及复印件':8.62  'currency':8.50  ' denomin':8.38  '含金量':8.31  'lets':8.25  'หน่วย':8.19
+
+--- layer 23 ---
+J-lens  ' called':9.88  '叫做':8.44  ' euros':8.38  'called':8.38  ' Dollars':8.19  ' currency':8.00  'currency':8.00  ' dollars':7.91  ' называется':7.91  '英镑':7.78
+R-lens  ' called':8.31  'currency':6.78  ' euros':6.75  ' dollars':6.75  ' Dollars':6.75  'called':6.62  '英镑':6.47  ' currency':6.47  '欧元':6.22  '叫做':6.09
+logit   '-den':10.31  'called':9.88  'lets':9.44  'cams':9.31  ' called':9.25  '兰特':9.25  '含金量':9.19  '叫什么':9.12  ' называется':9.00  'nam':9.00
+
+--- layer 24 ---
+J-lens  ' currency':14.06  'currency':13.00  '货币':13.00  ' money':12.94  '钱':12.44  ' dollars':12.38  ' Dollars':12.25  ' called':12.19  ' euros':11.94  ' Money':11.44
+R-lens  ' currency':11.75  'currency':11.19  ' money':11.00  ' called':10.88  ' dollars':10.69  '货币':10.50  ' Dollars':10.31  ' euros':9.88  '钱':9.50  ' euro':9.19
+logit   ' called':11.94  'called':11.38  'currency':11.00  ' Dollars':10.44  ' fiat':10.38  'บาท':9.88  '폐':9.75  '叫':9.69  'coins':9.56  'doll':9.50
+
+--- layer 25 ---
+J-lens  ' euro':13.69  ' euros':13.25  ' Euro':12.50  ' called':12.06  '欧元':11.69  '€':11.06  ' Euros':10.75  ' currency':10.19  'Euro':9.94  ' Dollars':9.88
+R-lens  ' euro':11.81  ' Euro':11.19  ' euros':11.12  ' called':11.00  '欧元':10.38  '€':10.06  ' Euros':9.19  ' EUR':8.75  'Euro':8.44  'EUR':8.38
+logit   ' called':11.81  'called':10.62  ' euro':10.62  ' Euro':10.06  ' euros':9.62  '叫':9.44  '叫做':9.12  'Euro':9.12  'ユー':9.06  '€':8.94
+
+--- layer 26 ---
+J-lens  ' called':12.31  ' euro':12.31  ' euros':12.00  ' Euro':11.31  '欧元':10.62  '€':10.25  ' Euros':9.88  'called':9.88  '叫做':9.56  ' pounds':9.19
+R-lens  ' called':11.19  ' euro':10.44  ' euros':10.00  ' Euro':9.88  '欧元':9.25  '€':9.25  'called':8.56  ' Euros':8.50  ' pounds':8.44  ' pound':8.06
+logit   ' called':10.94  'called':10.12  '叫':9.19  '叫什么':8.88  '叫我':8.44  '叫做':8.25  ' pounds':8.12  ' называется':8.12  'ユー':8.12  ' euros':8.12
+
+--- layer 27 ---
+J-lens  ' euro':18.00  ' Euro':17.88  ' euros':16.88  ' Euros':15.62  '欧元':15.00  'Euro':14.75  ' EURO':14.06  ' EUR':13.50  '€':13.50  'EUR':12.75
+R-lens  ' Euro':16.00  ' euro':15.75  ' euros':14.69  ' Euros':13.81  '欧元':13.06  'Euro':12.75  ' EURO':12.56  ' EUR':12.31  '€':12.00  'EUR':11.44
+logit   ' Euro':13.38  ' euro':13.31  ' Euros':12.75  ' euros':12.62  'Euro':12.38  'ユー':11.88  ' EURO':11.69  ' Евро':11.62  ' called':11.12  ' EUR':11.06
+
+--- layer 28 ---
+J-lens  ' euro':16.50  ' Euro':16.50  ' euros':15.81  ' Euros':14.94  '欧元':14.12  'Euro':13.81  ' EURO':13.25  ' called':13.25  '€':12.94  ' EUR':12.75
+R-lens  ' Euro':15.69  ' euro':15.12  ' euros':14.62  ' Euros':13.69  ' called':13.25  '欧元':12.88  'Euro':12.81  ' EURO':12.38  ' EUR':12.31  '€':11.94
+logit   ' called':13.19  ' Euros':12.94  ' euros':12.81  ' euro':12.56  ' Euro':12.06  'ユー':11.75  'Euro':11.44  'called':11.06  ' Евро':10.62  ' EUR':10.62
