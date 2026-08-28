@@ -1,0 +1,38 @@
+Tokenization checks, Qwen3.5-4B tokenizer
+
+[boot] boot vs sandal   <-- FLAG: ISOLATION count mismatch; IN-CONTEXT count mismatch
+  isolation : 'boot': 1 ['boot']   |   'sandal': 2 ['s', 'andal']
+  in-context: 'boot': 1 ['Ġboot']   |   'sandal': 2 ['Ġsand', 'al']
+  full prompt token counts: working=17 twin=18
+[hexagon] hexagon vs octagon
+  isolation : 'hexagon': 2 ['hex', 'agon']   |   'octagon': 2 ['oct', 'agon']
+  in-context: 'hexagon': 2 ['Ġhex', 'agon']   |   'octagon': 2 ['Ġoct', 'agon']
+  full prompt token counts: working=18 twin=18
+[parallel38] 38th vs 83rd
+  isolation : '38th': 3 ['3', '8', 'th']   |   '83rd': 3 ['8', '3', 'rd']
+  in-context: '38th': 3 ['3', '8', 'th']   |   '83rd': 3 ['8', '3', 'rd']
+  full prompt token counts: working=21 twin=21
+[portuguese] Portuguese vs Spanish   <-- FLAG: ISOLATION count mismatch
+  isolation : 'Portuguese': 3 ['Port', 'ug', 'uese']   |   'Spanish': 1 ['Spanish']
+  in-context: 'Portuguese': 1 ['ĠPortuguese']   |   'Spanish': 1 ['ĠSpanish']
+  full prompt token counts: working=20 twin=20
+[strait] Spain vs Portugal   <-- FLAG: ISOLATION count mismatch
+  isolation : 'Spain': 1 ['Spain']   |   'Portugal': 2 ['Port', 'ugal']
+  in-context: 'Spain': 1 ['ĠSpain']   |   'Portugal': 1 ['ĠPortugal']
+  full prompt token counts: working=21 twin=21
+[downunder] under vs south
+  isolation : 'under': 1 ['under']   |   'south': 1 ['south']
+  in-context: 'under': 1 ['Ġunder']   |   'south': 1 ['Ġsouth']
+  full prompt token counts: working=19 twin=19
+[teardrop] teardrop vs teaspoon   <-- FLAG: IN-CONTEXT count mismatch
+  isolation : 'teardrop': 3 ['te', 'ard', 'rop']   |   'teaspoon': 3 ['te', 'as', 'poon']
+  in-context: 'teardrop': 3 ['Ġte', 'ard', 'rop']   |   'teaspoon': 1 ['Ġteaspoon']
+  full prompt token counts: working=21 twin=19
+[vietnamS] S vs Z
+  isolation : 'S': 1 ['S']   |   'Z': 1 ['Z']
+  in-context: 'S': 1 ['ĠS']   |   'Z': 1 ['ĠZ']
+  full prompt token counts: working=19 twin=19
+[parallel17] 17th vs 71st
+  isolation : '17th': 3 ['1', '7', 'th']   |   '71st': 3 ['7', '1', 'st']
+  in-context: '17th': 3 ['1', '7', 'th']   |   '71st': 3 ['7', '1', 'st']
+  full prompt token counts: working=21 twin=21

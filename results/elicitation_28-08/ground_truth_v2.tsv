@@ -1,0 +1,27 @@
+item_id	condition	prompt_text	sample_1	sample_2	sample_3	sample_4	sample_5	raw_notes
+boot	working	Which country is shaped like a boot? Answer with one word, or 'none'.	Italy\n	Italy\n	Italy\n	Italy\n	Italy\n	
+boot	twin	Which country is shaped like a sandal? Answer with one word, or 'none'.	Italy\n	none\n	none\n	Indonesia\n	India\n	
+boot	bare	the boot. Which country comes to mind? Answer with one word, or 'none'.	none\n	none\n	United States\n	none\n	none\n	
+hexagon	working	Which country is shaped like a hexagon? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	Switzerland\n	
+hexagon	twin	Which country is shaped like an octagon? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	none\n	
+hexagon	bare	the hexagon. Which country comes to mind? Answer with one word, or 'none'.	Switzerland\n	Bosnia and Herzegovina\n	None\n	Canada\n	Morocco\n	
+parallel38	working	Which country is divided by the 38th parallel? Answer with one word, or 'none'.	Korea\n	Korea\n	Korea\n	Korea\n	Korea\n	
+parallel38	twin	Which country is divided by the 83rd parallel? Answer with one word, or 'none'.	none\n	none\n	None\n	none\n	none\n	
+parallel38	bare	the parallel. Which country comes to mind? Answer with one word, or 'none'.	none\n	none\n	Canada\n	None\n	None\n	
+portuguese	working	Which country is where they speak Portuguese in South America? Answer with one word, or 'none'.	Brazil\n	Brazil\n	Brazil\n	Brazil\n	Brazil\n	
+portuguese	twin	Which country is where they speak Spanish in South America? Answer with one word, or 'none'.	None\n	none\n	Spain\n	Mexico\n	Brazil\n	
+portuguese	bare	Portuguese. Which country comes to mind? Answer with one word, or 'none'.	Portugal\n	none\n	Portugal\n	None\n	Brazil\n	
+strait	working	Which country is separated from Spain by a narrow strait? Answer with one word, or 'none'.	Portugal\n	Portugal\n	Portugal\n	Portugal\n	Portugal\n	
+strait	twin	Which country is separated from Portugal by a narrow strait? Answer with one word, or 'none'.	Spain\n	Spain\n	Spain\n	Spain\n	Spain\n	
+strait	bare	the strait. Which country comes to mind? Answer with one word, or 'none'.	Spain\n	Spain\n	Spain\n	Spain\n	Spain\n	
+downunder	working	Which country is known as the land down under? Answer with one word, or 'none'.	Australia\n	Australia\n	Australia\n	Australia\n	Australia\n	
+downunder	twin	Which country is known as the land down south? Answer with one word, or 'none'.	Australia\n	Australia\n	South Africa\n	Australia\n	Australia\n	
+downunder	bare	down under. Which country comes to mind? Answer with one word, or 'none'.	Australia\n	Australia\n	Australia\n	Australia\n	Australia\n	
+teardrop	working	Which country is the island shaped like a teardrop? Answer with one word, or 'none'.	India\n	England\n	None\n	Indonesia\n	Indonesia\n	
+teardrop	twin	Which country is the island shaped like a teaspoon? Answer with one word, or 'none'.	Egypt\n	Ireland\n	Canada\n	Seychelles\n	none\n	
+teardrop	bare	the teardrop. Which country comes to mind? Answer with one word, or 'none'.	Bangladesh\n	Cuba\n	Egypt\n	None\n	Lebanon\n	
+vietnamS	working	Which country is shaped like an elongated S? Answer with one word, or 'none'.	Italy\n	South Africa\n	Poland\n	China\n	none\n	
+vietnamS	twin	Which country is shaped like an elongated Z? Answer with one word, or 'none'.	South Africa\n	None\n	Zimbabwe\n	Zimbabwe\n	None\n	
+vietnamS	bare	the letter S. Which country comes to mind? Answer with one word, or 'none'.	Sweden\n	Spain\n	Spain\n	Spain\n	Spain\n	
+parallel17	working	Which country is divided by the 17th parallel? Answer with one word, or 'none'.	South Korea\n	North Korea\n	Vietnam\n	North Korea\n	North Korea\n	
+parallel17	twin	Which country is divided by the 71st parallel? Answer with one word, or 'none'.	none\n	none\n	None\n	none\n	Russia\n	

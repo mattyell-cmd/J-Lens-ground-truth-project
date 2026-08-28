@@ -1,0 +1,43 @@
+- 2026-08-28T16:37:11  START elicit_ground_truth_v2.py
+- 2026-08-28T16:37:11  Pilot settings archaeology: elicit_country.py (commit 5cf7cf4, results/pilot_24-08/). do_sample=True temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0; 7 samples/word (5 'main' + 2 'para' prompt variants); chat template, enable_thinking=False.
+- 2026-08-28T16:37:11  Pilot was sampled (not greedy) -> NO override. Using temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0, 5 samples/prompt per task spec.
+- 2026-08-28T16:37:11  FLAG: bare-mention screen format ('{bare}. Which country comes to mind? ...') pending human sign-off.
+- 2026-08-28T16:37:14  Tokenizer loaded: Qwen/Qwen3.5-4B
+- 2026-08-28T16:37:14  Part 1 done: tokenization.txt written; 4/9 pairs flagged for token-count mismatch (reported only, nothing dropped).
+- 2026-08-28T16:38:08+00:00  FAIL: first run crashed at model load (ValueError: device_map requires accelerate; accelerate not installed). Fixed by loading with .to('cuda') instead of device_map. Part 1 output from first run is identical on rerun (deterministic). Rerunning.
+- 2026-08-28T16:38:15  START elicit_ground_truth_v2.py
+- 2026-08-28T16:38:15  Pilot settings archaeology: elicit_country.py (commit 5cf7cf4, results/pilot_24-08/). do_sample=True temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0; 7 samples/word (5 'main' + 2 'para' prompt variants); chat template, enable_thinking=False.
+- 2026-08-28T16:38:15  Pilot was sampled (not greedy) -> NO override. Using temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0, 5 samples/prompt per task spec.
+- 2026-08-28T16:38:15  FLAG: bare-mention screen format ('{bare}. Which country comes to mind? ...') pending human sign-off.
+- 2026-08-28T16:38:18  Tokenizer loaded: Qwen/Qwen3.5-4B
+- 2026-08-28T16:38:18  Part 1 done: tokenization.txt written; 4/9 pairs flagged for token-count mismatch (reported only, nothing dropped).
+- 2026-08-28T16:38:48  Model loaded: Qwen/Qwen3.5-4B bf16 cuda; torch.manual_seed(0)
+- 2026-08-28T16:38:48  26 prompts built (parallel17 bare skipped: shares 'the parallel' with parallel38).
+- 2026-08-28T16:38:49  boot/working: ['Italy\n', 'Italy\n', 'Italy\n', 'Italy\n', 'Italy\n']
+- 2026-08-28T16:38:50  boot/twin: ['Italy\n', 'none\n', 'none\n', 'Indonesia\n', 'India\n']
+- 2026-08-28T16:38:50  boot/bare: ['none\n', 'none\n', 'United States\n', 'none\n', 'none\n']
+- 2026-08-28T16:38:50  hexagon/working: ['none\n', 'none\n', 'none\n', 'none\n', 'Switzerland\n']
+- 2026-08-28T16:38:51  hexagon/twin: ['none\n', 'none\n', 'none\n', 'none\n', 'none\n']
+- 2026-08-28T16:38:51  hexagon/bare: ['Switzerland\n', 'Bosnia and Herzegovina\n', 'None\n', 'Canada\n', 'Morocco\n']
+- 2026-08-28T16:38:51  parallel38/working: ['Korea\n', 'Korea\n', 'Korea\n', 'Korea\n', 'Korea\n']
+- 2026-08-28T16:38:52  parallel38/twin: ['none\n', 'none\n', 'None\n', 'none\n', 'none\n']
+- 2026-08-28T16:38:52  parallel38/bare: ['none\n', 'none\n', 'Canada\n', 'None\n', 'None\n']
+- 2026-08-28T16:38:52  portuguese/working: ['Brazil\n', 'Brazil\n', 'Brazil\n', 'Brazil\n', 'Brazil\n']
+- 2026-08-28T16:38:53  portuguese/twin: ['None\n', 'none\n', 'Spain\n', 'Mexico\n', 'Brazil\n']
+- 2026-08-28T16:38:53  portuguese/bare: ['Portugal\n', 'none\n', 'Portugal\n', 'None\n', 'Brazil\n']
+- 2026-08-28T16:38:53  strait/working: ['Portugal\n', 'Portugal\n', 'Portugal\n', 'Portugal\n', 'Portugal\n']
+- 2026-08-28T16:38:54  strait/twin: ['Spain\n', 'Spain\n', 'Spain\n', 'Spain\n', 'Spain\n']
+- 2026-08-28T16:38:54  strait/bare: ['Spain\n', 'Spain\n', 'Spain\n', 'Spain\n', 'Spain\n']
+- 2026-08-28T16:38:54  downunder/working: ['Australia\n', 'Australia\n', 'Australia\n', 'Australia\n', 'Australia\n']
+- 2026-08-28T16:38:55  downunder/twin: ['Australia\n', 'Australia\n', 'South Africa\n', 'Australia\n', 'Australia\n']
+- 2026-08-28T16:38:55  downunder/bare: ['Australia\n', 'Australia\n', 'Australia\n', 'Australia\n', 'Australia\n']
+- 2026-08-28T16:38:55  teardrop/working: ['India\n', 'England\n', 'None\n', 'Indonesia\n', 'Indonesia\n']
+- 2026-08-28T16:38:56  teardrop/twin: ['Egypt\n', 'Ireland\n', 'Canada\n', 'Seychelles\n', 'none\n']
+- 2026-08-28T16:38:56  teardrop/bare: ['Bangladesh\n', 'Cuba\n', 'Egypt\n', 'None\n', 'Lebanon\n']
+- 2026-08-28T16:38:56  vietnamS/working: ['Italy\n', 'South Africa\n', 'Poland\n', 'China\n', 'none\n']
+- 2026-08-28T16:38:57  vietnamS/twin: ['South Africa\n', 'None\n', 'Zimbabwe\n', 'Zimbabwe\n', 'None\n']
+- 2026-08-28T16:38:57  vietnamS/bare: ['Sweden\n', 'Spain\n', 'Spain\n', 'Spain\n', 'Spain\n']
+- 2026-08-28T16:38:57  parallel17/working: ['South Korea\n', 'North Korea\n', 'Vietnam\n', 'North Korea\n', 'North Korea\n']
+- 2026-08-28T16:38:58  parallel17/twin: ['none\n', 'none\n', 'None\n', 'none\n', 'Russia\n']
+- 2026-08-28T16:38:58  Part 2 done: /workspace/jlens-project/results/elicitation_28-08/ground_truth_v2.tsv written (26 rows). No scoring, no normalization.
+- 2026-08-28T16:38:58  END
