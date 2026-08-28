@@ -1,0 +1,22 @@
+item_id	condition	prompt_text	sample_1	sample_2	sample_3	sample_4	sample_5	raw_notes
+rooster	working	Which country is shaped like a rooster? Answer with one word, or 'none'.	none\n	none\n	none\n	France\n	France\n	
+rooster	twin	Which country is shaped like a duck? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	Canada\n	
+rooster	bare	the rooster. Which country comes to mind? Answer with one word, or 'none'.	Japan\n	Japan\n	China\n	none\n	China\n	
+frenchNA	working	Which country is where they speak French in North America? Answer with one word, or 'none'.	Canada\n	Canada\n	Canada\n	Canada\n	Canada\n	
+frenchNA	twin	Which country is where they speak French in South America? Answer with one word, or 'none'.	France\n	none\n	none\n	Mexico\n	none\n	
+frenchNA	bare	French. Which country comes to mind? Answer with one word, or 'none'.	France\n	France\n	France\n	France\n	France\n	
+spanishNA	working	Which country is where they speak Spanish in North America? Answer with one word, or 'none'.	Mexico\n	Mexico\n	Mexico\n	Mexico\n	Mexico\n	
+spanishNA	twin	Which country is where they speak Spanish in East Asia? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	none\n	
+spanishNA	bare	Spanish. Which country comes to mind? Answer with one word, or 'none'.	Spain\n	Spain\n	Spain\n	Mexico\n	Mexico\n	
+dutchSA	working	Which country is where they speak Dutch in South America? Answer with one word, or 'none'.	Suriname\n	Suriname\n	Suriname\n	Suriname\n	Suriname\n	
+dutchSA	twin	Which country is where they speak Danish in South America? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	none\n	
+dutchSA	bare	Dutch. Which country comes to mind? Answer with one word, or 'none'.	Noorland\n	Nederland\n	Nederland\n	Nederland\n	Nederland\n	
+elephant	working	Which country is shaped like an elephant's head? Answer with one word, or 'none'.	none\n	none\n	none\n	none\n	None\n	
+elephant	twin	Which country is shaped like a horse's head? Answer with one word, or 'none'.	Ireland\n	Denmark\n	Algeria\n	Lebanon\n	Switzerland\n	
+elephant	bare	the elephant. Which country comes to mind? Answer with one word, or 'none'.	India\n	India\n	India\n	none\n	India\n	
+cherry	working	Which country is known for the cherry blossoms? Answer with one word, or 'none'.	Japan\n	Japan\n	Japan\n	Japan\n	Japan\n	
+cherry	twin	Which country is known for the pine trees? Answer with one word, or 'none'.	Canada\n	Germany\n	Sweden\n	Canada\n	Switzerland\n	
+cherry	bare	cherry blossoms. Which country comes to mind? Answer with one word, or 'none'.	Japan\n	Japan\n	Japan\n	Japan\n	Japan\n	
+crocodile	working	Which country is the island shaped like a crocodile? Answer with one word, or 'none'.	None\n	None\n	Australia\n	Egypt\n	Singapore\n	
+crocodile	twin	Which country is the island shaped like a lizard? Answer with one word, or 'none'.	Malta\n	Malta\n	None\n	Greece\n	Malta\n	
+crocodile	bare	the crocodile. Which country comes to mind? Answer with one word, or 'none'.	None\n	None\n	none\n	None\n	None\n	

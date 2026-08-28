@@ -1,0 +1,38 @@
+Tokenization checks, Qwen3.5-4B tokenizer
+
+[rooster] rooster vs duck   <-- FLAG: ISOLATION count mismatch; IN-CONTEXT count mismatch
+  isolation : 'rooster': 2 ['ro', 'oster']   |   'duck': 1 ['duck']
+  in-context: 'rooster': 2 ['Ġro', 'oster']   |   'duck': 1 ['Ġduck']
+  full prompt token counts: working=18 twin=17
+[frenchNA] French vs French
+  isolation : 'French': 1 ['French']   |   'French': 1 ['French']
+  in-context: 'French': 1 ['ĠFrench']   |   'French': 1 ['ĠFrench']
+  full prompt token counts: working=20 twin=20
+[frenchNA] North America vs South America
+  isolation : 'North America': 2 ['North', 'ĠAmerica']   |   'South America': 2 ['South', 'ĠAmerica']
+  in-context: 'North America': 2 ['ĠNorth', 'ĠAmerica']   |   'South America': 2 ['ĠSouth', 'ĠAmerica']
+  full prompt token counts: working=20 twin=20
+[spanishNA] Spanish vs Spanish
+  isolation : 'Spanish': 1 ['Spanish']   |   'Spanish': 1 ['Spanish']
+  in-context: 'Spanish': 1 ['ĠSpanish']   |   'Spanish': 1 ['ĠSpanish']
+  full prompt token counts: working=20 twin=20
+[spanishNA] North America vs East Asia
+  isolation : 'North America': 2 ['North', 'ĠAmerica']   |   'East Asia': 2 ['East', 'ĠAsia']
+  in-context: 'North America': 2 ['ĠNorth', 'ĠAmerica']   |   'East Asia': 2 ['ĠEast', 'ĠAsia']
+  full prompt token counts: working=20 twin=20
+[dutchSA] Dutch vs Danish
+  isolation : 'Dutch': 2 ['D', 'utch']   |   'Danish': 2 ['Dan', 'ish']
+  in-context: 'Dutch': 1 ['ĠDutch']   |   'Danish': 1 ['ĠDanish']
+  full prompt token counts: working=20 twin=20
+[elephant] elephant's vs horse's   <-- FLAG: ISOLATION count mismatch
+  isolation : "elephant's": 3 ['ele', 'phant', "'s"]   |   "horse's": 2 ['horse', "'s"]
+  in-context: "elephant's": 2 ['Ġelephant', "'s"]   |   "horse's": 2 ['Ġhorse', "'s"]
+  full prompt token counts: working=19 twin=19
+[cherry] cherry vs pine   <-- FLAG: ISOLATION count mismatch
+  isolation : 'cherry': 2 ['ch', 'erry']   |   'pine': 1 ['pine']
+  in-context: 'cherry': 1 ['Ġcherry']   |   'pine': 1 ['Ġpine']
+  full prompt token counts: working=19 twin=18
+[crocodile] crocodile vs lizard   <-- FLAG: IN-CONTEXT count mismatch
+  isolation : 'crocodile': 2 ['cro', 'codile']   |   'lizard': 2 ['l', 'izard']
+  in-context: 'crocodile': 2 ['Ġcro', 'codile']   |   'lizard': 1 ['Ġlizard']
+  full prompt token counts: working=20 twin=19

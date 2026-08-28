@@ -41,3 +41,34 @@
 - 2026-08-28T16:38:58  parallel17/twin: ['none\n', 'none\n', 'None\n', 'none\n', 'Russia\n']
 - 2026-08-28T16:38:58  Part 2 done: /workspace/jlens-project/results/elicitation_28-08/ground_truth_v2.tsv written (26 rows). No scoring, no normalization.
 - 2026-08-28T16:38:58  END
+- 2026-08-28T17:06:32  START elicit_ground_truth_v2.py round2
+- 2026-08-28T17:06:32  Pilot settings archaeology: elicit_country.py (commit 5cf7cf4, results/pilot_24-08/). do_sample=True temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0; 7 samples/word (5 'main' + 2 'para' prompt variants); chat template, enable_thinking=False.
+- 2026-08-28T17:06:32  Pilot was sampled (not greedy) -> NO override. Using temperature=0.7 top_p=1.0 top_k=0 max_new_tokens=16 seed=0, 5 samples/prompt per task spec.
+- 2026-08-28T17:06:32  FLAG: bare-mention screen format ('{bare}. Which country comes to mind? ...') pending human sign-off.
+- 2026-08-28T17:06:35  Tokenizer loaded: Qwen/Qwen3.5-4B
+- 2026-08-28T17:06:35  Part 1 done: tokenization_round2.txt written; 4/9 pairs flagged for token-count mismatch (reported only, nothing dropped).
+- 2026-08-28T17:07:06  Model loaded: Qwen/Qwen3.5-4B bf16 cuda; torch.manual_seed(0)
+- 2026-08-28T17:07:06  21 prompts built.
+- 2026-08-28T17:07:07  rooster/working: ['none\n', 'none\n', 'none\n', 'France\n', 'France\n']
+- 2026-08-28T17:07:07  rooster/twin: ['none\n', 'none\n', 'none\n', 'none\n', 'Canada\n']
+- 2026-08-28T17:07:07  rooster/bare: ['Japan\n', 'Japan\n', 'China\n', 'none\n', 'China\n']
+- 2026-08-28T17:07:08  frenchNA/working: ['Canada\n', 'Canada\n', 'Canada\n', 'Canada\n', 'Canada\n']
+- 2026-08-28T17:07:08  frenchNA/twin: ['France\n', 'none\n', 'none\n', 'Mexico\n', 'none\n']
+- 2026-08-28T17:07:08  frenchNA/bare: ['France\n', 'France\n', 'France\n', 'France\n', 'France\n']
+- 2026-08-28T17:07:09  spanishNA/working: ['Mexico\n', 'Mexico\n', 'Mexico\n', 'Mexico\n', 'Mexico\n']
+- 2026-08-28T17:07:09  spanishNA/twin: ['none\n', 'none\n', 'none\n', 'none\n', 'none\n']
+- 2026-08-28T17:07:09  spanishNA/bare: ['Spain\n', 'Spain\n', 'Spain\n', 'Mexico\n', 'Mexico\n']
+- 2026-08-28T17:07:10  dutchSA/working: ['Suriname\n', 'Suriname\n', 'Suriname\n', 'Suriname\n', 'Suriname\n']
+- 2026-08-28T17:07:10  dutchSA/twin: ['none\n', 'none\n', 'none\n', 'none\n', 'none\n']
+- 2026-08-28T17:07:10  dutchSA/bare: ['Noorland\n', 'Nederland\n', 'Nederland\n', 'Nederland\n', 'Nederland\n']
+- 2026-08-28T17:07:11  elephant/working: ['none\n', 'none\n', 'none\n', 'none\n', 'None\n']
+- 2026-08-28T17:07:11  elephant/twin: ['Ireland\n', 'Denmark\n', 'Algeria\n', 'Lebanon\n', 'Switzerland\n']
+- 2026-08-28T17:07:11  elephant/bare: ['India\n', 'India\n', 'India\n', 'none\n', 'India\n']
+- 2026-08-28T17:07:12  cherry/working: ['Japan\n', 'Japan\n', 'Japan\n', 'Japan\n', 'Japan\n']
+- 2026-08-28T17:07:12  cherry/twin: ['Canada\n', 'Germany\n', 'Sweden\n', 'Canada\n', 'Switzerland\n']
+- 2026-08-28T17:07:12  cherry/bare: ['Japan\n', 'Japan\n', 'Japan\n', 'Japan\n', 'Japan\n']
+- 2026-08-28T17:07:13  crocodile/working: ['None\n', 'None\n', 'Australia\n', 'Egypt\n', 'Singapore\n']
+- 2026-08-28T17:07:13  crocodile/twin: ['Malta\n', 'Malta\n', 'None\n', 'Greece\n', 'Malta\n']
+- 2026-08-28T17:07:13  crocodile/bare: ['None\n', 'None\n', 'none\n', 'None\n', 'None\n']
+- 2026-08-28T17:07:13  Part 2 done: /workspace/jlens-project/results/elicitation_28-08/ground_truth_v2_round2.tsv written (21 rows). No scoring, no normalization.
+- 2026-08-28T17:07:13  END
