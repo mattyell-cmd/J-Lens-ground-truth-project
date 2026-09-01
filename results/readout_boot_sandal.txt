@@ -1,0 +1,201 @@
+====================================================================================================
+prompt : 'She bought a new boot at the market yesterday.'
+tokens : ['She', ' bought', ' a', ' new', ' boot', ' at', ' the', ' market', ' yesterday', '.']
+readout position 4 = ' boot'  (final sub-token of 'boot')
+====================================================================================================
+
+--- layer 10 ---
+J-lens  'soles':12.19  ' boots':12.06  'wear':10.88  '靴':10.75  ' worn':10.00  '鞋':9.69  ' Boots':9.56  ' shoes':9.12  '蔻':9.00  ' leather':8.88
+R-lens  'wear':10.06  'soles':10.06  ' boots':10.06  ' worn':9.38  '那双':9.38  '一双':9.19  '蔻':8.88  ' wearing':8.50  ' Boots':8.50  ' footwear':8.44
+logit   '那双':7.75  'CONDITION':7.62  'BILL':7.06  'ลก':7.03  'очки':6.88  'KNOWN':6.84  '一双':6.84  'COMMAND':6.72  'CONTACT':6.72  '阙':6.66
+
+--- layer 11 ---
+J-lens  'soles':12.38  ' boots':12.25  '靴':10.62  'wear':10.62  '鞋':9.88  ' Boots':9.88  ' worn':9.75  ' shoes':9.44  '那双':8.94  ' footwear':8.88
+R-lens  ' boots':10.06  'soles':10.00  '那双':9.69  'wear':9.50  '一双':9.00  ' worn':8.94  ' Boots':8.44  ' footwear':8.44  '/boot':8.38  'boot':8.31
+logit   '那双':8.38  'CONDITION':7.94  'BILL':7.88  'ORK':7.78  'spath':7.75  'CONTACT':7.72  'COMMAND':7.59  'ORTH':7.50  ' Kho':7.22  '一双':7.22
+
+--- layer 12 ---
+J-lens  'soles':12.19  ' boots':11.81  'wear':10.19  '靴':10.12  ' worn':9.62  ' Boots':9.38  ' shoes':9.19  '鞋':8.94  '那双':8.56  '一双':8.56
+R-lens  'soles':9.88  ' boots':9.50  'wear':8.94  '那双':8.88  ' worn':8.56  '一双':8.50  'coat':8.31  '/boot':7.75  ' Boots':7.75  'boot':7.75
+logit   'spath':8.50  '那双':8.44  'USAGE':7.88  'CONTACT':7.75  'soles':7.66  'ORTH':7.56  'ORK':7.53  'BILL':7.41  'COMMAND':7.41  '一双':7.38
+
+--- layer 13 ---
+J-lens  'soles':11.88  ' boots':11.31  'wear':10.25  '靴':9.38  ' worn':9.12  ' shoes':8.94  ' Boots':8.62  '鞋':8.62  '那双':8.38  'ing':8.31
+R-lens  'soles':9.31  ' boots':8.56  'wear':8.50  '那双':8.19  ' worn':7.81  'coat':7.53  '一双':7.31  ' wearing':7.22  'heel':7.16  'boot':7.12
+logit   'soles':8.38  'COMMAND':8.12  'BILL':7.56  'isk':7.38  'ORK':7.31  ' Kho':7.31  'CONDITION':7.25  'حدث':7.25  '一双':7.22  'deaux':7.09
+
+--- layer 14 ---
+J-lens  'soles':10.94  ' boots':10.81  'wear':9.56  ' shoes':8.75  ' worn':8.69  '靴':8.31  'ing':8.19  '那双':8.00  '坏了':7.97  ' Boots':7.94
+R-lens  'soles':8.75  ' boots':8.00  '那双':7.59  'wear':7.56  ' worn':7.38  '一双':7.09  'coat':6.94  'boot':6.56  'shell':6.53  ' wearing':6.47
+logit   'argo':8.31  '一只':8.19  '一双':8.00  'CONDITION':7.75  'BILL':7.66  'soles':7.59  '_<':7.47  '_${':7.34  'ثر':7.28  ' kest':7.09
+
+--- layer 15 ---
+J-lens  'soles':10.62  ' boots':9.88  'wear':9.06  ' shoes':8.50  'ing':8.50  '那双':7.94  ' worn':7.75  '一双':7.72  '靴':7.59  'coat':7.31
+R-lens  'soles':8.19  '那双':7.50  'wear':7.31  'coat':7.09  ' boots':7.06  '一双':6.72  'shell':6.72  ' worn':6.53  ' shoes':6.25  '_unix':6.12
+logit   'soles':7.75  'argo':7.69  '一只':7.62  'BILL':7.47  'isk':7.28  'ثر':7.00  'spath':6.84  '@",':6.75  'ORK':6.62  'CONDITION':6.62
+
+--- layer 16 ---
+J-lens  ' boots':10.38  'soles':10.38  'wear':9.19  ' shoes':8.44  'ing':8.12  '一双':8.00  ' worn':7.91  ' Boots':7.91  '那双':7.91  '靴':7.66
+R-lens  'soles':8.56  'wear':7.78  ' boots':7.66  '那双':7.53  '一双':7.12  ' worn':6.88  'coat':6.78  ' shoes':6.44  ' wearing':6.44  'shell':6.44
+logit   'soles':9.31  'ثر':8.69  'spath':8.50  '一只':8.19  'ORK':8.00  '_<':7.78  'FUNCTION':7.53  'COMMAND':7.50  'zol':7.44  'argo':7.16
+
+--- layer 17 ---
+J-lens  'soles':10.06  ' boots':9.81  'wear':9.00  'ing':8.19  ' shoes':8.06  ' Boots':7.75  '一双':7.62  ' worn':7.59  '那双':7.50  ' wearing':7.41
+R-lens  'soles':8.69  'wear':7.84  ' boots':7.44  '那双':7.09  ' worn':6.91  '一双':6.81  'coat':6.56  ' wearing':6.50  'shell':6.41  ' shoes':6.09
+logit   'soles':9.00  '_<':7.75  'ORK':7.56  'spath':7.50  'BILL':7.25  'éz':7.12  'deaux':7.12  'عيد':7.12  'ثر':7.03  'FUNCTION':7.03
+
+--- layer 18 ---
+J-lens  'soles':9.19  ' boots':8.62  'wear':7.88  'ing':7.59  ' shoes':7.44  ' wearing':7.00  ' worn':6.84  'shell':6.75  '那双':6.50  '鞋':6.47
+R-lens  'soles':8.94  ' boots':7.19  'wear':7.00  ' worn':6.94  'shell':6.88  '那双':6.88  ' wearing':6.50  ' shoes':6.19  '一双':5.97  'coat':5.91
+logit   'soles':9.38  'aska':8.00  'CONTACT':7.97  '_>':7.75  '_<':7.72  'éz':7.66  '😀':7.56  'ثر':7.53  ' kest':7.47  'alian':7.31
+
+--- layer 19 ---
+J-lens  'soles':8.88  'ing':7.81  'less':7.06  ' boots':7.03  'wear':6.53  'ting':6.50  'shell':6.44  ' **':6.19  ' wearing':6.16  'als':6.06
+R-lens  'soles':7.75  'shell':6.69  'less':6.47  'ing':6.25  '那双':5.81  'wear':5.66  ' wearing':5.56  'les':5.53  'rey':5.34  ' worn':5.34
+logit   'soles':11.81  '😀':10.19  'éz':9.12  ' Dici':9.00  'ثر':8.81  '🙂':8.62  ' kest':8.38  'spath':8.38  'FLASH':8.31  '国家一级':8.31
+
+--- layer 20 ---
+J-lens  'soles':8.88  'ing':7.59  '____':7.22  'less':7.09  ' ___':6.59  'ting':6.59  ' boots':6.41  '________':6.28  'iers':6.16  '___':6.09
+R-lens  'soles':7.78  'less':6.41  'ing':6.19  'shell':6.06  'oes':5.97  '那双':5.84  'les':5.66  'iers':5.56  'proof':5.47  'ger':5.28
+logit   'soles':11.38  '😀':9.56  ' Dici':9.19  'éz':9.12  'FLASH':8.88  'жек':8.75  'OMS':8.69  ' truk':8.62  'cies':8.56  'deaux':8.50
+
+--- layer 21 ---
+J-lens  'soles':10.81  ' boots':10.31  '/boot':8.75  'boot':8.38  ' boot':8.31  '鞋':8.25  '靴':7.78  'ing':7.72  'BOOT':7.62  ' Boots':7.56
+R-lens  'soles':10.06  ' boots':9.50  '/boot':9.06  'boot':9.00  ' boot':8.56  '鞋':7.75  '那双':7.41  ' BOOT':7.38  'BOOT':7.34  ' heel':7.31
+logit   'soles':12.88  '😀':10.25  ',__':9.62  'spath':9.56  '袜':9.44  'swith':9.19  '高级模式':9.00  'ił':8.94  'ington':8.88  'deaux':8.88
+
+--- layer 22 ---
+J-lens  ' boots':11.00  'soles':10.31  '/boot':9.50  ' boot':9.38  '靴':8.94  'BOOT':8.31  'boot':8.31  ' بوت':8.25  '鞋':8.19  ' BOOT':8.12
+R-lens  ' boots':10.62  '/boot':9.81  ' boot':9.62  'soles':9.44  'boot':9.12  ' BOOT':8.88  '靴':8.50  ' بوت':8.25  ' Boot':7.94  '-boot':7.78
+logit   'soles':11.94  '😀':11.31  'iful':10.88  ' thang':10.75  'swith':9.94  '高级模式':9.75  '😉':9.62  'ليك':9.56  'leos':9.50  'ington':9.44
+
+--- layer 23 ---
+J-lens  ' boots':9.75  'soles':9.69  '/boot':8.44  '靴':8.00  ' boot':7.75  'boot':7.69  ' Boots':7.56  ' Boot':7.28  'iful':7.06  ' بوت':6.97
+R-lens  ' boots':9.69  'soles':8.94  '/boot':8.81  'boot':8.69  ' boot':8.25  ' Boot':7.59  ' بوت':7.44  '靴':7.44  'laces':7.41  ' BOOT':7.41
+logit   'soles':12.62  ' thang':10.88  '😀':10.81  'iful':10.81  'swith':10.44  ' بوت':10.31  'leos':10.31  'laces':10.19  'loader':10.12  'spath':10.12
+
+--- layer 24 ---
+J-lens  ' boots':11.12  'soles':10.38  '/boot':10.00  ' boot':9.38  '靴':9.25  ' Boots':9.12  'boot':9.00  ' Boot':8.62  ' بوت':8.25  'bootstrap':7.88
+R-lens  ' boots':10.81  '/boot':10.00  'boot':9.62  ' boot':9.50  'soles':9.44  ' Boot':8.62  ' Boots':8.56  '靴':8.50  ' BOOT':8.38  ' بوت':8.25
+logit   ' thang':13.06  'soles':12.56  '😀':10.88  'iful':10.50  ' بوت':10.50  '😉':10.25  ' Mercredi':10.12  'ليك':10.06  'spath':10.06  'edReader':9.88
+
+--- layer 25 ---
+J-lens  ' boots':12.50  '/boot':11.06  'soles':10.88  ' boot':10.75  '靴':10.50  'boot':10.25  ' Boots':10.00  ' Boot':9.88  '鞋':9.44  ' shoes':9.19
+R-lens  ' boots':11.75  '/boot':10.75  'boot':10.50  ' boot':10.44  'soles':10.06  ' Boot':9.44  '靴':9.38  ' BOOT':9.25  ' Boots':9.00  '那双':8.69
+logit   'soles':12.56  ' thang':12.19  '那双':11.44  'laces':11.06  'iful':10.25  ' loa':10.06  'boot':10.00  'iefe':9.81  'zv':9.81  '/boot':9.75
+
+--- layer 26 ---
+J-lens  ' boots':13.81  ' boot':13.25  '/boot':12.62  '靴':12.31  'boot':12.19  ' Boot':11.81  'Boot':11.44  ' Boots':11.19  'soles':11.00  '鞋':10.81
+R-lens  ' boots':12.38  ' boot':11.94  'boot':11.50  '/boot':11.44  ' Boot':10.56  '靴':10.50  'soles':10.31  'Boot':9.81  ' BOOT':9.75  ' Boots':9.69
+logit   'soles':10.81  'laces':9.62  ' thang':9.06  'boot':9.00  '那双':8.94  ' boots':8.50  'iful':8.44  '/boot':8.31  'leneck':8.25  '靴':8.06
+
+--- layer 27 ---
+J-lens  'soles':10.44  'laces':10.25  ' boots':10.06  '/boot':9.81  ' boot':9.06  ' heels':9.00  'boot':8.94  '鞋':8.62  ' shoes':8.50  ' Boot':8.25
+R-lens  'laces':10.12  'soles':9.75  '/boot':8.88  ' boots':8.81  ' heels':8.44  'boot':8.25  ' boot':8.00  'lace':7.62  '那双':7.56  ' loa':7.47
+logit   'laces':12.25  'soles':11.62  ' thang':10.94  ' loa':10.38  '那双':10.25  'iful':9.94  '/boot':9.62  'leg':9.44  'heels':9.38  'leneck':9.19
+
+--- layer 28 ---
+J-lens  'laces':10.88  'soles':10.75  ' thang':9.12  '/boot':8.94  'lace':8.44  'leg':8.38  ' loa':8.19  ' boots':8.19  'boot':7.91  ' heels':7.91
+R-lens  'laces':10.94  'soles':10.31  ' thang':8.75  'lace':8.69  ' loa':8.38  '/boot':8.12  'leg':8.12  'iful':7.81  'IFA':7.56  'leneck':7.53
+logit   'laces':12.94  'soles':11.81  ' thang':11.75  ' loa':10.50  'iful':10.50  'leneck':9.94  'IFA':9.88  'leg':9.56  'yh':9.50  'lace':9.50
+
+====================================================================================================
+prompt : 'She bought a new sandal at the market yesterday.'
+tokens : ['She', ' bought', ' a', ' new', ' sand', 'al', ' at', ' the', ' market', ' yesterday', '.']
+readout position 5 = 'al'  (final sub-token of 'sandal')
+====================================================================================================
+
+--- layer 10 ---
+J-lens  ' sandals':11.81  'wear':11.69  ' footwear':10.38  ' worn':10.12  '凉鞋':9.75  '那双':9.56  ' wearing':9.44  '一双':9.38  ' shoes':9.12  '高跟鞋':9.06
+R-lens  ' sandals':11.12  '凉鞋':10.69  '一双':10.19  '那双':10.19  ' footwear':10.12  'wear':9.94  ' worn':9.69  'heel':9.44  ' wearing':9.31  ' couture':9.06
+logit   'ausal':7.97  '那双':7.44  '一双':6.88  'зо':6.56  'ADVERTISEMENT':6.31  ' Cari':6.25  '一只':6.25  'NB':6.22  'acid':6.09  'úc':6.06
+
+--- layer 11 ---
+J-lens  ' sandals':11.69  'wear':11.31  ' footwear':10.44  ' worn':9.94  '那双':9.94  '凉鞋':9.62  ' shoes':9.50  '一双':9.38  '磨损':9.31  '高跟鞋':9.19
+R-lens  ' sandals':10.69  '那双':10.31  '凉鞋':9.94  '一双':9.81  ' footwear':9.75  ' worn':9.31  'heel':9.25  'wear':9.25  '磨损':8.81  ' wearing':8.75
+logit   '那双':8.56  'ausal':8.50  'зо':7.78  'eselect':7.56  ' وزار':7.25  'ancel':7.19  'atur':7.06  '_<':7.03  '一双':6.97  ' causal':6.84
+
+--- layer 12 ---
+J-lens  ' sandals':10.94  'wear':10.94  ' worn':10.00  ' footwear':9.81  '那双':9.50  ' wearing':9.31  '一双':9.12  '凉鞋':9.06  ' shoes':9.06  '磨损':8.88
+R-lens  ' sandals':10.06  '那双':9.38  '凉鞋':9.31  '一双':9.12  ' footwear':9.06  ' worn':8.94  'wear':8.75  'heel':8.62  ' wearing':8.44  '磨损':8.25
+logit   '那双':8.25  'зо':7.91  'ancel':7.44  'ثر':7.28  '一双':7.22  'spath':7.16  'THR':7.12  'acid':7.09  'GRAM':7.09  ' وزار':6.94
+
+--- layer 13 ---
+J-lens  'wear':10.94  ' sandals':10.00  ' worn':9.56  '那双':9.44  ' wearing':9.38  ' footwear':9.19  ' shoes':8.88  '一双':8.69  ' shoe':8.50  '高跟鞋':8.44
+R-lens  '那双':8.62  ' sandals':8.50  'heel':8.44  'wear':8.31  ' worn':8.12  '一双':8.00  ' footwear':8.00  ' wearing':7.91  '凉鞋':7.62  ' couture':7.41
+logit   'зо':7.84  ' وزار':7.72  'mob':7.19  '一双':7.09  'ifer':7.06  '一种是':7.00  'UPI':6.97  '一只':6.94  'gles':6.94  'IID':6.91
+
+--- layer 14 ---
+J-lens  'wear':10.75  ' sandals':9.50  ' worn':9.38  ' wearing':9.19  '那双':9.19  ' footwear':8.88  '一双':8.69  ' shoes':8.69  ' shoe':8.38  ' wear':8.31
+R-lens  '那双':8.25  ' worn':7.94  ' sandals':7.94  '一双':7.91  'wear':7.84  'heel':7.78  ' footwear':7.59  ' wearing':7.44  '凉鞋':7.28  '磨损':7.00
+logit   '一双':8.19  'зо':8.19  '女郎':8.12  'stub':7.78  '一只':7.66  'ثر':7.41  ' وزار':7.25  'zol':7.25  '_<':7.25  '一种是':7.22
+
+--- layer 15 ---
+J-lens  'wear':10.25  ' sandals':9.06  '那双':8.94  ' wearing':8.94  ' worn':8.81  '一双':8.56  ' shoes':8.50  ' footwear':8.50  ' wore':8.25  ' shoe':8.12
+R-lens  '那双':7.97  'wear':7.66  ' sandals':7.62  '一双':7.47  '凉鞋':7.41  ' worn':7.25  ' wearing':7.19  ' footwear':7.16  'heel':6.84  ' shoe':6.62
+logit   'зо':7.53  ' وزار':7.44  'stub':7.22  'zol':7.16  '一只':7.09  'BILL':7.03  'GRAM':7.00  'USR':6.94  'сти':6.91  'spath':6.75
+
+--- layer 16 ---
+J-lens  'wear':10.12  ' sandals':9.56  ' wearing':8.88  ' worn':8.88  '一双':8.88  '那双':8.81  ' footwear':8.75  ' shoes':8.69  ' wore':8.25  ' shoe':8.06
+R-lens  ' sandals':8.06  '一双':7.84  'wear':7.81  '那双':7.78  ' worn':7.47  '凉鞋':7.38  ' footwear':7.28  ' wearing':7.12  ' shoes':6.75  ' shoe':6.72
+logit   'зо':8.56  'ثر':8.56  'zol':8.19  'stub':7.97  'сти':7.94  'spath':7.69  ' وزار':7.44  'UPI':7.44  '一只':7.38  'soles':7.34
+
+--- layer 17 ---
+J-lens  'wear':9.81  ' sandals':9.56  ' wearing':8.88  ' worn':8.50  ' wore':8.44  ' footwear':8.38  ' shoes':8.38  '一双':8.31  '那双':8.19  ' shoe':8.00
+R-lens  ' sandals':8.06  'wear':7.94  ' wearing':7.59  '一双':7.56  ' worn':7.50  '那双':7.22  ' footwear':7.06  '凉鞋':7.00  'soles':6.91  '高跟鞋':6.81
+logit   'ritic':8.00  'UPI':7.78  ' وزار':7.69  'SOLE':7.56  'зо':7.47  'сти':7.44  'soles':7.34  'ثر':7.28  'GRAM':7.22  'zol':7.12
+
+--- layer 18 ---
+J-lens  ' sandals':9.75  'wear':8.69  ' wearing':8.25  ' shoes':7.88  '那双':7.75  ' wore':7.72  ' footwear':7.66  ' shoe':7.66  '凉鞋':7.62  ' worn':7.59
+R-lens  ' sandals':8.19  '那双':7.47  '一双':7.41  ' wearing':7.16  'wear':7.09  '高跟鞋':7.06  ' worn':7.06  '凉鞋':6.84  '脚趾':6.81  ' footwear':6.81
+logit   'зо':8.06  'وات':8.06  'CHANT':8.00  '_<':8.00  'GRAM':7.81  ' وزار':7.81  'ثر':7.69  ' économies':7.66  'WITHOUT':7.59  'бил':7.56
+
+--- layer 19 ---
+J-lens  ' sandals':8.00  ' wearing':7.97  'wear':7.72  '那双':7.31  ' wore':7.12  'oes':6.97  'soles':6.97  ' worn':6.94  ' yesterday':6.91  'foot':6.72
+R-lens  '那双':6.94  ' wearing':6.56  ' sandals':6.31  'oes':6.25  'wear':6.00  ' worn':5.88  '凉鞋':5.88  'soles':5.84  'foot':5.75  '一双':5.62
+logit   ' وزار':11.31  'soles':11.19  'witz':10.00  'quí':10.00  'GRAM':9.62  'WITHOUT':9.62  'وات':9.56  'stub':9.44  '😀':9.31  'øm':9.31
+
+--- layer 20 ---
+J-lens  ' sandals':8.25  ' wearing':7.66  '那双':7.62  'oes':7.59  '_____':7.19  'soles':7.09  ' yesterday':6.75  '____':6.75  '___':6.69  '__':6.59
+R-lens  '那双':7.44  'oes':6.84  ' sandals':6.56  ' wearing':6.47  'soles':5.94  '凉鞋':5.72  'laces':5.72  '脚趾':5.66  '趾':5.59  '__':5.56
+logit   'soles':10.38  'GRAM':10.19  'وات':10.06  'stub':10.00  'FLASH':9.94  'spa':9.62  ' وزار':9.62  ' sodom':9.56  'øm':9.50  'уне':9.50
+
+--- layer 21 ---
+J-lens  ' sandals':8.31  ' wearing':7.53  '那双':7.28  '__':6.97  '凉鞋':6.94  'soles':6.91  ' ___':6.84  '___':6.75  '_____':6.69  '____':6.69
+R-lens  ' sandals':7.09  '那双':6.97  ' wearing':6.53  '凉鞋':6.31  'oes':6.28  '__':6.19  'soles':5.84  ' heel':5.81  '脚趾':5.78  'laces':5.78
+logit   '半价':9.94  'GRAM':9.88  'WITHOUT':9.69  '_>':9.62  'soles':9.56  'stub':9.50  'つか':9.19  'witz':9.12  '😉':9.00  ',__':9.00
+
+--- layer 22 ---
+J-lens  ' sandals':8.19  ' wearing':7.44  '__':6.78  '_cost':6.72  'oes':6.56  '___':6.50  '-like':6.47  '那双':6.44  ' wore':6.41  ' costing':6.41
+R-lens  ' sandals':6.84  ' wearing':6.66  'oes':6.62  '那双':6.34  '_cost':6.06  '__':6.06  '-like':5.94  ' ankle':5.88  '脚趾':5.66  ' worn':5.62
+logit   'WITHOUT':9.31  '_>':9.25  '半价':8.94  'soles':8.69  'ifes':8.69  ' ,[':8.56  'swith':8.50  'ancel':8.44  'stub':8.44  ' costing':8.44
+
+--- layer 23 ---
+J-lens  ' sandals':7.91  ' costing':6.38  '那双':6.38  '_cost':6.34  '__':6.34  'oes':6.34  'soles':6.34  ' pair':6.31  '凉鞋':6.28  ' wearing':6.16
+R-lens  ' sandals':6.59  'oes':6.50  '那双':6.38  '__':6.12  ' which':5.88  '_cost':5.84  '脚趾':5.62  ' Praia':5.59  '凉鞋':5.53  ' heel':5.53
+logit   '😀':10.06  '半价':10.06  'вершенство':10.06  'NDAR':10.00  'VERR':9.88  'iby':9.81  'ancel':9.75  'apé':9.69  '😉':9.56  'rawdę':9.56
+
+--- layer 24 ---
+J-lens  ' sandals':10.88  '凉鞋':8.25  '脚趾':7.22  ' yesterday':7.12  'soles':7.09  ' costing':6.94  'boot':6.94  ' boots':6.91  ' wearing':6.62  ' ankle':6.59
+R-lens  ' sandals':9.12  '凉鞋':7.12  'boot':6.88  '脚趾':6.81  'oes':6.56  ' ankle':6.53  ' Praia':6.41  ' yesterday':6.34  '__':6.19  '那双':6.16
+logit   'ifes':10.62  'VERR':10.25  'iby':9.88  'вершенство':9.44  '😀':9.44  ' webb':9.31  'уне':9.25  ' ,[':9.19  'WITHOUT':9.12  'NDAR':9.12
+
+--- layer 25 ---
+J-lens  ' sandals':13.56  '凉鞋':11.56  ' shoes':11.38  ' boots':11.00  'boot':10.81  '鞋':10.69  ' shoe':10.38  ' footwear':10.25  ' boot':9.94  '/boot':9.62
+R-lens  ' sandals':11.31  'boot':10.25  '凉鞋':10.00  ' shoes':9.44  ' boots':9.38  '那双':9.31  ' shoe':9.12  ' boot':9.06  '鞋':8.88  ' heel':8.69
+logit   '那双':11.62  'boot':11.44  ' heel':9.88  'ifes':9.75  '鞋':9.62  '凉鞋':9.62  '一双':9.62  '一脚':9.56  '/boot':9.25  'oes':9.06
+
+--- layer 26 ---
+J-lens  ' sandals':11.50  '凉鞋':10.56  '那双':8.94  ' shoes':8.44  '一双':8.38  ' toe':7.72  ' sand':7.56  ' heel':7.53  ' shoe':7.53  ' pair':7.47
+R-lens  ' sandals':9.50  '凉鞋':9.06  '那双':8.75  '一双':7.41  ' heel':7.09  'oes':7.06  ' toe':7.06  '_pair':7.03  ' pair':6.91  ' toes':6.81
+logit   '那双':9.62  'uary':8.19  'izer':8.19  'amore':8.12  'ifes':8.06  '一双':7.84  'ank':7.72  'oes':7.59  'alias':7.47  ' heel':7.44
+
+--- layer 27 ---
+J-lens  ' sandals':9.12  '那双':8.69  ' costing':8.62  ' shoes':8.56  '凉鞋':8.44  ' toe':8.00  ' yesterday':7.81  '_cost':7.75  '一双':7.72  'Toe':7.34
+R-lens  '那双':8.00  ' costing':7.97  ' sandals':7.78  '凉鞋':7.66  ' yesterday':7.31  ' toe':7.28  ' pair':7.22  '_cost':7.09  ' shoes':7.03  '_pair':7.00
+logit   '那双':10.31  'uary':9.62  'izer':9.25  'sto':9.12  ' costing':9.12  'oes':8.88  'flip':8.81  'asan':8.75  'つか':8.69  ' neglig':8.50
+
+--- layer 28 ---
+J-lens  ' costing':9.75  ' sandals':8.19  '_cost':8.12  ' yesterday':8.12  ' for':8.06  '那双':7.84  '凉鞋':7.75  '_sizes':7.62  ' consisting':7.53  'stile':7.34
+R-lens  ' costing':9.12  ' for':8.44  ' yesterday':7.72  '_cost':7.72  ' pair':7.56  ' consisting':7.50  '凉鞋':7.28  '那双':7.28  'Last':7.28  'pair':7.12
+logit   ' costing':9.75  ' webb':9.00  'weiler':8.88  'amore':8.69  'stile':8.69  '那双':8.69  'illas':8.56  'sto':8.44  '_sizes':8.44  ' loa':8.44
