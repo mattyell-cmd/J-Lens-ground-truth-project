@@ -1,0 +1,7 @@
+[
+  {"file": "results/pilot_24-08/run1_positive_control.txt", "item": "boot", "condition": "working", "position_role": "entity", "anchor": "boot"},
+  {"file": "results/pilot_24-08/run2_broken_referent.txt",  "item": "boot", "condition": "twin",    "position_role": "entity", "anchor": "sandal"},
+  {"file": "results/pilot_24-08/run3_bare_mention.txt",     "item": "boot", "condition": "bare",    "position_role": "entity", "anchor": "boot"},
+  {"file": "results/pilot_24-08/run4_final_boot.txt",       "item": "boot", "condition": "working", "position_role": "final"},
+  {"file": "results/pilot_24-08/run5_final_sandal.txt",     "item": "boot", "condition": "twin",    "position_role": "final"}
+]

@@ -1,0 +1,208 @@
+================================================================================
+HARNESS VALIDATION REPORT  --  score_readouts.py against the 24/08 pilot data
+Generated 2026-09-01. Read this before authorising Part 4 (confirmatory capture).
+================================================================================
+
+PURPOSE
+  The scorer implements the frozen rules of prereg_frozen_v0.3.md. This report
+  checks it against the one dataset whose right answers are already known by
+  hand-reading: the 24/08 boot pilot. Every rule here came from the prereg.
+  Nothing was adjusted to make a number match.
+
+INPUTS
+  manifest : results/harness_validation/pilot_manifest.json
+    run1_positive_control.txt  -> item boot, condition working, entity position
+    run2_broken_referent.txt   -> item boot, condition twin,    entity position
+    run3_bare_mention.txt      -> item boot, condition bare,    entity position
+    run4_final_boot.txt        -> item boot, condition working, FINAL position
+    run5_final_sandal.txt      -> item boot, condition twin,    FINAL position
+  registry : 52 token strings over 6 countries (results/harness_validation/registry_tokens.txt)
+  claims   : 1950 in-band claims (5 files x 13 band layers x 3 lenses x top-10)
+
+ENTITY POSITIONS RESOLVED (by the pilot's own anchor method, then cross-checked
+against "the token before the final ' is'"; the scorer aborts on a mismatch)
+  run1  'Fact: ...shaped like a boot is'    anchor 'boot'   -> position 11 = ' boot'
+  run2  'Fact: ...shaped like a sandal is'  anchor 'sandal' -> position 12 = 'al'
+  run3  'the boot'                          anchor 'boot'   -> position  1 = ' boot'
+  All three agree with the positions recorded in the pilot files themselves.
+
+================================================================================
+1. COMMIT VERDICTS PER LENS   (rule: any registered form of a country at RAW
+   rank <= 3 for >= 3 consecutive layers inside the band L8-20; forms may differ
+   between layers)
+================================================================================
+
+  RUN 1 -- boot / working / entity position 11
+    J-lens   COMMIT to Italy, layers 9-11
+    R-lens   COMMIT to Italy, layers 8-11
+    logit    NO COMMIT   (zero registered country tokens at any rank, any layer)
+
+  RUN 2 -- boot / twin (sandal) / entity position 12
+    J-lens   no commit      R-lens   no commit      logit   no commit
+    Zero registered country tokens appeared at all. The twin scattered, which
+    is the twin behaving correctly.
+
+  RUN 3 -- boot / bare mention / entity position 1
+    J-lens   no commit      R-lens   no commit      logit   no commit
+    Zero registered country tokens appeared at all -- the lens-side replication
+    of the pilot's no-Italy-at-bare-mention result.
+
+  The claims that carried the two commits, listed so they can be checked by eye
+  against the raw files:
+    J-lens  L9  rank 1 '意大利'   L9  rank 2 ' italian'
+            L10 rank 2 '意大利'
+            L11 rank 2 '意大利'                       -> run of 3: L9,L10,L11
+            (L12 '意大利' is at RAW rank 4, so the run stops at L11)
+            (L20 ' Italy' rank 3 is a single layer -- not a run, not a commit)
+    R-lens  L8  rank 2 ' italian'
+            L9  rank 1 ' italian'   L9 rank 3 ' Italian'
+            L10 rank 3 ' italian'
+            L11 rank 3 ' italian'                     -> run of 4: L8..L11
+            (L12 has no Italy form in the top 3)
+            (L16 ' Italy' rank 3 is a single layer -- not a commit)
+
+================================================================================
+2. BUCKET COUNTS
+================================================================================
+
+  By condition x lens (all positions, in-band):
+    condition  lens      TP   FP-P   FP-C   UNSCORED   total
+    working    J-lens    29      0      0        231     260
+    working    R-lens    10      0      0        250     260
+    working    logit      0      0      0        260     260
+    twin       J-lens     0      0      0        260     260
+    twin       R-lens     0      0      0        260     260
+    twin       logit      0      0      0        260     260
+    bare       J-lens     0      0      0        130     130
+    bare       R-lens     0      0      0        130     130
+    bare       logit      0      0      0        130     130
+                                                       -----
+                                                        1950
+
+  By position role:
+    entity   TP 39      UNSCORED 1131
+    final    TP  0      UNSCORED  780
+    (The prereg scores the COUNTRY at the entity position only. Final-position
+    claims are parsed, tagged and reported, but are never bucketed TP/FP --
+    there is no registry for downstream answers such as ' Euro'. Reason code
+    on those rows is 'not_entity_position'.)
+
+  UNSCORED reasons at entity positions:
+    fragment_filter   487
+    not_in_registry   644
+
+  Zero FP-P and zero FP-C anywhere. That is the correct pilot result: the twin
+  never committed (so no FP-P can be opened), and no other item's country
+  (Korea/Brazil/Canada/Mexico/Suriname) ever appeared on the boot item.
+
+  Control precision, boot working condition, entity position, k=10 (reported
+  separately and NEVER pooled -- boot's readouts were seen before freeze):
+    J-lens  P = 1.000 on 29 scored claims spread over L8-L20
+    R-lens  P = 1.000 on 10 scored claims
+    logit   undefined (0 scored claims -- no country token to score)
+
+================================================================================
+3. AGREEMENT WITH THE EXPECTED VALUES
+================================================================================
+
+  (1) J-lens Italy commit spanning L9-11
+      EXPECTED  L9-11        GOT  L9-11         *** AGREE ***
+
+  (2) R-lens Italy commit spanning L8-11
+      EXPECTED  L8-11        GOT  L8-11         *** AGREE ***
+
+  (3) Logit lens: no commit anywhere
+      EXPECTED  no commit    GOT  no commit, in any condition, at any position.
+      Stronger than required: the logit lens produced zero registered country
+      tokens at any rank, at any band layer, in any of the five runs.
+                                                *** AGREE ***
+
+  (4) Logit L8 'oman' -> UNSCORED
+      EXPECTED  UNSCORED     GOT  UNSCORED, reason 'fragment_filter'
+      Found at run1 logit L8 rank 1 ('oman':8.81) and again on the twin at
+      run2 logit L8 rank 7. Both excluded by the fragment filter, before any
+      registry lookup, because 'oman' is Latin-script, has no leading space
+      and does not begin with a capital.
+                                                *** AGREE ***
+
+  (5) Zero claims scored outside L8-20
+      EXPECTED  zero         GOT  zero.
+      scored_claims.tsv holds exactly 150 claims at each of layers 8,9,...,20
+      (13 layers x 150 = 1950) and none at any other layer, although the source
+      files contain layers 8-28. The scorer also asserts this internally and
+      aborts if it is ever violated.
+                                                *** AGREE ***
+
+  ALL FIVE EXPECTED VALUES AGREE. NO DISAGREEMENTS.
+
+================================================================================
+4. THINGS THE HUMAN SHOULD LOOK AT BEFORE PART 4
+================================================================================
+
+4a. ONE OBSERVATION THAT DOES NOT MATCH A PREREG SENTENCE (reported, not acted
+    on). Section 3 says the commit rule "is robust to tightening the rank
+    threshold to 2". On this data that holds for the J-lens (rank<=2 layers are
+    still 9,10,11 -> commit L9-11 unchanged) but NOT for the R-lens: at rank<=2
+    the R-lens has only L8 (rank 2) and L9 (rank 1), a run of 2, which is below
+    the 3-layer minimum, so the R-lens commit would disappear entirely. The
+    R-lens streak is carried at rank exactly 3 at L10 and L11.
+    I have changed NOTHING: the frozen threshold is rank<=3 and that is what
+    ran. Flagging it because the robustness sentence in the prereg is stronger
+    than the data supports, which may matter for the write-up.
+
+4b. UNDERSPECIFICATIONS I HAD TO RESOLVE. Full reasoning is in
+    results/confirmatory_01-09/research_log.md. Each needs your sign-off:
+    - Italy's surface-form list is not tabulated in the prereg (boot is the
+      control). I applied section 3's general rule to get
+      {Italy, Italian, Italia, 意大利}, the same shape the table uses for
+      Brazil and Mexico. This affects the control and this validation only.
+    - FP-P is defined per commit but precision is per claim. Resolution: on a
+      twin, if the lens commits to country X then every in-band claim of X on
+      that twin is FP-P; non-committed country claims stay UNSCORED (they are
+      the smear the twin should produce). On a forced-choice twin the FP-P
+      bucket only opens if exactly ONE country was committed to.
+    - The bare condition has no FP definition in the prereg. Scored
+      structurally like a twin, reported descriptively, never pooled.
+    NOTE: none of these three was exercised by this validation -- the pilot
+    twin and bare runs produced no country tokens at all, so the FP-P path has
+    NOT been tested against known-good data. It will first do real work in
+    Part 4. Its logic is stated above so you can check it by reading.
+
+4c. THE REGISTRY. Full audit in registry_tokens.txt. 52 tokens over 6
+    countries. Two properties worth your eye:
+    - Suriname has NO single-token Latin form ('Sur'+'iname'), so it is
+      registered only through first-token forms. Without the prereg's
+      first-token rule the dutchSA item would silently score nothing.
+    - The flagged first-token registrations that survive the fragment filter
+      are ' BRA' 'BRA' ' CAN' 'CAN' ' ITAL' 'ITAL' ' SUR' 'SUR' ' Sur' 'Sur'
+      ' sur' ' mex' 'Mex'. ' sur' and 'Mex' are ordinary strings and could
+      false-match. Mitigation, reported not tuned: every claim row carries
+      form_kind, and summary.json reports an exact-forms-only sensitivity
+      analysis beside every headline number.
+    - Ambiguous single-character shards were NOT registered ('K' from 'Korea',
+      'm' from 'mexico', the bare SPACE token from ' 意大利', '加', '苏').
+      Registering those would have fired spurious commits everywhere.
+
+4d. WHAT THIS VALIDATION COULD NOT TEST, because the pilot data does not
+    contain it:
+    - k=25 secondary scoring. The pilot files hold top-10 only, so only the
+      k=10 path is exercised. The k=25 path is the same code with a different
+      constant; Part 4 files will carry top-25.
+    - Mouth-exclusion tags (top-1 / top-5 of the model's own next token). Run 1
+      does not record the model's next-token distribution at the entity
+      position, so mouth_top1/mouth_top5 are NA on every row here. Part 4 will
+      record the model's top-25 next token at every position, and the tags will
+      populate. UNTESTED CODE PATH.
+    - Bootstrap CIs. The bootstrap resamples ITEMS, and this validation has one
+      item (boot). A CI over one item is meaningless, so the scorer returns the
+      point estimate with null bounds. With 5 confirmatory items it will run
+      properly. LARGELY UNTESTED CODE PATH.
+    - FP-C. No cross-item country token ever appeared, so the FP-C branch never
+      fired. UNTESTED CODE PATH.
+
+================================================================================
+VERDICT: the harness reproduces every one of the five expected pilot values
+exactly. Three code paths (FP-P, FP-C, bootstrap) and two settings (k=25,
+mouth tags) could not be exercised by pilot data and will run first in Part 4.
+Awaiting human go-ahead before Part 4.
+================================================================================

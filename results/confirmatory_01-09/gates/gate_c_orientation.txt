@@ -1,0 +1,80 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+lens          : JacobianLens(d_model=2560, n_prompts=25, source_layers=[0..30] (31 layers))
+model         : HFLensModel(Qwen3_5ForCausalLM, n_layers=32, d_model=2560)
+prompt        : 'Fact: The currency used in the country shaped like a boot is'
+tokens        : ['Fact', ':', ' The', ' currency', ' used', ' in', ' the', ' country', ' shaped', ' like', ' a', ' boot', ' is']
+position -2   : ' boot'
+
+layer  max|manual-lib|  match  cos(J@h, J.T@h)  asym ||J-J.T||_F          top1 J@h        top1 J.T@h   same
+    0          0.00000   True           0.2743            1.1004            'ting'               '融'  False
+    1          0.00000   True           0.2164            1.1383            'ting'              '奇遇'  False
+    2          0.00000   True           0.3587            1.0941            'ting'          'icions'  False
+    3          0.00000   True           0.2814            1.0464            'ting'              'ać'  False
+    4          0.00000   True           0.1082            1.0257            'ting'              'ać'  False
+    5          0.00000   True           0.2342            1.0166            'ting'               'a'  False
+    6          0.00000   True           0.3047            1.0529             'ing'             '...'  False
+    7          0.00000   True           0.4507            1.0472              '儿的'             '...'  False
+    8          0.00000   True           0.4368            1.0431          ' boots'               '‑'  False
+    9          0.00000   True           0.4516            1.0296             '意大利'               'L'  False
+   10          0.00000   True           0.4726            1.0174           ' heel'               'L'  False
+   11          0.00000   True           0.4886            1.0107           ' heel'               '‑'  False
+   12          0.00000   True           0.5339            1.0070           'soles'            ' ___'  False
+   13          0.00000   True           0.5210            1.0075           'soles'               'A'  False
+   14          0.00000   True           0.4637            1.0022           'soles'            ' ___'  False
+   15          0.00000   True           0.4315            1.0017           'soles'               'L'  False
+   16          0.00000   True           0.5362            0.9768               '?'            ' ___'  False
+   17          0.00000   True           0.5295            0.9501               '?'              ' ['  False
+   18          0.00000   True           0.5569            0.9098         '-shaped'              '[]'  False
+   19          0.00000   True           0.6485            0.8401         '-shaped'               '�'  False
+   20          0.00000   True           0.6373            0.7917         '-shaped'               '�'  False
+   21          0.00000   True           0.4842            0.7530           'soles'           'soles'   True
+   22          0.00000   True           0.3564            0.7103         '-shaped'          'shapes'  False
+   23          0.00000   True           0.4832            0.6393          ' shape'             '的形状'  False
+   24          0.00000   True           0.5301            0.5892          ' shape'             '的形状'  False
+   25          0.00000   True           0.4896            0.5465          ' shape'           'shape'  False
+   26          0.00000   True           0.1106            0.4956           ' boot'      '_bootstrap'  False
+   27          0.00000   True           0.8026            0.3900           ' boot'            'boot'  False
+   28          0.00000   True           0.6676            0.3273           ' boot'            'boot'  False
+   29          0.00000   True           0.7419            0.2594           ' boot'            'boot'  False
+   30          0.00000   True           1.0000            0.0000             ' is'             ' is'   True
+
+manual J@h matches jlens.apply at all 31 layers: True
+transposed J.T@h changes the top-1 token at 29/31 layers
+  (if this were 0/31 the control would be vacuous -- the two
+   orientations would be empirically indistinguishable)
+
+model's own top-5 at this position: [' is', ' in', ' on', '.', ' with']
+J-lens top-5 by layer:
+  layer  0 ['ting', 'lessly', '儿的', 'ing', 'erior']
+  layer  1 ['ting', '儿的', 'lessly', 'ing', 'erior']
+  layer  2 ['ting', 'lessly', '儿的', 'erior', 'ing']
+  layer  3 ['ting', '儿的', 'lessly', '盔', 'ing']
+  layer  4 ['ting', '儿的', 'lessly', 'ing', 'erior']
+  layer  5 ['ting', 'ing', '儿的', 'lessly', '盔']
+  layer  6 ['ing', 'ting', '儿的', ' boots', 'lessly']
+  layer  7 ['儿的', 'ting', 'ing', 'lessly', '盔']
+  layer  8 [' boots', '盔', 'ting', '靴', 'lessly']
+  layer  9 ['意大利', ' italian', ' heel', ' Italian', '盔']
+  layer 10 [' heel', '意大利', 'soles', ' italian', ' Italian']
+  layer 11 [' heel', '意大利', 'soles', ' italian', ' Ital']
+  layer 12 ['soles', ' heel', '-shaped', '意大利', ' Ital']
+  layer 13 ['soles', ' heel', ' Ital', '-shaped', '象征着']
+  layer 14 ['soles', ' heel', '-shaped', 'oreal', ' Ital']
+  layer 15 ['soles', ' Ital', '?', 'oreal', ' heel']
+  layer 16 ['?', 'soles', ' Ital', 'oreal', '意大利']
+  layer 17 ['?', 'soles', 'oreal', '-shaped', ' heel']
+  layer 18 ['-shaped', '?', 'soles', 'oreal', '-like']
+  layer 19 ['-shaped', 'soles', '-like', '?', ' Italy']
+  layer 20 ['-shaped', 'soles', ' Italy', ' Italian', '-like']
+  layer 21 ['soles', '/boot', ' Shoe', ' heel', 'boot']
+  layer 22 ['-shaped', ' shape', '形状', '的形状', 'shape']
+  layer 23 [' shape', '-shaped', '的形状', '形状', 'shape']
+  layer 24 [' shape', '-shaped', '形状', '的形状', 'shape']
+  layer 25 [' shape', 'shape', '形状', '的形状', ' shaped']
+  layer 26 [' boot', 'boot', ' Boot', 'Boot', ' boots']
+  layer 27 [' boot', 'boot', ' Boot', ' boots', 'Boot']
+  layer 28 [' boot', 'boot', ' Boot', ' boots', '/boot']
+  layer 29 [' boot', 'boot', ' Boot', ' Shoe', ' shoe']
+  layer 30 [' is', ' shape', '-shaped', ' heel', ' shaped']
+
+GATE (c): PASS

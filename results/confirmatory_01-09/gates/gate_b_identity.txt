@@ -1,0 +1,54 @@
+lens file      : /workspace/lenses/qwen3.5-4b/j-lens/lens.pt
+J              : dict of 31 matrices, layers 0..30
+each matrix    : (2560, 2560) torch.float16
+target_layer   : 30   (this is the one that must be I)
+n_prompts      : 25
+
+--- J[30] vs identity ---
+  ||J-I||_F / ||I||_F   : 0.000e+00
+  max |J-I| (any entry) : 0.000e+00
+  diagonal  min/mean/max: 1.000000 / 1.000000 / 1.000000
+  max |off-diagonal|    : 0.000e+00
+  exactly equal to I    : True
+  allclose(atol=1e-3)   : True
+
+--- control: distance from I at every layer ---
+layer   ||J-I||_F/||I||_F   diag mean  max|off-diag|
+    0              1.7725      0.2273         2.1250
+    1              1.4493      0.1845         1.0322
+    2              1.3720      0.1850         1.0273
+    3              1.2962      0.1826         1.0283
+    4              1.2667      0.1850         1.0293
+    5              1.2566      0.1957         1.0215
+    6              1.0528      0.1511         0.5781
+    7              1.0508      0.1705         0.5703
+    8              1.0511      0.1943         0.6270
+    9              1.0539      0.2239         0.6343
+   10              1.0524      0.2498         0.7207
+   11              1.0595      0.2908         0.7627
+   12              1.0517      0.3265         0.7729
+   13              1.0520      0.3654         0.7695
+   14              1.0423      0.4020         0.8418
+   15              1.0403      0.4451         0.8447
+   16              0.9963      0.4926         0.8755
+   17              0.9717      0.5638         0.9692
+   18              0.8791      0.6192         1.0938
+   19              0.7468      0.6885         1.0137
+   20              0.7049      0.7775         0.9438
+   21              0.6756      0.8465         0.8579
+   22              0.6566      0.9328         0.8071
+   23              0.5957      0.9911         0.8042
+   24              0.5794      1.0520         0.7515
+   25              0.5728      1.1010         0.7944
+   26              0.5750      1.1578         0.8765
+   27              0.4707      1.1575         0.7964
+   28              0.3577      1.1012         0.5312
+   29              0.2562      1.0552         0.2771
+   30              0.0000      1.0000         0.0000  <-- target
+
+non-target layers: min rel-dist = 0.2562, median = 1.0423, max = 1.7725
+target layer 30: rel-dist = 0.000e+00
+target is EXACTLY I (bit-for-bit); nearest other layer is 0.2562 away
+
+GATE (b): PASS
+saved /workspace/jlens-project/results/gate_b_identity.png
