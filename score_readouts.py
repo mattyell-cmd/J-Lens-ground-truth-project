@@ -400,7 +400,7 @@ def norm_tok(s):
     return s.strip().lower()
 
 
-def score_file(entry, parsed, registry):
+def score_file(entry, parsed, registry, keep_all_positions=False):
     """Turn one parsed readout file into a list of claim dicts."""
     item = entry["item"]
     condition = entry["condition"]
@@ -411,8 +411,14 @@ def score_file(entry, parsed, registry):
     # --- work out which position plays which role -------------------------
     roles = {}
     if parsed["positions"]:
-        for role, p in parsed["positions"].items():
-            roles[p] = role
+        # 'final' first, then 'entity', so that when the two coincide -- a
+        # one-token bare mention such as 'French', where the description IS the
+        # whole prompt -- the position is scored as the ENTITY position. The
+        # country readout is the point of the bare control; the downstream
+        # answer is not, and a bare mention has no downstream answer.
+        for role in ("final", "entity"):
+            if role in parsed["positions"]:
+                roles[parsed["positions"][role]] = role
     if parsed["single_pos"] is not None:
         roles[parsed["single_pos"]] = entry.get("position_role", "entity")
 
@@ -447,6 +453,14 @@ def score_file(entry, parsed, registry):
         mn = parsed["model_next"].get(pos)
         mouth1 = {t for r, t, s in mn if r == 1} if mn else None
         mouth5 = {t for r, t, s in mn if r <= 5} if mn else None
+
+        # The prereg reports two positions: the entity position (where the
+        # country is scored) and the final position (the downstream answer,
+        # reported separately). Every other position is captured in full in the
+        # raw readout files but is not carried into the claims table, which
+        # would otherwise be ~8x larger and entirely 'not_entity_position'.
+        if role not in ("entity", "final") and not keep_all_positions:
+            continue
 
         for layer, per_lens in per_layer.items():
             if layer not in BAND:
@@ -537,61 +551,58 @@ def precision(claims):
     return (tp / n if n else None), tp, fp, n
 
 
-def bootstrap_ci(items, per_item_claims, stat_fn, n_boot=N_BOOTSTRAP, seed=BOOTSTRAP_SEED):
-    """Percentile 95% CI, resampling ITEMS with replacement (not claims).
+def item_counts(items, per_item_claims, lens, k, extra=None):
+    """Per-item TP and FP counts for one (lens, k, filter) combination.
 
-    `stat_fn` takes the pooled claim list of one resample and returns a float
-    or None. Returns (point_estimate, lo, hi, n_valid_resamples).
+    Precision pools claims, and every claim belongs to exactly one item, so a
+    bootstrap resample of items is just a SUM of these per-item counts. That
+    makes the whole bootstrap a couple of numpy reductions instead of
+    re-pooling thousands of claim dicts 10,000 times over.
     """
-    items = list(items)
-    if not items:
-        return None, None, None, 0
-    pooled = [c for it in items for c in per_item_claims.get(it, [])]
-    point = stat_fn(pooled)
-    if len(items) < 2:
-        return point, None, None, 0        # a CI over one item is meaningless
+    tp = np.zeros(len(items))
+    fp = np.zeros(len(items))
+    for i, it in enumerate(items):
+        for c in per_item_claims.get(it, []):
+            if c["lens"] != lens or c["rank"] > k:
+                continue
+            if extra is not None and not extra(c):
+                continue
+            if c["bucket"] == "TP":
+                tp[i] += 1
+            elif c["bucket"] in ("FP-P", "FP-C"):
+                fp[i] += 1
+    return tp, fp
 
+
+def _ratio(tp, fp, idx):
+    """Pooled precision for every resample. NaN where a resample scores nothing."""
+    num = tp[idx].sum(axis=1)
+    den = (tp + fp)[idx].sum(axis=1)
+    out = np.full(num.shape, np.nan)
+    nz = den > 0
+    out[nz] = num[nz] / den[nz]
+    return out
+
+
+def _point(tp, fp):
+    den = (tp + fp).sum()
+    return float(tp.sum() / den) if den > 0 else None
+
+
+def _ci(vals):
+    vals = vals[~np.isnan(vals)]
+    if vals.size < 2:
+        return None, None, int(vals.size)
+    return (float(np.percentile(vals, 2.5)),
+            float(np.percentile(vals, 97.5)), int(vals.size))
+
+
+def boot_index(n_items, n_boot=N_BOOTSTRAP, seed=BOOTSTRAP_SEED):
+    """One shared resample matrix, so every quantity is computed on the SAME
+    resamples -- which is what makes the paired differences (J-logit, R-logit,
+    J-R) valid."""
     rng = np.random.default_rng(seed)
-    vals = []
-    idx = rng.integers(0, len(items), size=(n_boot, len(items)))
-    for row in idx:
-        draw = [c for i in row for c in per_item_claims.get(items[i], [])]
-        v = stat_fn(draw)
-        if v is not None:
-            vals.append(v)
-    if len(vals) < 2:
-        return point, None, None, len(vals)
-    return point, float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5)), len(vals)
-
-
-def make_stat_precision(lens, k, extra=None):
-    def f(claims):
-        sel = [c for c in claims
-               if c["lens"] == lens and c["rank"] <= k and (extra(c) if extra else True)]
-        p, *_ = precision(sel)
-        return p
-    return f
-
-
-def make_stat_diff(lens_a, lens_b, k, extra=None):
-    """Paired difference: both lenses computed on the SAME resample."""
-    fa, fb = make_stat_precision(lens_a, k, extra), make_stat_precision(lens_b, k, extra)
-    def f(claims):
-        a, b = fa(claims), fb(claims)
-        return None if (a is None or b is None) else a - b
-    return f
-
-
-def make_stat_novel_minus_echo(lenses, k):
-    """H-4: truth rate among novel claims minus truth rate among echo claims."""
-    def f(claims):
-        sel = [c for c in claims if c["lens"] in lenses and c["rank"] <= k]
-        novel = [c for c in sel if not c["echo"]]
-        echo = [c for c in sel if c["echo"]]
-        pn, *_ = precision(novel)
-        pe, *_ = precision(echo)
-        return None if (pn is None or pe is None) else pn - pe
-    return f
+    return rng.integers(0, n_items, size=(n_boot, n_items))
 
 
 # ----------------------------------------------------------------------------
@@ -604,6 +615,9 @@ def main():
     ap.add_argument("--out", required=True, help="output directory")
     ap.add_argument("--label", default="run")
     ap.add_argument("--model", default="Qwen/Qwen3.5-4B")
+    ap.add_argument("--all-positions", action="store_true",
+                    help="keep every prompt position in the claims table, "
+                         "not just the entity and final positions")
     args = ap.parse_args()
 
     os.makedirs(args.out, exist_ok=True)
@@ -621,7 +635,8 @@ def main():
     all_claims, all_commits, all_roles = [], {}, {}
     for entry in manifest:
         parsed = parse_readout(entry["file"])
-        claims, commits, roles = score_file(entry, parsed, registry)
+        claims, commits, roles = score_file(entry, parsed, registry,
+                                            keep_all_positions=args.all_positions)
         all_claims += claims
         for (pos, lens), com in commits.items():
             all_commits[(entry["item"], entry["condition"], pos, lens)] = com
@@ -653,7 +668,11 @@ def main():
                 elif isinstance(v, bool):
                     v = "1" if v else "0"
                 elif isinstance(v, str):
-                    v = v.replace("\t", "\\t").replace("\n", "\\n")
+                    # escape every character that would break a TSV line.
+                    # \r matters: Python reads text in universal-newline mode,
+                    # so a raw CR inside a token splits the row on read.
+                    v = (v.replace("\\", "\\\\").replace("\t", "\\t")
+                          .replace("\n", "\\n").replace("\r", "\\r"))
                 row.append(str(v))
             f.write("\t".join(row) + "\n")
     print(f"wrote {tsv}  ({len(all_claims)} claims)")
@@ -748,29 +767,57 @@ def main():
         "novel_only": lambda c: (not c["echo"]),
         "echo_only": lambda c: c["echo"],
     }
-    for k in (K_PRIMARY, K_SECONDARY):
-        for fname, ffn in filters.items():
-            for lens in LENSES:
-                pt, lo, hi, nv = bootstrap_ci(
-                    items_present, per_item, make_stat_precision(lens, k, ffn))
-                cis.append({"quantity": f"precision[{lens}]", "k": k, "filter": fname,
-                            "point": pt, "lo": lo, "hi": hi, "n_items": len(items_present),
+    if items_present:
+        idx = boot_index(len(items_present))
+        for k in (K_PRIMARY, K_SECONDARY):
+            for fname, ffn in filters.items():
+                counts = {lens: item_counts(items_present, per_item, lens, k, ffn)
+                          for lens in LENSES}
+                ratios = {lens: _ratio(*counts[lens], idx) for lens in LENSES}
+                for lens in LENSES:
+                    tp, fp = counts[lens]
+                    lo, hi, nv = _ci(ratios[lens])
+                    cis.append({"quantity": f"precision[{lens}]", "k": k,
+                                "filter": fname, "point": _point(tp, fp),
+                                "lo": lo, "hi": hi, "tp": int(tp.sum()),
+                                "fp": int(fp.sum()),
+                                "n_items": len(items_present),
+                                "n_valid_resamples": nv})
+                for a, b in [("J-lens", "logit"), ("R-lens", "logit"),
+                             ("J-lens", "R-lens")]:
+                    pa, pb = _point(*counts[a]), _point(*counts[b])
+                    lo, hi, nv = _ci(ratios[a] - ratios[b])
+                    cis.append({"quantity": f"{a} - {b}", "k": k, "filter": fname,
+                                "point": (None if (pa is None or pb is None)
+                                          else pa - pb),
+                                "lo": lo, "hi": hi,
+                                "n_items": len(items_present),
+                                "n_valid_resamples": nv})
+
+            # H-4: novel-claim truth rate minus echo-claim truth rate
+            for lensset, name in [(("J-lens", "R-lens"), "J+R pooled"),
+                                  (("J-lens",), "J-lens"), (("R-lens",), "R-lens"),
+                                  (("logit",), "logit")]:
+                nt = np.zeros(len(items_present)); nf = np.zeros(len(items_present))
+                et = np.zeros(len(items_present)); ef = np.zeros(len(items_present))
+                for lens in lensset:
+                    a, b = item_counts(items_present, per_item, lens, k,
+                                       filters["novel_only"])
+                    nt += a; nf += b
+                    a, b = item_counts(items_present, per_item, lens, k,
+                                       filters["echo_only"])
+                    et += a; ef += b
+                pn, pe = _point(nt, nf), _point(et, ef)
+                lo, hi, nv = _ci(_ratio(nt, nf, idx) - _ratio(et, ef, idx))
+                cis.append({"quantity": f"novel - echo truth rate [{name}]", "k": k,
+                            "filter": "all",
+                            "point": (None if (pn is None or pe is None)
+                                      else pn - pe),
+                            "novel_rate": pn, "echo_rate": pe,
+                            "n_novel_scored": int((nt + nf).sum()),
+                            "n_echo_scored": int((et + ef).sum()),
+                            "lo": lo, "hi": hi, "n_items": len(items_present),
                             "n_valid_resamples": nv})
-            for a, b in [("J-lens", "logit"), ("R-lens", "logit"), ("J-lens", "R-lens")]:
-                pt, lo, hi, nv = bootstrap_ci(
-                    items_present, per_item, make_stat_diff(a, b, k, ffn))
-                cis.append({"quantity": f"{a} - {b}", "k": k, "filter": fname,
-                            "point": pt, "lo": lo, "hi": hi, "n_items": len(items_present),
-                            "n_valid_resamples": nv})
-        # H-4: novel - echo truth-rate difference
-        for lensset, name in [(("J-lens", "R-lens"), "J+R pooled"),
-                              (("J-lens",), "J-lens"), (("R-lens",), "R-lens"),
-                              (("logit",), "logit")]:
-            pt, lo, hi, nv = bootstrap_ci(
-                items_present, per_item, make_stat_novel_minus_echo(lensset, k))
-            cis.append({"quantity": f"novel - echo truth rate [{name}]", "k": k,
-                        "filter": "all", "point": pt, "lo": lo, "hi": hi,
-                        "n_items": len(items_present), "n_valid_resamples": nv})
     summary["bootstrap_cis"] = cis
     summary["bootstrap_items"] = items_present
 

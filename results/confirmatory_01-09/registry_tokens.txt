@@ -1,0 +1,196 @@
+SURFACE-FORM REGISTRY -- full tokenizer expansion audit
+tokenizer: Qwen/Qwen3.5-4B    MIN_FIRST_TOKEN_CHARS=3
+====================================================================================================
+
+### Korea
+  DROP first_token 'Korea'          -> 2 tok ['K', 'orea']   registers 'K'   dropped: first token not distinctive (len 1 < 3)
+  KEEP exact       ' Korea'         -> 1 tok [' Korea']   registers ' Korea'
+  DROP first_token 'korea'          -> 2 tok ['k', 'orea']   registers 'k'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' korea'         -> 2 tok [' k', 'orea']   registers ' k'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token 'KOREA'          -> 3 tok ['K', 'ORE', 'A']   registers 'K'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' KOREA'         -> 3 tok [' K', 'ORE', 'A']   registers ' K'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token 'Korean'         -> 2 tok ['K', 'orean']   registers 'K'   dropped: first token not distinctive (len 1 < 3)
+  KEEP exact       ' Korean'        -> 1 tok [' Korean']   registers ' Korean'
+  DROP first_token 'korean'         -> 2 tok ['k', 'orean']   registers 'k'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' korean'        -> 2 tok [' k', 'orean']   registers ' k'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token 'KOREAN'         -> 3 tok ['K', 'ORE', 'AN']   registers 'K'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' KOREAN'        -> 3 tok [' K', 'ORE', 'AN']   registers ' K'   dropped: first token not distinctive (len 1 < 3)
+  KEEP exact       '韩国'             -> 1 tok ['韩国']   registers '韩国'
+  KEEP exact       '朝鲜'             -> 1 tok ['朝鲜']   registers '朝鲜'
+
+  FINAL TOKEN SET for Korea (4 tokens):
+    ' Korea'         exact       from 'Korea'      fragment-filter: passes
+    ' Korean'        exact       from 'Korean'     fragment-filter: passes
+    '朝鲜'             exact       from '朝鲜'         fragment-filter: passes
+    '韩国'             exact       from '韩国'         fragment-filter: passes
+
+### Brazil
+  KEEP exact       'Brazil'         -> 1 tok ['Brazil']   registers 'Brazil'
+  KEEP exact       ' Brazil'        -> 1 tok [' Brazil']   registers ' Brazil'
+  DROP first_token 'brazil'         -> 2 tok ['b', 'razil']   registers 'b'   dropped: first token not distinctive (len 1 < 3)
+  KEEP exact       ' brazil'        -> 1 tok [' brazil']   registers ' brazil'
+  KEEP first_token 'BRAZIL'         -> 3 tok ['BRA', 'Z', 'IL']   registers 'BRA'
+  KEEP first_token ' BRAZIL'        -> 3 tok [' BRA', 'Z', 'IL']   registers ' BRA'
+  KEEP first_token 'Brazilian'      -> 2 tok ['Brazil', 'ian']   registers 'Brazil'
+  KEEP exact       ' Brazilian'     -> 1 tok [' Brazilian']   registers ' Brazilian'
+  DROP first_token 'brazilian'      -> 3 tok ['b', 'razil', 'ian']   registers 'b'   dropped: first token not distinctive (len 1 < 3)
+  KEEP first_token ' brazilian'     -> 2 tok [' brazil', 'ian']   registers ' brazil'
+  KEEP first_token 'BRAZILIAN'      -> 4 tok ['BRA', 'Z', 'IL', 'IAN']   registers 'BRA'
+  KEEP first_token ' BRAZILIAN'     -> 4 tok [' BRA', 'Z', 'IL', 'IAN']   registers ' BRA'
+  KEEP exact       'Brasil'         -> 1 tok ['Brasil']   registers 'Brasil'
+  KEEP exact       ' Brasil'        -> 1 tok [' Brasil']   registers ' Brasil'
+  DROP first_token 'brasil'         -> 2 tok ['br', 'asil']   registers 'br'   dropped: first token not distinctive (len 2 < 3)
+  KEEP exact       ' brasil'        -> 1 tok [' brasil']   registers ' brasil'
+  DROP first_token 'BRASIL'         -> 2 tok ['BR', 'ASIL']   registers 'BR'   dropped: first token not distinctive (len 2 < 3)
+  KEEP exact       ' BRASIL'        -> 1 tok [' BRASIL']   registers ' BRASIL'
+  KEEP exact       '巴西'             -> 1 tok ['巴西']   registers '巴西'
+
+  FINAL TOKEN SET for Brazil (11 tokens):
+    ' BRA'           first_token from 'Brazil'     fragment-filter: passes
+    ' BRASIL'        exact       from 'Brasil'     fragment-filter: passes
+    ' Brasil'        exact       from 'Brasil'     fragment-filter: passes
+    ' Brazil'        exact       from 'Brazil'     fragment-filter: passes
+    ' Brazilian'     exact       from 'Brazilian'  fragment-filter: passes
+    ' brasil'        exact       from 'Brasil'     fragment-filter: passes
+    ' brazil'        exact       from 'Brazil'     fragment-filter: passes
+    'BRA'            first_token from 'Brazil'     fragment-filter: passes
+    'Brasil'         exact       from 'Brasil'     fragment-filter: passes
+    'Brazil'         exact       from 'Brazil'     fragment-filter: passes
+    '巴西'             exact       from '巴西'         fragment-filter: passes
+
+### Canada
+  KEEP exact       'Canada'         -> 1 tok ['Canada']   registers 'Canada'
+  KEEP exact       ' Canada'        -> 1 tok [' Canada']   registers ' Canada'
+  KEEP first_token 'canada'         -> 2 tok ['can', 'ada']   registers 'can'
+  KEEP exact       ' canada'        -> 1 tok [' canada']   registers ' canada'
+  KEEP first_token 'CANADA'         -> 2 tok ['CAN', 'ADA']   registers 'CAN'
+  KEEP first_token ' CANADA'        -> 2 tok [' CAN', 'ADA']   registers ' CAN'
+  KEEP exact       'Canadian'       -> 1 tok ['Canadian']   registers 'Canadian'
+  KEEP exact       ' Canadian'      -> 1 tok [' Canadian']   registers ' Canadian'
+  KEEP first_token 'canadian'       -> 2 tok ['can', 'adian']   registers 'can'
+  KEEP exact       ' canadian'      -> 1 tok [' canadian']   registers ' canadian'
+  KEEP first_token 'CANADIAN'       -> 3 tok ['CAN', 'AD', 'IAN']   registers 'CAN'
+  KEEP first_token ' CANADIAN'      -> 3 tok [' CAN', 'AD', 'IAN']   registers ' CAN'
+  DROP first_token '加拿大'            -> 3 tok ['加', '拿', '大']   registers '加'   dropped: first token not distinctive (len 1 < 3)
+
+  FINAL TOKEN SET for Canada (9 tokens):
+    ' CAN'           first_token from 'Canada'     fragment-filter: passes
+    ' Canada'        exact       from 'Canada'     fragment-filter: passes
+    ' Canadian'      exact       from 'Canadian'   fragment-filter: passes
+    ' canada'        exact       from 'Canada'     fragment-filter: passes
+    ' canadian'      exact       from 'Canadian'   fragment-filter: passes
+    'CAN'            first_token from 'Canada'     fragment-filter: passes
+    'Canada'         exact       from 'Canada'     fragment-filter: passes
+    'Canadian'       exact       from 'Canadian'   fragment-filter: passes
+    'can'            first_token from 'Canada'     fragment-filter: FILTERED
+
+### Mexico
+  KEEP exact       'Mexico'         -> 1 tok ['Mexico']   registers 'Mexico'
+  KEEP exact       ' Mexico'        -> 1 tok [' Mexico']   registers ' Mexico'
+  DROP first_token 'mexico'         -> 3 tok ['m', 'ex', 'ico']   registers 'm'   dropped: first token not distinctive (len 1 < 3)
+  KEEP exact       ' mexico'        -> 1 tok [' mexico']   registers ' mexico'
+  DROP first_token 'MEXICO'         -> 3 tok ['M', 'EX', 'ICO']   registers 'M'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' MEXICO'        -> 3 tok [' M', 'EX', 'ICO']   registers ' M'   dropped: first token not distinctive (len 1 < 3)
+  KEEP first_token 'Mexican'        -> 2 tok ['Mex', 'ican']   registers 'Mex'
+  KEEP exact       ' Mexican'       -> 1 tok [' Mexican']   registers ' Mexican'
+  DROP first_token 'mexican'        -> 3 tok ['m', 'ex', 'ican']   registers 'm'   dropped: first token not distinctive (len 1 < 3)
+  KEEP first_token ' mexican'       -> 2 tok [' mex', 'ican']   registers ' mex'
+  DROP first_token 'MEXICAN'        -> 4 tok ['M', 'EX', 'IC', 'AN']   registers 'M'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' MEXICAN'       -> 4 tok [' M', 'EX', 'IC', 'AN']   registers ' M'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token 'México'         -> 2 tok ['Mé', 'xico']   registers 'Mé'   dropped: first token not distinctive (len 2 < 3)
+  KEEP exact       ' México'        -> 1 tok [' México']   registers ' México'
+  DROP first_token 'méxico'         -> 2 tok ['mé', 'xico']   registers 'mé'   dropped: first token not distinctive (len 2 < 3)
+  DROP first_token ' méxico'        -> 2 tok [' mé', 'xico']   registers ' mé'   dropped: first token not distinctive (len 2 < 3)
+  DROP first_token 'MÉXICO'         -> 4 tok ['M', 'É', 'X', 'ICO']   registers 'M'   dropped: first token not distinctive (len 1 < 3)
+  DROP first_token ' MÉXICO'        -> 3 tok [' MÉ', 'X', 'ICO']   registers ' MÉ'   dropped: first token not distinctive (len 2 < 3)
+  KEEP exact       '墨西哥'            -> 1 tok ['墨西哥']   registers '墨西哥'
+
+  FINAL TOKEN SET for Mexico (8 tokens):
+    ' Mexican'       exact       from 'Mexican'    fragment-filter: passes
+    ' Mexico'        exact       from 'Mexico'     fragment-filter: passes
+    ' México'        exact       from 'México'     fragment-filter: passes
+    ' mex'           first_token from 'Mexican'    fragment-filter: passes
+    ' mexico'        exact       from 'Mexico'     fragment-filter: passes
+    'Mex'            first_token from 'Mexican'    fragment-filter: passes
+    'Mexico'         exact       from 'Mexico'     fragment-filter: passes
+    '墨西哥'            exact       from '墨西哥'        fragment-filter: passes
+
+### Suriname
+  KEEP first_token 'Suriname'       -> 2 tok ['Sur', 'iname']   registers 'Sur'
+  KEEP first_token ' Suriname'      -> 2 tok [' Sur', 'iname']   registers ' Sur'
+  KEEP first_token 'suriname'       -> 2 tok ['sur', 'iname']   registers 'sur'
+  KEEP first_token ' suriname'      -> 2 tok [' sur', 'iname']   registers ' sur'
+  KEEP first_token 'SURINAME'       -> 3 tok ['SUR', 'IN', 'AME']   registers 'SUR'
+  KEEP first_token ' SURINAME'      -> 3 tok [' SUR', 'IN', 'AME']   registers ' SUR'
+  KEEP first_token 'Surinamese'     -> 4 tok ['Sur', 'in', 'ames', 'e']   registers 'Sur'
+  KEEP first_token ' Surinamese'    -> 4 tok [' Sur', 'in', 'ames', 'e']   registers ' Sur'
+  KEEP first_token 'surinamese'     -> 4 tok ['sur', 'in', 'ames', 'e']   registers 'sur'
+  KEEP first_token ' surinamese'    -> 4 tok [' sur', 'in', 'ames', 'e']   registers ' sur'
+  KEEP first_token 'SURINAMESE'     -> 4 tok ['SUR', 'IN', 'AME', 'SE']   registers 'SUR'
+  KEEP first_token ' SURINAMESE'    -> 4 tok [' SUR', 'IN', 'AME', 'SE']   registers ' SUR'
+  DROP first_token '苏里南'            -> 3 tok ['苏', '里', '南']   registers '苏'   dropped: first token not distinctive (len 1 < 3)
+
+  FINAL TOKEN SET for Suriname (6 tokens):
+    ' SUR'           first_token from 'Suriname'   fragment-filter: passes
+    ' Sur'           first_token from 'Suriname'   fragment-filter: passes
+    ' sur'           first_token from 'Suriname'   fragment-filter: passes
+    'SUR'            first_token from 'Suriname'   fragment-filter: passes
+    'Sur'            first_token from 'Suriname'   fragment-filter: passes
+    'sur'            first_token from 'Suriname'   fragment-filter: FILTERED
+
+### Italy
+  KEEP exact       'Italy'          -> 1 tok ['Italy']   registers 'Italy'
+  KEEP exact       ' Italy'         -> 1 tok [' Italy']   registers ' Italy'
+  KEEP first_token 'italy'          -> 2 tok ['ital', 'y']   registers 'ital'
+  DROP first_token ' italy'         -> 2 tok [' it', 'aly']   registers ' it'   dropped: first token not distinctive (len 2 < 3)
+  KEEP first_token 'ITALY'          -> 2 tok ['ITAL', 'Y']   registers 'ITAL'
+  KEEP first_token ' ITALY'         -> 2 tok [' ITAL', 'Y']   registers ' ITAL'
+  KEEP exact       'Italian'        -> 1 tok ['Italian']   registers 'Italian'
+  KEEP exact       ' Italian'       -> 1 tok [' Italian']   registers ' Italian'
+  KEEP first_token 'italian'        -> 2 tok ['ital', 'ian']   registers 'ital'
+  KEEP exact       ' italian'       -> 1 tok [' italian']   registers ' italian'
+  KEEP first_token 'ITALIAN'        -> 2 tok ['ITAL', 'IAN']   registers 'ITAL'
+  KEEP first_token ' ITALIAN'       -> 2 tok [' ITAL', 'IAN']   registers ' ITAL'
+  KEEP exact       'Italia'         -> 1 tok ['Italia']   registers 'Italia'
+  KEEP exact       ' Italia'        -> 1 tok [' Italia']   registers ' Italia'
+  KEEP exact       'italia'         -> 1 tok ['italia']   registers 'italia'
+  KEEP exact       ' italia'        -> 1 tok [' italia']   registers ' italia'
+  KEEP first_token 'ITALIA'         -> 2 tok ['ITAL', 'IA']   registers 'ITAL'
+  KEEP exact       ' ITALIA'        -> 1 tok [' ITALIA']   registers ' ITALIA'
+  KEEP exact       '意大利'            -> 1 tok ['意大利']   registers '意大利'
+
+  FINAL TOKEN SET for Italy (14 tokens):
+    ' ITAL'          first_token from 'Italy'      fragment-filter: passes
+    ' ITALIA'        exact       from 'Italia'     fragment-filter: passes
+    ' Italia'        exact       from 'Italia'     fragment-filter: passes
+    ' Italian'       exact       from 'Italian'    fragment-filter: passes
+    ' Italy'         exact       from 'Italy'      fragment-filter: passes
+    ' italia'        exact       from 'Italia'     fragment-filter: passes
+    ' italian'       exact       from 'Italian'    fragment-filter: passes
+    'ITAL'           first_token from 'Italy'      fragment-filter: passes
+    'Italia'         exact       from 'Italia'     fragment-filter: passes
+    'Italian'        exact       from 'Italian'    fragment-filter: passes
+    'Italy'          exact       from 'Italy'      fragment-filter: passes
+    'ital'           first_token from 'Italy'      fragment-filter: FILTERED
+    'italia'         exact       from 'Italia'     fragment-filter: FILTERED
+    '意大利'            exact       from '意大利'        fragment-filter: passes
+
+====================================================================================================
+Tokens registered by FIRST TOKEN of a multi-token form (flagged
+per section 3 -- these are the ones that could false-match):
+    ' BRA'           -> Brazil    passes
+    ' CAN'           -> Canada    passes
+    ' ITAL'          -> Italy     passes
+    ' SUR'           -> Suriname  passes
+    ' Sur'           -> Suriname  passes
+    ' mex'           -> Mexico    passes
+    ' sur'           -> Suriname  passes
+    'BRA'            -> Brazil    passes
+    'CAN'            -> Canada    passes
+    'ITAL'           -> Italy     passes
+    'Mex'            -> Mexico    passes
+    'SUR'            -> Suriname  passes
+    'Sur'            -> Suriname  passes
+    'can'            -> Canada    FILTERED by fragment filter
+    'ital'           -> Italy     FILTERED by fragment filter
+    'sur'            -> Suriname  FILTERED by fragment filter

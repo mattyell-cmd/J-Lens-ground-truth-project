@@ -1,0 +1,110 @@
+[
+  {
+    "file": "results/confirmatory_01-09/raw/01_boot_working.txt",
+    "item": "boot",
+    "condition": "working",
+    "anchor": "boot"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/02_boot_twin.txt",
+    "item": "boot",
+    "condition": "twin",
+    "anchor": "sandal"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/03_boot_bare.txt",
+    "item": "boot",
+    "condition": "bare",
+    "anchor": "boot"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/04_parallel38_working.txt",
+    "item": "parallel38",
+    "condition": "working",
+    "anchor": "parallel"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/05_parallel38_twin.txt",
+    "item": "parallel38",
+    "condition": "twin",
+    "anchor": "parallel"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/06_parallel38_bare.txt",
+    "item": "parallel38",
+    "condition": "bare",
+    "anchor": "parallel"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/07_portuguese_working.txt",
+    "item": "portuguese",
+    "condition": "working",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/08_portuguese_twin.txt",
+    "item": "portuguese",
+    "condition": "twin",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/09_portuguese_bare.txt",
+    "item": "portuguese",
+    "condition": "bare",
+    "anchor": "Portuguese"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/10_frenchNA_working.txt",
+    "item": "frenchNA",
+    "condition": "working",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/11_frenchNA_twin.txt",
+    "item": "frenchNA",
+    "condition": "twin",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/12_frenchNA_bare.txt",
+    "item": "frenchNA",
+    "condition": "bare",
+    "anchor": "French"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/13_spanishNA_working.txt",
+    "item": "spanishNA",
+    "condition": "working",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/14_spanishNA_twin.txt",
+    "item": "spanishNA",
+    "condition": "twin",
+    "anchor": "Asia"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/15_spanishNA_bare.txt",
+    "item": "spanishNA",
+    "condition": "bare",
+    "anchor": "Spanish"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/16_dutchSA_working.txt",
+    "item": "dutchSA",
+    "condition": "working",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/17_dutchSA_twin.txt",
+    "item": "dutchSA",
+    "condition": "twin",
+    "anchor": "America"
+  },
+  {
+    "file": "results/confirmatory_01-09/raw/18_dutchSA_bare.txt",
+    "item": "dutchSA",
+    "condition": "bare",
+    "anchor": "Dutch"
+  }
+]

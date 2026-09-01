@@ -1,0 +1,22 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+registry: 52 token strings over 6 countries
+  results/confirmatory_01-09/raw/01_boot_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], roles {12: 'final', 11: 'entity'}
+  results/confirmatory_01-09/raw/02_boot_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], roles {13: 'final', 12: 'entity'}
+  results/confirmatory_01-09/raw/03_boot_bare.txt: 975 in-band claims, positions [0, 1], roles {1: 'entity'}
+  results/confirmatory_01-09/raw/04_parallel38_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], roles {16: 'final', 15: 'entity'}
+  results/confirmatory_01-09/raw/05_parallel38_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], roles {16: 'final', 15: 'entity'}
+  results/confirmatory_01-09/raw/06_parallel38_bare.txt: 975 in-band claims, positions [0, 1], roles {1: 'entity'}
+  results/confirmatory_01-09/raw/07_portuguese_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/08_portuguese_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/09_portuguese_bare.txt: 975 in-band claims, positions [0, 1, 2], roles {2: 'entity'}
+  results/confirmatory_01-09/raw/10_frenchNA_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/11_frenchNA_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/12_frenchNA_bare.txt: 975 in-band claims, positions [0], roles {0: 'entity'}
+  results/confirmatory_01-09/raw/13_spanishNA_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], roles {15: 'final', 14: 'entity'}
+  results/confirmatory_01-09/raw/14_spanishNA_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15], roles {15: 'final', 14: 'entity'}
+  results/confirmatory_01-09/raw/15_spanishNA_bare.txt: 975 in-band claims, positions [0], roles {0: 'entity'}
+  results/confirmatory_01-09/raw/16_dutchSA_working.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/17_dutchSA_twin.txt: 1950 in-band claims, positions [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], roles {14: 'final', 13: 'entity'}
+  results/confirmatory_01-09/raw/18_dutchSA_bare.txt: 975 in-band claims, positions [0, 1], roles {1: 'entity'}
+wrote results/confirmatory_01-09/scored_claims.tsv  (29250 claims)
+wrote results/confirmatory_01-09/summary.json

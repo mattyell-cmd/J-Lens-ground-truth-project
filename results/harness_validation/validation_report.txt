@@ -206,3 +206,90 @@ exactly. Three code paths (FP-P, FP-C, bootstrap) and two settings (k=25,
 mouth tags) could not be exercised by pilot data and will run first in Part 4.
 Awaiting human go-ahead before Part 4.
 ================================================================================
+
+
+================================================================================
+ADDENDUM (added after the Part-4 capture, 2026-09-01)
+Coverage of the five code paths that section 4d listed as untested.
+================================================================================
+
+Section 4d listed five things the pilot data could not exercise. Here is what
+happened to each once the confirmatory data existed.
+
+  k=25 secondary scoring      NOW EXERCISED. The Part-4 files carry top-25;
+                              claim ranks in the confirmatory table run 1-25.
+  Mouth-exclusion tags        NOW EXERCISED. The Part-4 files record the
+                              model's own next-token top-25 at every position,
+                              and mouth_top1/mouth_top5 are populated on all
+                              29,250 confirmatory claim rows (0 of 1,950 on the
+                              pilot rows, which carry no such block).
+  Bootstrap CIs               NOW EXERCISED. 5 confirmatory items resample
+                              properly; 80 CI rows are emitted.
+  FP-C                        NOW EXERCISED by the real data -- the FP-C bucket
+                              is populated in the confirmatory claims table.
+  FP-P                        STILL NOT EXERCISED BY REAL DATA. No lens
+                              committed to any country on any twin or bare
+                              condition in the confirmatory run, so the FP-P
+                              branch never opened. That is a substantive result
+                              about the twins, not a harness failure -- but it
+                              left the branch unverified.
+
+Because a branch that never fires is a branch nobody has checked, FP-P and its
+neighbours are now covered by test_scorer_synthetic.py, which builds FABRICATED
+readouts in the Part-4 file format and asserts on the buckets. No pilot and no
+confirmatory data is used there, and nothing in the scorer was adjusted in
+response to any of it. All 16 assertions pass:
+
+  1. empty-search twin, a registered form at rank 1 for L8-L10  -> commit
+     detected as (8,10), 3 claims bucketed FP-P, no TP available on a twin,
+     other lenses untouched
+  2. the same planted at only 2 consecutive layers               -> NO commit,
+     zero FP-P, every country claim reasoned 'smear_not_commit'
+  3. the same planted at rank 4 for 3 layers                     -> NO commit
+     (the rank<=3 threshold bites)
+  4. forced-choice twin with exactly ONE committed country       -> FP-P opens
+  5. forced-choice twin with TWO committed countries             -> FP-P stays
+     CLOSED (the signed-off single-commit clause)
+  6. empty-search twin with TWO committed countries              -> FP-P opens
+     for both (there, FP is "a commit to any country")
+  7. working condition                                           -> own country
+     TP, another item's country FP-C
+  8. fragment filter beats the registry                          -> 'oman' and
+     bare-lowercase 'korea' both UNSCORED/fragment_filter, while ' Korea' is TP
+
+Two harness bugs were found and fixed after the original report, both by
+structural checks on the outputs rather than by looking at any score:
+
+  * TSV escaping. Two claim tokens contain a carriage return. The writer
+    escaped tab and newline but not CR, and because Python reads text in
+    universal-newline mode a raw CR split those rows on read -- 29,252 rows
+    parsed where 29,250 were written. Now CR (and backslash) are escaped too.
+  * Position-role precedence. For a one-token bare mention ('French',
+    'Spanish') the entity position and the final position are the same index,
+    and 'final' was overwriting 'entity', which would have silently dropped
+    those two bare controls from scoring. Entity now wins the tie, which is
+    correct: the country readout is the whole point of a bare control and a
+    bare mention has no downstream answer.
+
+  A third change was performance only, with no effect on results: the bootstrap
+  now sums per-item TP/FP counts instead of re-pooling claim dictionaries
+  10,000 times per quantity (the first confirmatory attempt was killed after
+  10 minutes of CPU with no output).
+
+REGRESSION CHECK. After every one of those changes the pilot validation was
+re-run. It stayed byte-identical through the role-precedence and bootstrap
+changes. The CR/backslash escaping fix did change 4 of the 1,950 pilot rows,
+and it is worth being precise about which: all four are final-position rows
+already bucketed UNSCORED/'not_entity_position', whose token text contains a
+backslash or a carriage return, and the only change is that those characters
+are now written escaped ('...\' -> '...\\', '\n\n' -> '\r\n\n'). The pilot
+data carried the same defect the confirmatory data did. Nothing that feeds a
+verdict moved: bucket_counts, commits, precision_per_layer_control_boot and
+precision_per_layer_confirmatory are all identical to the originally reported
+values, and all five expected values still agree:
+  J-lens Italy L9-11 / R-lens Italy L8-11 / logit no commit anywhere /
+  logit L8 'oman' UNSCORED via fragment_filter / zero claims outside L8-20.
+The only difference in summary.json is that 80 all-null CI rows are no longer
+emitted for a run with zero confirmatory items, instead of being emitted full
+of nulls. No scoring rule, threshold, band or registry entry was changed.
+================================================================================

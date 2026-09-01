@@ -1,0 +1,2449 @@
+{
+  "label": "confirmatory_01-09",
+  "frozen_settings": {
+    "band": [
+      8,
+      20
+    ],
+    "commit_max_rank": 3,
+    "commit_min_run": 3,
+    "k_primary": 10,
+    "k_secondary": 25,
+    "n_bootstrap": 10000,
+    "bootstrap_seed": 0,
+    "min_first_token_chars": 3
+  },
+  "registry_size": 52,
+  "n_claims": 29250,
+  "commits": [
+    {
+      "item": "boot",
+      "condition": "working",
+      "position": 11,
+      "lens": "J-lens",
+      "country": "Italy",
+      "runs": [
+        [
+          9,
+          11
+        ]
+      ]
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "position": 11,
+      "lens": "R-lens",
+      "country": "Italy",
+      "runs": [
+        [
+          8,
+          11
+        ]
+      ]
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "position": 13,
+      "lens": "J-lens",
+      "country": "Canada",
+      "runs": [
+        [
+          8,
+          20
+        ]
+      ]
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "position": 13,
+      "lens": "R-lens",
+      "country": "Canada",
+      "runs": [
+        [
+          8,
+          20
+        ]
+      ]
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "position": 14,
+      "lens": "J-lens",
+      "country": "Canada",
+      "runs": [
+        [
+          8,
+          13
+        ]
+      ]
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "position": 14,
+      "lens": "R-lens",
+      "country": "Canada",
+      "runs": [
+        [
+          8,
+          17
+        ]
+      ]
+    }
+  ],
+  "bucket_counts": [
+    {
+      "item": "boot",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "boot",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "boot",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "boot",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "boot",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "boot",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "TP",
+      "n": 69
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 581
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "TP",
+      "n": 29
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 621
+    },
+    {
+      "item": "boot",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "dutchSA",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "dutchSA",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "dutchSA",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "dutchSA",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "dutchSA",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "dutchSA",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "dutchSA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "FP-C",
+      "n": 8
+    },
+    {
+      "item": "dutchSA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 642
+    },
+    {
+      "item": "dutchSA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "FP-C",
+      "n": 11
+    },
+    {
+      "item": "dutchSA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 639
+    },
+    {
+      "item": "dutchSA",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "frenchNA",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "frenchNA",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "frenchNA",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "frenchNA",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "frenchNA",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "frenchNA",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "TP",
+      "n": 38
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 612
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "TP",
+      "n": 46
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 604
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "TP",
+      "n": 4
+    },
+    {
+      "item": "frenchNA",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 646
+    },
+    {
+      "item": "parallel38",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "parallel38",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "parallel38",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "parallel38",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "parallel38",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "parallel38",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "parallel38",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "parallel38",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "parallel38",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "portuguese",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "portuguese",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "portuguese",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "portuguese",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "portuguese",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "portuguese",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "portuguese",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "TP",
+      "n": 5
+    },
+    {
+      "item": "portuguese",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 645
+    },
+    {
+      "item": "portuguese",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "TP",
+      "n": 5
+    },
+    {
+      "item": "portuguese",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 645
+    },
+    {
+      "item": "portuguese",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "spanishNA",
+      "condition": "bare",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "spanishNA",
+      "condition": "bare",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "spanishNA",
+      "condition": "bare",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 325
+    },
+    {
+      "item": "spanishNA",
+      "condition": "twin",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "spanishNA",
+      "condition": "twin",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "spanishNA",
+      "condition": "twin",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "FP-C",
+      "n": 15
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "TP",
+      "n": 2
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "J-lens",
+      "bucket": "UNSCORED",
+      "n": 633
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "FP-C",
+      "n": 26
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "R-lens",
+      "bucket": "UNSCORED",
+      "n": 624
+    },
+    {
+      "item": "spanishNA",
+      "condition": "working",
+      "lens": "logit",
+      "bucket": "UNSCORED",
+      "n": 650
+    }
+  ],
+  "precision_per_layer_confirmatory": [
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 8,
+      "precision": 0.8,
+      "tp": 4,
+      "fp": 1,
+      "n_scored": 5
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 9,
+      "precision": 0.8333333333333334,
+      "tp": 5,
+      "fp": 1,
+      "n_scored": 6
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 10,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 11,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 12,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 13,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 14,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 15,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 16,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 17,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 18,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 19,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 8,
+      "precision": 0.625,
+      "tp": 5,
+      "fp": 3,
+      "n_scored": 8
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 9,
+      "precision": 0.5714285714285714,
+      "tp": 4,
+      "fp": 3,
+      "n_scored": 7
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 10,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 11,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 12,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 13,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 14,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 15,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 16,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 17,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 18,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 19,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 20,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "logit",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 8,
+      "precision": 0.6666666666666666,
+      "tp": 6,
+      "fp": 3,
+      "n_scored": 9
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 9,
+      "precision": 0.6,
+      "tp": 6,
+      "fp": 4,
+      "n_scored": 10
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 10,
+      "precision": 0.6666666666666666,
+      "tp": 6,
+      "fp": 3,
+      "n_scored": 9
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 11,
+      "precision": 0.7142857142857143,
+      "tp": 5,
+      "fp": 2,
+      "n_scored": 7
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 12,
+      "precision": 0.6666666666666666,
+      "tp": 4,
+      "fp": 2,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 13,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 14,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 15,
+      "precision": 0.8,
+      "tp": 4,
+      "fp": 1,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 16,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 17,
+      "precision": 0.6666666666666666,
+      "tp": 2,
+      "fp": 1,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 18,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 19,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 8,
+      "precision": 0.5384615384615384,
+      "tp": 7,
+      "fp": 6,
+      "n_scored": 13
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 9,
+      "precision": 0.5454545454545454,
+      "tp": 6,
+      "fp": 5,
+      "n_scored": 11
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 10,
+      "precision": 0.6,
+      "tp": 6,
+      "fp": 4,
+      "n_scored": 10
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 11,
+      "precision": 0.6,
+      "tp": 6,
+      "fp": 4,
+      "n_scored": 10
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 12,
+      "precision": 0.5555555555555556,
+      "tp": 5,
+      "fp": 4,
+      "n_scored": 9
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 13,
+      "precision": 0.5714285714285714,
+      "tp": 4,
+      "fp": 3,
+      "n_scored": 7
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 14,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 15,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 16,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 17,
+      "precision": 0.75,
+      "tp": 3,
+      "fp": 1,
+      "n_scored": 4
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 18,
+      "precision": 0.5,
+      "tp": 1,
+      "fp": 1,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 19,
+      "precision": 0.3333333333333333,
+      "tp": 1,
+      "fp": 2,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 20,
+      "precision": 0.6,
+      "tp": 3,
+      "fp": 2,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "logit",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "logit",
+      "layer": 9,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    }
+  ],
+  "precision_per_layer_control_boot": [
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 9,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 10,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 11,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 12,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 13,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 15,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 16,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 17,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 19,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_scored": 4
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 9,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 10,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 11,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 16,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 17,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 10,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_scored": 4
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 9,
+      "precision": 1.0,
+      "tp": 7,
+      "fp": 0,
+      "n_scored": 7
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 10,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 11,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 12,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 13,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 14,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 15,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 16,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 17,
+      "precision": 1.0,
+      "tp": 5,
+      "fp": 0,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 18,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 19,
+      "precision": 1.0,
+      "tp": 5,
+      "fp": 0,
+      "n_scored": 5
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "J-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 6,
+      "fp": 0,
+      "n_scored": 6
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 8,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 9,
+      "precision": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_scored": 4
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 10,
+      "precision": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_scored": 4
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 11,
+      "precision": 1.0,
+      "tp": 3,
+      "fp": 0,
+      "n_scored": 3
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 12,
+      "precision": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "n_scored": 1
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 13,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 16,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 17,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 18,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 19,
+      "precision": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_scored": 2
+    },
+    {
+      "k": 25,
+      "condition": "working",
+      "lens": "R-lens",
+      "layer": 20,
+      "precision": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_scored": 4
+    }
+  ],
+  "bootstrap_cis": [
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "all",
+      "point": 0.7692307692307693,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 30,
+      "fp": 9,
+      "n_items": 5,
+      "n_valid_resamples": 9907
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "all",
+      "point": 0.6037735849056604,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 32,
+      "fp": 21,
+      "n_items": 5,
+      "n_valid_resamples": 9894
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "all",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "all",
+      "point": -0.23076923076923073,
+      "lo": -0.4736842105263158,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "all",
+      "point": -0.39622641509433965,
+      "lo": -0.6521739130434783,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "all",
+      "point": 0.16545718432510892,
+      "lo": 0.0,
+      "hi": 1.0,
+      "n_items": 5,
+      "n_valid_resamples": 9803
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": 0.7692307692307693,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 30,
+      "fp": 9,
+      "n_items": 5,
+      "n_valid_resamples": 9907
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": 0.6037735849056604,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 32,
+      "fp": 21,
+      "n_items": 5,
+      "n_valid_resamples": 9894
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": -0.23076923076923073,
+      "lo": -0.4736842105263158,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": -0.39622641509433965,
+      "lo": -0.6521739130434783,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "exact_forms_only",
+      "point": 0.16545718432510892,
+      "lo": 0.0,
+      "hi": 1.0,
+      "n_items": 5,
+      "n_valid_resamples": 9803
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": 0.7692307692307693,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 30,
+      "fp": 9,
+      "n_items": 5,
+      "n_valid_resamples": 9907
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": 0.6037735849056604,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 32,
+      "fp": 21,
+      "n_items": 5,
+      "n_valid_resamples": 9894
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": -0.23076923076923073,
+      "lo": -0.4736842105263158,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": -0.39622641509433965,
+      "lo": -0.6521739130434783,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "covert_mouth_top1",
+      "point": 0.16545718432510892,
+      "lo": 0.0,
+      "hi": 1.0,
+      "n_items": 5,
+      "n_valid_resamples": 9803
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": 0.7692307692307693,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 30,
+      "fp": 9,
+      "n_items": 5,
+      "n_valid_resamples": 9907
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": 0.6037735849056604,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 32,
+      "fp": 21,
+      "n_items": 5,
+      "n_valid_resamples": 9894
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": -0.23076923076923073,
+      "lo": -0.4736842105263158,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": -0.39622641509433965,
+      "lo": -0.6521739130434783,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "covert_mouth_top5",
+      "point": 0.16545718432510892,
+      "lo": 0.0,
+      "hi": 1.0,
+      "n_items": 5,
+      "n_valid_resamples": 9803
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "novel_only",
+      "point": 0.7692307692307693,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 30,
+      "fp": 9,
+      "n_items": 5,
+      "n_valid_resamples": 9907
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "novel_only",
+      "point": 0.6037735849056604,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 32,
+      "fp": 21,
+      "n_items": 5,
+      "n_valid_resamples": 9894
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "novel_only",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 2,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "novel_only",
+      "point": -0.23076923076923073,
+      "lo": -0.4736842105263158,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "novel_only",
+      "point": -0.39622641509433965,
+      "lo": -0.6521739130434783,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "novel_only",
+      "point": 0.16545718432510892,
+      "lo": 0.0,
+      "hi": 1.0,
+      "n_items": 5,
+      "n_valid_resamples": 9803
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 10,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [J+R pooled]",
+      "k": 10,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.6739130434782609,
+      "echo_rate": null,
+      "n_novel_scored": 92,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [J-lens]",
+      "k": 10,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.7692307692307693,
+      "echo_rate": null,
+      "n_novel_scored": 39,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [R-lens]",
+      "k": 10,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.6037735849056604,
+      "echo_rate": null,
+      "n_novel_scored": 53,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [logit]",
+      "k": 10,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 1.0,
+      "echo_rate": null,
+      "n_novel_scored": 2,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "all",
+      "point": 0.6617647058823529,
+      "lo": 0.06060606060606061,
+      "hi": 1.0,
+      "tp": 45,
+      "fp": 23,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "all",
+      "point": 0.5795454545454546,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 51,
+      "fp": 37,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "all",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "all",
+      "point": -0.3382352941176471,
+      "lo": -0.5227272727272727,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "all",
+      "point": -0.4204545454545454,
+      "lo": -0.6166666666666667,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "all",
+      "point": 0.08221925133689834,
+      "lo": 0.0,
+      "hi": 0.15689149560117302,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": 0.6617647058823529,
+      "lo": 0.06060606060606061,
+      "hi": 1.0,
+      "tp": 45,
+      "fp": 23,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": 0.5795454545454546,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 51,
+      "fp": 37,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": -0.3382352941176471,
+      "lo": -0.5227272727272727,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": -0.4204545454545454,
+      "lo": -0.6166666666666667,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "exact_forms_only",
+      "point": 0.08221925133689834,
+      "lo": 0.0,
+      "hi": 0.15689149560117302,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": 0.6617647058823529,
+      "lo": 0.06060606060606061,
+      "hi": 1.0,
+      "tp": 45,
+      "fp": 23,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": 0.5795454545454546,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 51,
+      "fp": 37,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": -0.3382352941176471,
+      "lo": -0.5227272727272727,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": -0.4204545454545454,
+      "lo": -0.6166666666666667,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "covert_mouth_top1",
+      "point": 0.08221925133689834,
+      "lo": 0.0,
+      "hi": 0.15689149560117302,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": 0.6617647058823529,
+      "lo": 0.06060606060606061,
+      "hi": 1.0,
+      "tp": 45,
+      "fp": 23,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": 0.5795454545454546,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 51,
+      "fp": 37,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": -0.3382352941176471,
+      "lo": -0.5227272727272727,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": -0.4204545454545454,
+      "lo": -0.6166666666666667,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "covert_mouth_top5",
+      "point": 0.08221925133689834,
+      "lo": 0.0,
+      "hi": 0.15689149560117302,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "novel_only",
+      "point": 0.6617647058823529,
+      "lo": 0.06060606060606061,
+      "hi": 1.0,
+      "tp": 45,
+      "fp": 23,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "novel_only",
+      "point": 0.5795454545454546,
+      "lo": 0.0,
+      "hi": 1.0,
+      "tp": 51,
+      "fp": 37,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "novel_only",
+      "point": 1.0,
+      "lo": 1.0,
+      "hi": 1.0,
+      "tp": 4,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "novel_only",
+      "point": -0.3382352941176471,
+      "lo": -0.5227272727272727,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "novel_only",
+      "point": -0.4204545454545454,
+      "lo": -0.6166666666666667,
+      "hi": 0.0,
+      "n_items": 5,
+      "n_valid_resamples": 6693
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "novel_only",
+      "point": 0.08221925133689834,
+      "lo": 0.0,
+      "hi": 0.15689149560117302,
+      "n_items": 5,
+      "n_valid_resamples": 9998
+    },
+    {
+      "quantity": "precision[J-lens]",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "precision[R-lens]",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "precision[logit]",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "tp": 0,
+      "fp": 0,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "J-lens - logit",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "R-lens - logit",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "J-lens - R-lens",
+      "k": 25,
+      "filter": "echo_only",
+      "point": null,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [J+R pooled]",
+      "k": 25,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.6153846153846154,
+      "echo_rate": null,
+      "n_novel_scored": 156,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [J-lens]",
+      "k": 25,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.6617647058823529,
+      "echo_rate": null,
+      "n_novel_scored": 68,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [R-lens]",
+      "k": 25,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 0.5795454545454546,
+      "echo_rate": null,
+      "n_novel_scored": 88,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    },
+    {
+      "quantity": "novel - echo truth rate [logit]",
+      "k": 25,
+      "filter": "all",
+      "point": null,
+      "novel_rate": 1.0,
+      "echo_rate": null,
+      "n_novel_scored": 4,
+      "n_echo_scored": 0,
+      "lo": null,
+      "hi": null,
+      "n_items": 5,
+      "n_valid_resamples": 0
+    }
+  ],
+  "bootstrap_items": [
+    "dutchSA",
+    "frenchNA",
+    "parallel38",
+    "portuguese",
+    "spanishNA"
+  ]
+}
