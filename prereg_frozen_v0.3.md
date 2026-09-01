@@ -174,3 +174,23 @@ Bootstrap 95% confidence intervals on every headline rate. No hypothesis is call
 Decision rules are stated as confidence-interval criteria rather than significance tests; a 95% CI excluding a null value is equivalent to a two-tailed test at α = .05 against it, but the intervals additionally report the magnitudes, which are the quantities of interest.
 8. What sits outside this registration
 The 24/08 pilot — boot/sandal/bare readouts, band curves, word-association elicitation — is exploratory and predates this registration; its items are struck from confirmatory aggregates (boot survives only as the positive control). The boot->Germany result (7/7 under forced-choice word association) is presented in the write-up as an exhibit under the invalidated format, not as certified ground truth; its legitimate-format replication is the bare-mention screen, which the boot item passed (none 4/5, no Italy). The 28/08 elicitation rounds generate ground truth and sit inside this registration's pipeline, but involved no lens readouts.
+
+________________
+
+AMENDMENTS
+
+Amendment 1 (01/09/2026) — correction to the commit-rule robustness claim in section 3.
+
+Section 3, under "Commit versus smear", states that the commit rule, validated against run 1, "is robust to tightening the rank threshold to 2". That sentence is too strong and is corrected here.
+
+Re-checking run 1 mechanically with the scoring harness (score_readouts.py, results/harness_validation/), the frozen rule — any registered form at rank <= 3 for >= 3 consecutive band layers — reproduces all three pilot verdicts exactly: J-lens commits to Italy at L9-11, R-lens at L8-11, logit lens never. That part of section 3 stands unchanged.
+
+The robustness claim does not. Tightening the rank threshold from 3 to 2:
+  * J-lens: unaffected. Its qualifying layers at rank <= 2 are still 9, 10 and 11 ('意大利' at rank 1, 2 and 2), so the commit remains L9-11.
+  * R-lens: the commit DISAPPEARS. Its streak is carried at rank exactly 3 at L10 (' italian', behind ' heel' and '不长') and at L11 (' italian', behind ' heel' and '的剑'). At rank <= 2 only L8 and L9 qualify — a run of 2, below the 3-layer minimum.
+
+Corrected sentence: the rule is robust to tightening the rank threshold to 2 for the J-lens verdict, but not for the R-lens verdict, whose streak depends on rank-3 positions at L10 and L11.
+
+Nothing operative changes. The frozen threshold is and remains rank <= 3, which is what the harness runs and what the confirmatory analysis will use. This amendment corrects a factual statement about the pilot data; it does not alter a rule, a threshold, a band, or a hypothesis. It was written before any confirmatory readout was produced.
+
+Consequence to carry into the write-up: the R-lens commit verdict is threshold-sensitive in a way the J-lens verdict is not, and any claim that the commit rule is insensitive to the rank threshold must be qualified accordingly.
