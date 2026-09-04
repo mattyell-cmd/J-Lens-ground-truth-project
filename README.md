@@ -19,9 +19,12 @@ rank 1 only at layers 26-28. See the write-up for the argument and the limitatio
 
 ## Pre-registration
 
-`prereg_frozen_v0.3.md`, frozen 31 August 2026 at commit `06a3e70`.
-SHA-256: `71e47abec9c61b03962daa6cfedf1907b9e239ece9cf8ae1a40409066ea06a63`
-One dated amendment (commit `d040f19`) corrected a robustness claim about the commit rule; no rule changed.
+`prereg_frozen_v0.3.md`, frozen 31 August 2026 at commit `06a3e70`. SHA-256 of the frozen file at that
+commit: `d09de709969209eee7a40b5b758f06e714c53a9f76d135aef9ddd134ad8f55e9`
+(`git show 06a3e70:prereg_frozen_v0.3.md | sha256sum`).
+One dated, append-only amendment (commit `d040f19`) corrected a robustness claim about the commit rule; no
+rule changed. The file at HEAD includes that amendment and therefore hashes differently
+(`71e47abec9c61b03962daa6cfedf1907b9e239ece9cf8ae1a40409066ea06a63`).
 
 ## Layout
 
